@@ -4,7 +4,7 @@
       {
           "label": "Processing",
           "type": "shell",
-          "command": "processing-java --sketch=${fileDirname} --run",
+          "command": "processing-java --sketch=${workspaceFolder}/Main --run",
           "group": {
               "kind": "build",
               "isDefault": true
