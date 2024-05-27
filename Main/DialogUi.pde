@@ -18,6 +18,10 @@ public class DialogUi {
     private int imageHeight;
     private PImage uiImage;
 
+    int charIndex = 0;
+    int frameCounter = 0;
+    int frameInterval = 2; // 문자 하나당 표시될 프레임 수
+
     public DialogUi() {
         this.visible = false;
         current = new DialogContent("0", "", "", null);
@@ -55,16 +59,20 @@ public class DialogUi {
             //text(this.current.teller, x + DIALOG_PADDING, y + DIALOG_PADDING * 2);
             //textAnchor = this.y + DIALOG_PADDING * 2 + TELLER_TEXT_SIZE + 10;
         }
-        //textSize(MSG_TEXT_SIZE);
         fill(0, 0, 0);
+        
         String msg = this.current.text.replace("\\n","\n");
-        fontManager.drawText(msg, x + 150, this.y + 80, imageWidth - 300, imageHeight - 80, MSG_TEXT_SIZE);
-        //fontManager.drawText(msg, x + DIALOG_PADDING, textAnchor, width/2 - DIALOG_PADDING*2, 1000, MSG_TEXT_SIZE);
-        //text(this.current.text,
-        //x + DIALOG_PADDING,
-        //textAnchor,
-        //width/2 - DIALOG_PADDING * 2,
-        //1000);
+          // frameCounter가 frameInterval에 도달하면 다음 문자를 표시
+        if (frameCounter % frameInterval == 0 && charIndex < msg.length()) {
+            charIndex++;
+        } else if (charIndex >= msg.length()) {
+            charIndex = msg.length();
+        }
+
+        String showingText = msg.substring(0, charIndex);
+
+        fontManager.drawText(showingText, x + DIALOG_PADDING, textAnchor, width/2 - DIALOG_PADDING*2, 1000, MSG_TEXT_SIZE);
+        frameCounter++;
     }
 
     private void draw() {
@@ -114,7 +122,9 @@ public class DialogUi {
     }
 
     public void push(String msg, String teller) {
-        this.queue.add(new DialogContent("0", msg, teller, null));
+        this.frameCounter = 0;
+        this.charIndex = 0;
+        this.queue.add(new DialogContent("0", msg, teller));
     }
 
     public String getCurrentId() {
