@@ -93,7 +93,6 @@ public class Scene_301 extends BaseScene {
 
     if(curTime >= curCount * animationDelay)
     {
-      println("실행");
       var isEven = curCount % 2 == 0;
       var boyAnimation = isEven ? boyRightMoveAnimation : boyLeftMoveAnimation;
       var girlAnimation = isEven ? girlRightMoveAnimation : girlLeftMoveAnimation;
