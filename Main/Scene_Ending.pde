@@ -185,7 +185,7 @@ public class Scene_Ending extends BaseScene {
     
     public void mousePressed()
     {
-        sceneManager.loadScene(new Scene_Intro());
+        sceneManager.loadScene(new Scene_Intro_New());
         println("Scene_Ending : mousePressed");
     }
 }

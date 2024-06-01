@@ -4,12 +4,13 @@
 import static java.awt.event.KeyEvent.*;
 //import processing.javafx.*;
 float deltaTime = 0;
+boolean mouseClickedThisFrame = false;
 int lastMillis = 0;
 
 void setup() {
   //size(1280, 720, FX2D);
   size(1280, 720, P2D);
-  sceneManager.loadScene(new Scene_Intro());
+  sceneManager.loadScene(new Scene_Intro_New());
   //sceneManager.loadScene(new Scene_ParticleTest());
   //sceneManager.loadScene(new Scene_CameraManagerTest());
   //postProcessManager.addGrain(new PVector(0.3, 0.6, 0.3));
@@ -27,6 +28,8 @@ void draw() {
 
   postProcessManager.draw();
   image(get(), 0, 0, width, height);
+
+  mouseClickedThisFrame = false;
 }
 
 void updateDeltaTime() {
@@ -36,6 +39,8 @@ void updateDeltaTime() {
 }
 
 void mousePressed() {
+  print("mousePressed");
+  mouseClickedThisFrame = true;
   BaseScene scene = sceneManager.getCurrentScene();
   if (scene != null) {
     scene.mousePressed();
@@ -58,7 +63,7 @@ void keyPressed() {
   int plusKeycode = 61;
   int minusKeycode = 45;
   if (keyCode == backspace) {   
-    sceneManager.loadScene(new Scene_Intro());
+    sceneManager.loadScene(new Scene_Intro_New());
   }
   if (keyCode == plusKeycode) {   
     sceneManager.getCurrentScene().loadNextScene();

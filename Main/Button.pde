@@ -1,8 +1,18 @@
 public class Button {
+  public Button() {
+
+  }
+
+  public Button(String text, PVector position, PVector size) {
+    this.text = text;
+    this.position = position;
+    this.size = size;
+  }
+
   public String text;
   public color buttonColor = #FFFFFF;
   public color textColor = #000000;
-  public int fontSize = 15;
+  public int fontSize = 24;
   // TODO: text font and size
   // Left top of the button 
   public PVector position;
@@ -16,7 +26,7 @@ public class Button {
     
     popStyle();
 
-    return isMouseOver() && mousePressed;
+    return isMouseOver() && mouseClickedThisFrame;
   }
   
   public boolean isMouseOver() {
@@ -32,10 +42,8 @@ public class Button {
     if (text != null) {
       float textX = position.x + size.x / 2;
       float textY = position.y + size.y / 2;
-      fill(textColor);
-      textSize(fontSize);
       textAlign(CENTER, CENTER);
-      text(text, textX, textY);
+      fontManager.drawText(text, (int)textX, (int)textY, fontSize);
     }
     popStyle();
   }
