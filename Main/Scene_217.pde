@@ -10,17 +10,24 @@ public class Scene_217 extends BaseScene {
 
     loadBackground("32", drawManager);
 
-    // Drawable house = objectFactory.create("res/images/object/hut_front.png");
-    // house.setPosition(width / 2 + 200, height / 2 - 40);
-    // house.setScale(0.13, 0.13);
-    // drawManager.addDrawable(house);
+    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.front);
+    mom.setPosition(width / 2 - 230, 500);
+    mom.setScale(0.6f, 0.6f);
+    drawManager.addDrawable(mom);
 
-    // 배경 나중에
+    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.smile);
+    girl.setPosition(width / 2 + 170, 590);
+    girl.setScale(0.6f, 0.6f);
+    drawManager.addDrawable(girl);
+
+    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.smile);
+    boy.setPosition(width / 2, 560);
+    boy.setScale(0.6f, 0.6f);
+    drawManager.addDrawable(boy);
   }
  
   public void draw() {
     pushStyle();
-    
     
     drawManager.drawing();
     uiManager.drawing();
