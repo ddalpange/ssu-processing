@@ -38,6 +38,6 @@ public class Scene_330 extends BaseScene {
   }
   
   public void mousePressed() {
-    sceneManager.loadScene(new Scene_Credit());
+    sceneManager.loadScene(new Scene_Ending());
   }
 }

@@ -29,6 +29,6 @@ public class Scene_217 extends BaseScene {
   }
   
   public void mousePressed() {
-    loadNextScene();
+    sceneManager.loadScene(new Scene_Ending());
   }
 }
