@@ -12,6 +12,9 @@ public class Scene_204 extends BaseScene {
   @Override
   public int getPreviousScene() { return 203; }
 
+  Drawable 팥떡;
+  Drawable 쑥떡;
+
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -24,12 +27,12 @@ public class Scene_204 extends BaseScene {
     drawManager.addDrawable(bg);
     
 
-    var 팥떡 = objectFactory.create("res/images/object/ricecake_02_02.png");
+    팥떡 = objectFactory.create("res/images/object/ricecake_02_02.png");
     팥떡.setPosition(400, 400);
     팥떡.setScale(1.2, 1.2);
     drawManager.addDrawable(팥떡);
 
-    var 쑥떡 = objectFactory.create("res/images/object/ricecake_01_02.png");
+    쑥떡 = objectFactory.create("res/images/object/ricecake_01_02.png");
     쑥떡.setPosition(800, 410);
     쑥떡.setScale(1.2, 1.2);
     drawManager.addDrawable(쑥떡);
@@ -45,6 +48,8 @@ public class Scene_204 extends BaseScene {
   public void draw() {
     pushStyle();
     
+    팥떡.update();
+    쑥떡.update();
     
     drawManager.drawing();
     uiManager.drawing();
@@ -54,9 +59,5 @@ public class Scene_204 extends BaseScene {
   
   public void mousePressed() {
     gameManager.update();
-    if (uiManager.dialogUi.next()) {
-      return;
-    }
-    loadNextScene();
   }
 }

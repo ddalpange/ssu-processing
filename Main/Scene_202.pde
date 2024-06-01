@@ -26,12 +26,12 @@ public class Scene_202 extends BaseScene {
     loadBackground("17", drawManager);
     Scene_202_bg_setup(drawManager);
 
-    var tornWindow = new TornWindow(500, 50, 250, 250, 0);
-    drawManager.addDrawable(tornWindow);
+    // var tornWindow = new TornWindow(500, 50, 250, 250, 0);
+    // drawManager.addDrawable(tornWindow);
 
     var tigerHand = objectFactory.create("res/images/character/tiger_hand.png");
-    tigerHand.setPosition(width / 2, 200);
-    tigerHand.setScale(0.8f, 0.8f);
+    tigerHand.setPosition(300, 180);
+    tigerHand.setScale(0.65f, 0.65f);
     drawManager.addDrawable(tigerHand);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
