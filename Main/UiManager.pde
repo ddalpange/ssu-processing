@@ -5,17 +5,11 @@ public class UiManager {
 
   private UiManager(){
     super();
-    tsvProcessor = new TsvProcessor("Data/ss1.tsv");
+    tsvProcessor = new TsvProcessor("Data/ScenarioScript.tsv");
     var s1 = tsvProcessor.readTsvFile();
-    tsvProcessor = new TsvProcessor("Data/ss2.tsv");
-    var s2 = tsvProcessor.readTsvFile();
-    tsvProcessor = new TsvProcessor("Data/ss3.tsv");
-    var s3 = tsvProcessor.readTsvFile();
 
     currentDialogList = new ArrayList<Map<String, String>>();
     currentDialogList.addAll(s1);
-    currentDialogList.addAll(s2);
-    currentDialogList.addAll(s3);
 
     dialogUi = new DialogUi();
     dialogUi.show();
