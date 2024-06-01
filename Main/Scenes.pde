@@ -15,6 +15,25 @@ public class Scenes {
     321, 322, 323, 324, 325, 326, 327, 328, 329, 330
   };
 
+  // TODO: 아직 임의 숫자
+  public int[] introductionSceneNumbers = {
+    101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114
+  };
+
+  // TODO: 아직 임의 숫자
+  public int[] deploymentSceneNumbers = {
+    201, 202, 203, 204, 205, 206, 207, 208, 209,
+    210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220,
+    221, 222
+  };
+
+  // TODO: 아직 임의 숫자
+  public int[] endingSceneNumbers = {
+    301, 302, 303, 304, 305, 306, 307, 308, 309, 310,
+    311, 312, 313, 314, 315, 316, 317, 318, 319, 320,
+    321, 322, 323, 324, 325, 326, 327, 328, 329, 330
+  };
+
   public String[] getSceneNames() {
     String[] result = new String[sceneNumbers.length];
     for (int i = 0; i < sceneNumbers.length; i++) {

@@ -4,20 +4,21 @@ Button[] createGridButtons(String[] buttonTexts, int fontSize, int columnCount, 
   int eachButtonWidth = w / columnCount;
   int rowCount = (int)Math.ceil((float)buttonTexts.length / columnCount);
   int eachButtonHeight = h / rowCount;
+  int currentX = x;
   for (int i = 0; i < rowCount; i++) {
     for (int j = 0; j < columnCount; j++) {
       if (buttonIndex < buttonTexts.length) {
         var button = new Button();
         button.text = buttonTexts[buttonIndex];
-        button.position = new PVector(x, y);
+        button.position = new PVector(currentX, y);
         button.size = new PVector(eachButtonWidth, eachButtonHeight);
         button.fontSize = fontSize;
         buttons[buttonIndex] = button;
         buttonIndex++;
       }
-      x += eachButtonWidth;
+      currentX += eachButtonWidth;
     }
-    x = 0;
+    currentX = x;
     y += eachButtonHeight;
   }
 
