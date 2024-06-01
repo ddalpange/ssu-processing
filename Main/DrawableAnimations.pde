@@ -96,6 +96,15 @@ public class MoveAnimation extends BaseAnimation {
       elapsedTime = 0;
     }
   }
+
+  public MoveAnimation reset() // 하나의 객체를 돌려쓸때 사용
+  {
+    elapsedTime = 0;
+    isDone = false;
+    startX = target.getX();
+    startY = target.getY();
+    return this;
+  }
 }
 
 public class ScaleAnimation extends BaseAnimation {
@@ -159,5 +168,14 @@ public class ScaleAnimation extends BaseAnimation {
       isDone = false;
       elapsedTime = 0;
     }
+  }
+
+    public ScaleAnimation reset() // 하나의 객체를 돌려쓸때 사용
+  {
+    elapsedTime = 0;
+    isDone = false;
+    startX = target.getScaleX();
+    startY = target.getScaleY();
+    return this;
   }
 }

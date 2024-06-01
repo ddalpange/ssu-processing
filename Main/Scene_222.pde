@@ -54,8 +54,8 @@ public class Scene_222 extends BaseScene {
     girlMoveAnimation = new MoveAnimation(girl, width + 150 + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
         drawManager.addDrawable(girl);
 
-    startAnimation(boyMoveAnimation);
-    startAnimation(girlMoveAnimation);
+    startAnimation(boyMoveAnimation.reset());
+    startAnimation(girlMoveAnimation.reset());
   }
 
   public void setup() {
@@ -70,7 +70,7 @@ public class Scene_222 extends BaseScene {
     
     drawManager.drawing();
     DrawObject();
-    animationManager.update();
+    animationManager.update(); // 중요함
 
     uiManager.drawing();
     
@@ -82,7 +82,7 @@ public class Scene_222 extends BaseScene {
       boolean ableToMove = Util.InRange(waitTime, prevTime, curTime); // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
 
       if(ableToMove)
-        startAnimation(tigerMoveAnimation);
+        startAnimation(tigerMoveAnimation.reset());
 
       if(maxWaitCount >= curWaitCount)    
       { 
@@ -95,14 +95,14 @@ public class Scene_222 extends BaseScene {
       if(needToScaleUp)
       {
           stopAnimation(tigerScaleDownAnimation);
-          startAnimation(tigerScaleUpAnimation);
+          startAnimation(tigerScaleUpAnimation.reset());
           curWaitCount++;
       }
 
         if(needToScaleDown)
         {
           stopAnimation(tigerScaleUpAnimation);
-          startAnimation(tigerScaleDownAnimation);
+          startAnimation(tigerScaleDownAnimation.reset());
           curWaitCount++;
         }
       }

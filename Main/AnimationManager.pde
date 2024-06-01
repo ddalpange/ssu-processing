@@ -11,6 +11,11 @@ public class AnimationManager {
             animations.remove(animation);
     }
 
+    public void clearAnimation()
+    {
+     animations.clear();
+    }
+
     public void update() {
         ArrayList<BaseAnimation> toRemove = new ArrayList<BaseAnimation>();
         for (BaseAnimation anim : animations) {

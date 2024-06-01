@@ -34,16 +34,10 @@ public class Scene_301 extends BaseScene {
   private ShapeObject boy;
   private ShapeObject girl;
 
-  private MoveAnimation boyRightMoveAnimation;
-  private MoveAnimation boyLeftMoveAnimation;
-  private MoveAnimation girlRightMoveAnimation;
-  private MoveAnimation girlLeftMoveAnimation;
-
-  private final float animationDuration = 1f;
-  private final float animationDelay = 1.05f;
-
+  private float animationDuration = 1f;
+  private  float animationDelay = 1.05f;
   private float curTime = 0;
-  private int curCount = 0;
+  private float targetTime = 0;
 
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
@@ -57,19 +51,10 @@ public class Scene_301 extends BaseScene {
     boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
     boy.setPosition(700, 500);
     boy.setScale(0.3, 0.3);
-    drawManager.addDrawable(boy);
 
     girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
     girl.setPosition(800, 500);
     girl.setScale(0.3, 0.3);
-    drawManager.addDrawable(girl);
-
-    boyRightMoveAnimation = new MoveAnimation(boy, 650, 500, animationDuration, EaseType.InOutBounce);
-    boyLeftMoveAnimation = new MoveAnimation(boy, 750, 500, animationDuration, EaseType.InOutBounce);
-    girlRightMoveAnimation = new MoveAnimation(girl, 750, 500, animationDuration, EaseType.InOutBounce);
-    girlLeftMoveAnimation = new MoveAnimation(girl, 850, 500, animationDuration, EaseType.InOutBounce);
-    
-    startAnimation(boyRightMoveAnimation);
   }
 
   public void draw() {
@@ -78,6 +63,20 @@ public class Scene_301 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     UpdateMove();
+
+    //보긴안좋은데 sortingOrder 처리하는 좋은 방법
+    var isGirlUpperBoy = girl.getY() > boy.getY();
+    if(isGirlUpperBoy)
+    {
+      boy.drawImage();
+      girl.drawImage();
+    }
+    else
+    {
+      girl.drawImage();
+      boy.drawImage();
+    }
+
     uiManager.drawing();
     animationManager.update();
     popStyle();
@@ -91,14 +90,17 @@ public class Scene_301 extends BaseScene {
   {
     curTime += deltaTime;
 
-    if(curTime >= curCount * animationDelay)
+    if(curTime >= targetTime)
     {
-      var isEven = curCount % 2 == 0;
-      var boyAnimation = isEven ? boyRightMoveAnimation : boyLeftMoveAnimation;
-      var girlAnimation = isEven ? girlRightMoveAnimation : girlLeftMoveAnimation;
-      startAnimation(boyAnimation);
-      startAnimation(girlAnimation);
-      curCount++;
+      animationDuration = random(0.3f,1.5f);
+      animationDelay = animationDuration + 0.05f;
+      targetTime = curTime + animationDelay;
+
+      var boyAnimation = new MoveAnimation(boy, random(300,1000), random(300,450), animationDuration, EaseType.OutCubic);
+      var girlAnimation = new MoveAnimation(girl, random(400,800), random(300,450), animationDuration, EaseType.OutCubic);
+      clearAnimation();
+      startAnimation(boyAnimation.reset());
+      startAnimation(girlAnimation.reset());
     }
   }
 }
