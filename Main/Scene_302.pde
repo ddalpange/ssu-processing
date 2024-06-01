@@ -11,34 +11,36 @@ public class Scene_302 extends BaseScene {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
 
+    loadBackground("39", drawManager);
+
     b1 = color(#805955);
     b2 = color(#1c1a27);
 
-    int numStars = 30; // 별의 수
-    float[] starX = new float[numStars];
-    float[] starY = new float[numStars];
-    float[] starBrightness = new float[numStars];
-    float[] starBrightnessChange = new float[numStars];
-    color[] starColor = new color[numStars];
+    // int numStars = 30; // 별의 수
+    // float[] starX = new float[numStars];
+    // float[] starY = new float[numStars];
+    // float[] starBrightness = new float[numStars];
+    // float[] starBrightnessChange = new float[numStars];
+    // color[] starColor = new color[numStars];
 
-    for (int i = 0; i < numStars; i++) {
-      starX[i] = random(width);
-      starY[i] = random(height / 2.5); // 상단 1/2.5 영역에만 별을 배치
-      starBrightness[i] = random(100, 255);
-      starBrightnessChange[i] = random(-10, 100); // 밝기 변화량 설정
-    }
+    // for (int i = 0; i < numStars; i++) {
+    //   starX[i] = random(width);
+    //   starY[i] = random(height / 2.5); // 상단 1/2.5 영역에만 별을 배치
+    //   starBrightness[i] = random(100, 255);
+    //   starBrightnessChange[i] = random(-10, 100); // 밝기 변화량 설정
+    // }
 
-    Drawable starlight = new Starlight(numStars, starX, starY, starBrightness, starBrightnessChange, starColor);
-    drawManager.addDrawable(starlight);
+    // Drawable starlight = new Starlight(numStars, starX, starY, starBrightness, starBrightnessChange, starColor);
+    // drawManager.addDrawable(starlight);
     
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.point);
-    boy.setPosition(200, 700);
-    boy.setScale(0.3, 0.3);
+    boy.setPosition(300, 600);
+    boy.setScale(0.4, 0.4);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
-    girl.setPosition(100, 700);
-    girl.setScale(0.3, 0.3);
+    girl.setPosition(160, 620);
+    girl.setScale(0.4, 0.4);
     drawManager.addDrawable(girl);
 
     // 구름 필요
@@ -74,11 +76,9 @@ public class Scene_302 extends BaseScene {
   public void draw() {
     pushStyle();
 
-    loadBackground("39", drawManager);
-
-    setGradient(0, 0, width, height, b2, b1, Y_AXIS);
+    // setGradient(0, 0, width, height, b2, b1, Y_AXIS);
    
-    drawGradientBackground();
+    // drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
 

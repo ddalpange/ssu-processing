@@ -65,6 +65,10 @@ public class Drawable {
     this.zAngle = zAngle;
   }
 
+  public void setZIndex(int zIndex) {
+    this.zIndex = zIndex;
+  }
+
   // draw function
   public void draw(){
     System.out.println("Draw");
