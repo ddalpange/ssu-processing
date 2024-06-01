@@ -28,8 +28,11 @@ public class DialogUi {
             return;
         }
 
+        pushStyle();
         strokeWeight(1);
+        fill(255, 255, 255, 200);
         rect(this.x, this.y, width/2, DIALOG_HEIGHT, 5);
+        popStyle();
     }
 
     private void drawText() {
