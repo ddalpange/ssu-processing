@@ -31,6 +31,20 @@ public class Scene_301 extends BaseScene {
   @Override
   public int getNextScene() { return 302; }
 
+  private ShapeObject boy;
+  private ShapeObject girl;
+
+  private MoveAnimation boyRightMoveAnimation;
+  private MoveAnimation boyLeftMoveAnimation;
+  private MoveAnimation girlRightMoveAnimation;
+  private MoveAnimation girlLeftMoveAnimation;
+
+  private final float animationDuration = 1f;
+  private final float animationDelay = 1.05f;
+
+  private float curTime = 0;
+  private int curCount = 0;
+
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -40,15 +54,22 @@ public class Scene_301 extends BaseScene {
   
     setup_Scene_301_BG(drawManager);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
+    boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
     boy.setPosition(700, 500);
     boy.setScale(0.3, 0.3);
     drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
+    girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
     girl.setPosition(800, 500);
     girl.setScale(0.3, 0.3);
     drawManager.addDrawable(girl);
+
+    boyRightMoveAnimation = new MoveAnimation(boy, 650, 500, animationDuration, EaseType.InOutBounce);
+    boyLeftMoveAnimation = new MoveAnimation(boy, 750, 500, animationDuration, EaseType.InOutBounce);
+    girlRightMoveAnimation = new MoveAnimation(girl, 750, 500, animationDuration, EaseType.InOutBounce);
+    girlLeftMoveAnimation = new MoveAnimation(girl, 850, 500, animationDuration, EaseType.InOutBounce);
+    
+    startAnimation(boyRightMoveAnimation);
   }
 
   public void draw() {
@@ -56,11 +77,29 @@ public class Scene_301 extends BaseScene {
 
     drawGradientBackground();
     drawManager.drawing();
+    UpdateMove();
     uiManager.drawing();
+    animationManager.update();
     popStyle();
   }
   
   public void mousePressed() {
     loadNextScene();
+  }
+
+  private void UpdateMove()
+  {
+    curTime += deltaTime;
+
+    if(curTime >= curCount * animationDelay)
+    {
+      println("실행");
+      var isEven = curCount % 2 == 0;
+      var boyAnimation = isEven ? boyRightMoveAnimation : boyLeftMoveAnimation;
+      var girlAnimation = isEven ? girlRightMoveAnimation : girlLeftMoveAnimation;
+      startAnimation(boyAnimation);
+      startAnimation(girlAnimation);
+      curCount++;
+    }
   }
 }
