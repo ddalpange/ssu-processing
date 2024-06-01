@@ -26,7 +26,7 @@ public class Scene_222 extends BaseScene {
 
   private final int waitTime = 6; // n초
   private final int scaleChangeTime = 1;
-  private final int maxWaitCount = 4; // 호랑이 scale 변경은 여기까지만
+  private final int maxWaitCount = 6; // 호랑이 scale 변경은 여기까지만
 
   private float curTime = 0;
   private float prevTime = 0;
@@ -61,8 +61,8 @@ public class Scene_222 extends BaseScene {
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
-    SetUpObject();
     loadBackground("37", drawManager);
+    SetUpObject();
   }
  
   public void draw() {
