@@ -11,14 +11,14 @@ public class Scene_205 extends BaseScene {
     loadBackground("20", drawManager);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.ricecake_03_02);
-    tiger.setPosition(width / 2, 800);
-    tiger.setScale(1.3f, 1.3f);
+    tiger.setPosition(width / 2, height);
+    tiger.setScale(1, 1);
     drawManager.addDrawable(tiger);
 
-    var 팥떡 = objectFactory.create("res/images/object/ricecake_02_02.png");
-    팥떡.setPosition(width / 2, 400);
-    팥떡.setScale(1.2, 1.2);
-    drawManager.addDrawable(팥떡);
+    var riceCake = objectFactory.create("res/images/object/ricecake_02_02.png");
+    riceCake.setPosition(width / 2, height - 120);
+    riceCake.setScale(2f, 2f);
+    drawManager.addDrawable(riceCake);
   }
  
   public void draw() {
