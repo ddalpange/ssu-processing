@@ -8,6 +8,10 @@ public abstract class BaseScene {
   public void startAnimation(BaseAnimation animation) {
     animationManager.startAnimation(animation);
   }
+
+    public void stopAnimation(BaseAnimation animation) {
+    animationManager.stopAnimation(animation);
+  }
   
   // 씬이 최초로 생성되는 시점에 1회 호출됨.
   public abstract void setup();

@@ -5,39 +5,53 @@ public class Scene_222 extends BaseScene {
   @Override
   public int getNextScene() { return 301; }
 
-  private PVector tigerPos = new PVector(300,400);
-  private PVector boyPos = new PVector(800,400);
-  private PVector girlPos = new PVector(950,400);
+  private PVector tigerPos = new PVector(200,400);
+  private PVector boyPos = new PVector(400,400);
+  private PVector girlPos = new PVector(550,400);
 
   private ShapeObject tiger;
   private ShapeObject boy;
   private ShapeObject girl;
 
   private MoveAnimation tigerMoveAnimation;
+  private ScaleAnimation tigerScaleUpAnimation;
+  private ScaleAnimation tigerScaleDownAnimation;
   private MoveAnimation boyMoveAnimation;
   private MoveAnimation girlMoveAnimation;
 
-  private boolean isNeedToMove = false;
-  private final float kidsMoveDuration = 2f;
-  private final float imageBuffer = 200;
-  private final float tigerMoveDuration = 4f;
+  private final float imageBuffer = 300;
+  private final float moveDuration = 8f;
+  private final float tigerMoveDuration = 3f;
+
+  private final int waitTime = 6; // n초
+  private final int scaleChangeTime = 1;
+  private final int maxWaitCount = 4; // 호랑이 scale 변경은 여기까지만
+
+  private float curTime = 0;
+  private float prevTime = 0;
+  private int curWaitCount = 1;
 
   private void SetUpObject()
   {
-   tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.left);
+   tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.angry);
    tiger.setPosition(tigerPos.x,tigerPos.y);
    tiger.setScale(0.5f,0.5f);
-    tigerMoveAnimation = new MoveAnimation(tiger, width/2, 400, tigerMoveDuration);
+    tigerMoveAnimation = new MoveAnimation(tiger, width + imageBuffer, 400, tigerMoveDuration, EaseType.InBack);
+    tigerScaleUpAnimation = new ScaleAnimation(tiger, 0.52f,0.52f,0.7f);
+    tigerScaleDownAnimation = new ScaleAnimation(tiger, 0.5f,0.5f,0.7f);
 
     boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
    boy.setPosition(boyPos.x,boyPos.y);
    boy.setScale(0.5f,0.5f);
-    boyMoveAnimation = new MoveAnimation(boy, width + imageBuffer, 400, kidsMoveDuration);
+    boyMoveAnimation = new MoveAnimation(boy, width + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
    
     girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope); 
    girl.setPosition(girlPos.x,girlPos.y);
    girl.setScale(0.5f,0.5f);
-    girlMoveAnimation = new MoveAnimation(girl, width + 150 + imageBuffer, 400, kidsMoveDuration);
+    girlMoveAnimation = new MoveAnimation(girl, width + 150 + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
+
+    startAnimation(boyMoveAnimation);
+    startAnimation(girlMoveAnimation);
   }
 
   public void setup() {
@@ -62,23 +76,50 @@ public class Scene_222 extends BaseScene {
   void DrawObject()
   {
     tiger.drawImage();
-    if(isNeedToMove)
-    {
       boy.drawImage();
       girl.drawImage();
-    }
+
+      boolean ableToMove = InRange(waitTime, prevTime, curTime); // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
+
+      if(ableToMove)
+        startAnimation(tigerMoveAnimation);
+
+      if(maxWaitCount >= curWaitCount)    
+      { 
+        int targetTime = curWaitCount * scaleChangeTime;
+      boolean needScaleChange = curTime >= targetTime;
+
+      boolean needToScaleUp = needScaleChange && targetTime % 2 != 0;
+      boolean needToScaleDown = needScaleChange && targetTime % 2 == 0;
+
+      if(needToScaleUp)
+      {
+          stopAnimation(tigerScaleDownAnimation);
+          startAnimation(tigerScaleUpAnimation);
+          curWaitCount++;
+      }
+
+        if(needToScaleDown)
+        {
+          stopAnimation(tigerScaleUpAnimation);
+          startAnimation(tigerScaleDownAnimation);
+          curWaitCount++;
+        }
+      }
+
+      prevTime = curTime;
+      curTime += deltaTime;
   }
   
   public void mousePressed() {
     if (uiManager.dialogUi.next()) {
-      {
-        //대사가 단 두개 밖에 없다는게 전제라 이런 동작을 사용한다.
-        startAnimation(boyMoveAnimation);
-        startAnimation(girlMoveAnimation);
-        isNeedToMove = true;
-      } 
       return;
     }
     loadNextScene();
+  }
+
+  private boolean InRange(float target, float a, float b)
+  {
+    return b >= target && target >= a;
   }
 }

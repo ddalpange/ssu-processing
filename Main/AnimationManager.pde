@@ -5,6 +5,12 @@ public class AnimationManager {
         animations.add(animation);
     }
 
+    public void stopAnimation(BaseAnimation animation)
+    {
+        if(animations.contains(animation))
+            animations.remove(animation);
+    }
+
     public void update() {
         ArrayList<BaseAnimation> toRemove = new ArrayList<BaseAnimation>();
         for (BaseAnimation anim : animations) {

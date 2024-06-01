@@ -16,6 +16,11 @@ public class BaseAnimation {
 
   public void update() {
   }
+
+  public void setEaseType(EaseType ease)
+  {
+    easeType = ease;
+  }
 }
 
 
@@ -33,6 +38,16 @@ public class MoveAnimation extends BaseAnimation {
       this.destX = destX;
       this.destY = destY;
       this.duration = duration;
+  }
+
+    public MoveAnimation(Drawable target, float destX, float destY, float duration, EaseType ease) {
+      super(target);
+      startX = target.getX();
+      startY = target.getY();
+      this.destX = destX;
+      this.destY = destY;
+      this.duration = duration;
+      setEaseType(ease);
   }
 
   public float destX;
