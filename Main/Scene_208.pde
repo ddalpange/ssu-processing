@@ -12,11 +12,11 @@ public class Scene_208 extends BaseScene {
 
     Scene_202_bg_setup(drawManager);
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
-    tiger.setPosition(width / 2, 600);
+    tiger.setPosition(width / 2, 500);
     tiger.setScale(-0.6f, 0.6f);
     drawManager.addDrawable(tiger);
 
-    var candle = new Candle(900, 450);
+    var candle = new Candle(width / 2 + 5, 142);
     drawManager.addDrawable(candle);
 
     var knife = objectFactory.create("res/images/object/knife.png");
@@ -26,7 +26,6 @@ public class Scene_208 extends BaseScene {
     //knife.setScale(0.6f, 0.6f);
     drawManager.addDrawable(knife);
     
-
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb);
     boy.setPosition(300, 650);
     boy.setScale(0.6f, 0.6f);
@@ -60,7 +59,7 @@ public class Scene_208 extends BaseScene {
     
       var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.left);
       mom.setPosition(650, 350);
-      mom.setScale(0.6f, 0.6f);
+      mom.setScale(0.5f, 0.5f);
       drawManager.addDrawable(mom);
     } else {
       if (uiManager.dialogUi.next()) {
