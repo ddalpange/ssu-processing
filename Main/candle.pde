@@ -21,13 +21,12 @@ public class Candle extends Drawable {
     bezierVertex(lightX, lightY, lightX+lightW/2, lightY+20, lightX+lightW, lightY);
     vertex(lightX+lightW, lightY); //꼭짓점
     vertex(lightX+lightW, lightY+lightH); //꼭짓점
-    bezierVertex(lightX+lightW, lightY+lightH, lightX+lightW/2, lightY+lightH+20, lightX, lightY+lightH);
     vertex(lightX, lightY+lightH); //꼭짓점
+    endShape();
     pushStyle();
     fill(color(254, 235, 207));
     ellipse(lightX+lightW/2, lightY, lightW, 20);
     popStyle();
-    endShape();
     
     //촛불
     beginShape();
