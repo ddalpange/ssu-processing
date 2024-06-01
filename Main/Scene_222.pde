@@ -79,7 +79,7 @@ public class Scene_222 extends BaseScene {
       boy.drawImage();
       girl.drawImage();
 
-      boolean ableToMove = InRange(waitTime, prevTime, curTime); // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
+      boolean ableToMove = Util.InRange(waitTime, prevTime, curTime); // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
 
       if(ableToMove)
         startAnimation(tigerMoveAnimation);
@@ -116,10 +116,5 @@ public class Scene_222 extends BaseScene {
       return;
     }
     loadNextScene();
-  }
-
-  private boolean InRange(float target, float a, float b)
-  {
-    return b >= target && target >= a;
   }
 }
