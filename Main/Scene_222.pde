@@ -22,6 +22,7 @@ public class Scene_222 extends BaseScene {
   private final float imageBuffer = 300;
   private final float moveDuration = 8f;
   private final float tigerMoveDuration = 3f;
+  private final float tigerScaleDuration = 0.7f;
 
   private final int waitTime = 6; // n초
   private final int scaleChangeTime = 1;
@@ -37,18 +38,21 @@ public class Scene_222 extends BaseScene {
    tiger.setPosition(tigerPos.x,tigerPos.y);
    tiger.setScale(0.5f,0.5f);
     tigerMoveAnimation = new MoveAnimation(tiger, width + imageBuffer, 400, tigerMoveDuration, EaseType.InBack);
-    tigerScaleUpAnimation = new ScaleAnimation(tiger, 0.52f,0.52f,0.7f);
-    tigerScaleDownAnimation = new ScaleAnimation(tiger, 0.5f,0.5f,0.7f);
+    tigerScaleUpAnimation = new ScaleAnimation(tiger, 0.52f,0.52f,tigerScaleDuration);
+    tigerScaleDownAnimation = new ScaleAnimation(tiger, 0.5f,0.5f,tigerScaleDuration);
+        drawManager.addDrawable(tiger);
 
     boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
    boy.setPosition(boyPos.x,boyPos.y);
    boy.setScale(0.5f,0.5f);
     boyMoveAnimation = new MoveAnimation(boy, width + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
+        drawManager.addDrawable(boy);
    
     girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope); 
    girl.setPosition(girlPos.x,girlPos.y);
    girl.setScale(0.5f,0.5f);
     girlMoveAnimation = new MoveAnimation(girl, width + 150 + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
+        drawManager.addDrawable(girl);
 
     startAnimation(boyMoveAnimation);
     startAnimation(girlMoveAnimation);
@@ -75,10 +79,6 @@ public class Scene_222 extends BaseScene {
 
   void DrawObject()
   {
-    tiger.drawImage();
-      boy.drawImage();
-      girl.drawImage();
-
       boolean ableToMove = Util.InRange(waitTime, prevTime, curTime); // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
 
       if(ableToMove)
