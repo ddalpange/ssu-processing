@@ -7,6 +7,17 @@ public class Scene_302 extends BaseScene {
 
   @Override
   public int getNextScene() { return 303; }
+
+  private final float treeDefaultScale = 0.088f;
+  private final float treeScaleDuration = 0.4f;
+
+  private ShapeObject tree;
+  private ScaleAnimation treeScaleUpAnimation;
+  private ScaleAnimation treeScaleDownAnimation;
+
+  private float curTime = 0;
+  private int curCount = 0;
+
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -15,6 +26,11 @@ public class Scene_302 extends BaseScene {
 
     b1 = color(#805955);
     b2 = color(#1c1a27);
+
+    tree = objectFactory.create("res/images/object/tree_to_climb.png");
+    tree.setPosition(970, 130);
+    tree.setScale(treeDefaultScale, treeDefaultScale);
+    drawManager.addDrawable(tree);
 
     // int numStars = 30; // 별의 수
     // float[] starX = new float[numStars];
@@ -71,6 +87,10 @@ public class Scene_302 extends BaseScene {
     // bigTree.setPosition(1200, 300);
     // bigTree.setScale(0.05, 0.05);
     // drawManager.addDrawable(bigTree);
+
+    var upScale = treeDefaultScale + 0.0015f;
+    treeScaleUpAnimation = new ScaleAnimation(tree, upScale,upScale,treeScaleDuration);
+    treeScaleDownAnimation = new ScaleAnimation(tree, treeDefaultScale,treeDefaultScale,treeScaleDuration);
   }
  
   public void draw() {
@@ -81,7 +101,8 @@ public class Scene_302 extends BaseScene {
     // drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
-
+    animationManager.update();
+    UpdateScale();
     popStyle();
   }
   
@@ -111,5 +132,18 @@ public class Scene_302 extends BaseScene {
   
   public void mousePressed() {
     loadNextScene();
+  }
+
+  public void UpdateScale()
+  {
+    curTime += deltaTime;
+
+   if(curTime >= curCount * treeScaleDuration)
+   {
+    animationManager.clearAnimation();
+    var isEven = curCount % 2 == 0;
+      animationManager.startAnimation(isEven ? treeScaleUpAnimation.reset() : treeScaleDownAnimation.reset());
+      curCount++;
+   }
   }
 }
