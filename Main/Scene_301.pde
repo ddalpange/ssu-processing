@@ -31,6 +31,7 @@ public class Scene_301 extends BaseScene {
   @Override
   public int getNextScene() { return 302; }
 
+  private ShapeObject tiger;
   private ShapeObject boy;
   private ShapeObject girl;
 
@@ -48,11 +49,16 @@ public class Scene_301 extends BaseScene {
   
     setup_Scene_301_BG(drawManager);
 
-    boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
+    tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.angry);
+    tiger.setPosition(300, 200);
+    tiger.setScale(0.15f, 0.15f);
+    drawManager.addDrawable(tiger);
+
+    boy = objectFactory.create(CharacterType.boy, CharacterPoseType.front);
     boy.setPosition(700, 500);
     boy.setScale(0.3, 0.3);
 
-    girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
+    girl = objectFactory.create(CharacterType.girl, CharacterPoseType.front);
     girl.setPosition(800, 500);
     girl.setScale(0.3, 0.3);
   }
@@ -96,8 +102,8 @@ public class Scene_301 extends BaseScene {
       animationDelay = animationDuration + 0.05f;
       targetTime = curTime + animationDelay;
 
-      var boyAnimation = new MoveAnimation(boy, random(300,1000), random(300,450), animationDuration, EaseType.OutCubic);
-      var girlAnimation = new MoveAnimation(girl, random(400,800), random(300,450), animationDuration, EaseType.OutCubic);
+      var boyAnimation = new MoveAnimation(boy, random(400,1100), random(400,700), animationDuration, EaseType.OutCubic);
+      var girlAnimation = new MoveAnimation(girl, random(400,1000), random(400,700), animationDuration, EaseType.OutCubic);
       clearAnimation();
       startAnimation(boyAnimation.reset());
       startAnimation(girlAnimation.reset());
