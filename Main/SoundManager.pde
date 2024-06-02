@@ -25,6 +25,8 @@ public enum SoundList {
     }
 }
 
+final SoundManager soundManager = new SoundManager();
+
 public class SoundManager {
   public void setup() {
   }
@@ -40,5 +42,10 @@ public class SoundManager {
         file.play();
     }
   }
-}
 
+  public SoundFile playOnce(String path) {
+    SoundFile file = new SoundFile(Main.this, path);
+    file.play();
+    return file;
+  }
+}

@@ -1,6 +1,5 @@
 public abstract class BaseScene {
   public DrawManager drawManager = new DrawManager();
-  public SoundManager soundManager = new SoundManager();
   public AnimationManager animationManager = new AnimationManager();
   public EffectManager effectManager = new EffectManager();
   public UiManager uiManager = new UiManager();

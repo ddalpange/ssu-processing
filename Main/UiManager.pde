@@ -23,8 +23,15 @@ public class UiManager {
     }
     String text = data.get("comment");
     String teller = data.get("character");
+    String voice = data.get("voice");
+    if (Util.isNullOrWhitespace(voice) == false) {
+      voice = "res/sound/voice/" + voice + ".mp3";
+    } else {
+      voice = null;
+    }
+    println("voice : " + voice);
     
-    DialogContent dialogContent = new DialogContent(id, text, teller);
+    DialogContent dialogContent = new DialogContent(id, text, teller, voice);
     return dialogContent;
   }
 

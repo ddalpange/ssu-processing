@@ -30,6 +30,8 @@ public class SceneManager {
       smoothFrame = false;
     }
 
+
+    // ---> Black
     if (fadeOut == true && fadeIn == false) {
       alpha += smoothDt * fadeSpeed;
 
@@ -40,11 +42,14 @@ public class SceneManager {
         if (nextScene != null) {
           currentScene = nextScene;
         }
+
+        stopPlayingVoice();
         currentScene.setup();
         smoothFrame = true;
       }
     }
 
+    // ---> Transparent
     if (fadeIn == true && fadeOut == false) {
       if (alpha > 0f) {
         alpha -= smoothDt * fadeSpeed;
@@ -75,6 +80,7 @@ public class SceneManager {
         fadeOut = false;
         currentScene.setup();
         nextScene = null;
+        stopPlayingVoice();
         return;
     }
 

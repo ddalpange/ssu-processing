@@ -17,7 +17,7 @@ public class DialogUi {
 
     public DialogUi() {
         this.visible = false;
-        current = new DialogContent("0", "", "");
+        current = new DialogContent("0", "", "", null);
         this.x = width / 4;
         this.y = height - DIALOG_HEIGHT - (DIALOG_MARGIN * 2); // 20 은 MARGIN
     }
@@ -87,8 +87,14 @@ public class DialogUi {
 
     // true : 대화 표시 성공, false : 대화 표시 실패
     public boolean next() {
+
+        stopPlayingVoice();
+
         if (this.queue.size() > 0) {
             this.current = this.queue.poll();
+            if (this.current.voicePath != null) {
+                lastPlayedSoundFile = soundManager.playOnce(this.current.voicePath);
+            }
             return true;
         }
 
@@ -96,10 +102,22 @@ public class DialogUi {
     }
 
     public void push(String msg, String teller) {
-        this.queue.add(new DialogContent("0", msg, teller));
+        this.queue.add(new DialogContent("0", msg, teller, null));
     }
 
     public String getCurrentId() {
         return this.current.id;
     }
+}
+
+// DialogUi 자체가 씬별로 생성되어서 전역 변수로 처리해야 함.
+SoundFile lastPlayedSoundFile = null;
+
+void stopPlayingVoice() {
+    if (lastPlayedSoundFile == null)
+        return;
+
+    lastPlayedSoundFile.stop();
+    lastPlayedSoundFile.removeFromCache();
+    lastPlayedSoundFile = null;
 }
