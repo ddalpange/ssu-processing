@@ -15,7 +15,7 @@ public class Scene_320 extends BaseScene {
 
 
     // 리소스 교체 필요
-    // var rope = objectFactory.create("compressedRes/images/objects/rope_new.png");
+    // var rope = objectFactory.create("res/images/objects/rope_new.png");
     // rope.setPosition(400, 50);
     // rope.setScale(0.03, 0.03);
     // drawManager.addDrawable(rope);

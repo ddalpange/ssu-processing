@@ -11,7 +11,7 @@ public class Scene_325 extends BaseScene {
 
     loadBackground("62", drawManager);
 
-    var newRope = objectFactory.create("compressedRes/images/objects/rope_new.png");
+    var newRope = objectFactory.create("res/images/objects/rope_new.png");
     newRope.setPosition(400, 50);
     newRope.setScale(0.05, 0.05);
     drawManager.addDrawable(newRope);
@@ -26,7 +26,7 @@ public class Scene_325 extends BaseScene {
     girl.setScale(-0.2, 0.2);
     drawManager.addDrawable(girl);
 
-    var oldRope = objectFactory.create("compressedRes/images/objects/rope_old.png");
+    var oldRope = objectFactory.create("res/images/objects/rope_old.png");
     oldRope.setPosition(1000, 50);
     oldRope.setScale(0.05, 0.05);
     drawManager.addDrawable(oldRope);

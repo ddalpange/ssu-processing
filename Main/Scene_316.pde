@@ -12,7 +12,7 @@ public class Scene_316 extends BaseScene {
 
 
     // 리소스 교체 필요
-    // var oldRope = objectFactory.create("compressedRes/images/objects/rope_old.png");
+    // var oldRope = objectFactory.create("res/images/objects/rope_old.png");
     // oldRope.setPosition(width / 2, -50);
     // oldRope.setScale(0.3, 0.3);
     // drawManager.addDrawable(oldRope);

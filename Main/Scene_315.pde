@@ -11,7 +11,7 @@ public class Scene_315 extends BaseScene {
     loadBackground("52", drawManager);
 
 
-    // var oldRope = objectFactory.create("compressedRes/images/objects/rope_old.png");
+    // var oldRope = objectFactory.create("res/images/objects/rope_old.png");
     // oldRope.setPosition(width / 2, 200);
     // oldRope.setScale(0.1, 0.1);
     // drawManager.addDrawable(oldRope);

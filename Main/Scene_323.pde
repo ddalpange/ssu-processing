@@ -11,7 +11,7 @@ public class Scene_323 extends BaseScene {
     loadBackground("60", drawManager);
 
     PVector ropeScale = new PVector(0.1, 0.1);
-    var oldRope = objectFactory.create("compressedRes/images/objects/rope_old.png");
+    var oldRope = objectFactory.create("res/images/objects/rope_old.png");
     oldRope.setPosition(width / 2, 000);
     oldRope.setScale(ropeScale.x, ropeScale.y);
     startAnimation(new MoveAnimation(oldRope, width / 2, 200, 2));

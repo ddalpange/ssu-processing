@@ -10,7 +10,7 @@ public class Scene_329 extends BaseScene {
 
     loadBackground("66", drawManager);
 
-    var newRope = objectFactory.create("compressedRes/images/objects/rope_new.png");
+    var newRope = objectFactory.create("res/images/objects/rope_new.png");
     newRope.setPosition(400, 50);
     newRope.setScale(0.2, 0.2);
     drawManager.addDrawable(newRope);

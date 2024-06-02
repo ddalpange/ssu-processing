@@ -12,7 +12,7 @@ public class Scene_321 extends BaseScene {
 
     // 배경, 나무, 도끼 필요
     
-    // var rope = objectFactory.create("compressedRes/images/objects/rope_new.png");
+    // var rope = objectFactory.create("res/images/objects/rope_new.png");
     // rope.setPosition(100, 50);
     // rope.setScale(0.03, 0.03);
     // drawManager.addDrawable(rope);
