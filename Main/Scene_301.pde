@@ -37,8 +37,9 @@ public class Scene_301 extends BaseScene {
 
   private float animationDuration = 1f;
   private  float animationDelay = 1.05f;
-  private float curTime = 0;
   private float targetTime = 0;
+
+  private TimeTracker timeTracker = new TimeTracker();
 
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
@@ -85,6 +86,7 @@ public class Scene_301 extends BaseScene {
 
     uiManager.drawing();
     animationManager.update();
+    timeTracker.update();
     popStyle();
   }
   
@@ -94,13 +96,11 @@ public class Scene_301 extends BaseScene {
 
   private void UpdateMove()
   {
-    curTime += deltaTime;
-
-    if(curTime >= targetTime)
+    if(timeTracker.IfTimeOver(targetTime))
     {
       animationDuration = random(0.3f,1.5f);
       animationDelay = animationDuration + 0.05f;
-      targetTime = curTime + animationDelay;
+      targetTime = timeTracker.GetCurrentTime() + animationDelay;
 
       var boyAnimation = new MoveAnimation(boy, random(400,1100), random(400,700), animationDuration, EaseType.OutCubic);
       var girlAnimation = new MoveAnimation(girl, random(400,1000), random(400,700), animationDuration, EaseType.OutCubic);
