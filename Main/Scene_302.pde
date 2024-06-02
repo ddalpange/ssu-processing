@@ -14,9 +14,10 @@ public class Scene_302 extends BaseScene {
   private ShapeObject tree;
   private ScaleAnimation treeScaleUpAnimation;
   private ScaleAnimation treeScaleDownAnimation;
-
-  private float curTime = 0;
   private int curCount = 0;
+
+  private TimeTracker timeTracker = new TimeTracker();
+
 
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
@@ -105,6 +106,7 @@ public class Scene_302 extends BaseScene {
     uiManager.drawing();
     animationManager.update();
     UpdateScale();
+    timeTracker.update();
     popStyle();
   }
   
@@ -141,9 +143,8 @@ public class Scene_302 extends BaseScene {
 
   public void UpdateScale()
   {
-    curTime += deltaTime;
 
-   if(curTime >= curCount * treeScaleDuration)
+   if(timeTracker.IfTimeOver(curCount * treeScaleDuration))
    {
     animationManager.clearAnimation();
     var isEven = curCount % 2 == 0;
