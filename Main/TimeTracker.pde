@@ -1,13 +1,7 @@
-public class TimeTracker
+public class TimeTracker // 사용법 : 변수로 만들고 setup과 update만 해당 씬의 구간에 잘 넣어주세요
 {
     private float curTime = 0;
     private float prevTime = 0;
-
-    public void setup()
-    {
-        curTime = 0;
-        prevTime = 0;
-    }
 
     public void update()
     {
@@ -23,5 +17,10 @@ public class TimeTracker
     public boolean IfTimeOver(float time)
     {
      return curTime >= time;
+    }
+
+    public float GetCurrentTime()
+    {
+        return curTime;
     }
 }
