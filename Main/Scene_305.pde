@@ -4,6 +4,15 @@ public class Scene_305 extends BaseScene {
 
   @Override
   public int getNextScene() { return 306; }
+
+  MoveAnimation runMoveAnimation;
+  ScaleAnimation runScaleAnimation;
+
+  private final float waitDuration = 1.5f;
+  private final float moveDuration = 1.5f;
+
+  private TimeTracker timeTracker = new TimeTracker();
+
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -29,6 +38,9 @@ public class Scene_305 extends BaseScene {
     tiger.setPosition(300, 600);
     tiger.setScale(0.5, 0.5);
     drawManager.addDrawable(tiger);
+
+    runMoveAnimation = new MoveAnimation(tiger,960,560,moveDuration, EaseType.InOutQuad);
+    runScaleAnimation = new ScaleAnimation(tiger, 0.25f, 0.25f, moveDuration);
     
     // // 나무 리소스 교체 필요
     // var bigTree = objectFactory.create(BackgroundType.무서운나무);
@@ -43,7 +55,9 @@ public class Scene_305 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
-    
+    animationManager.update();
+    timeTracker.update();
+    MoveUpdate();
     popStyle();
   }
   
@@ -52,5 +66,14 @@ public class Scene_305 extends BaseScene {
       return;
     }
     loadNextScene();
+  }
+
+  private void MoveUpdate()
+  {
+    if(timeTracker.IfTimeIs(waitDuration))
+    {
+     startAnimation(runMoveAnimation);
+     startAnimation(runScaleAnimation);
+    }
   }
 }
