@@ -71,7 +71,7 @@ public class DialogUi {
 
         String showingText = msg.substring(0, charIndex);
 
-        fontManager.drawText(showingText, x + DIALOG_PADDING, textAnchor, width/2 - DIALOG_PADDING*2, 1000, MSG_TEXT_SIZE);
+        fontManager.drawText(showingText, x + 150, this.y + 100, imageWidth - 300, imageHeight - 100, MSG_TEXT_SIZE);
         frameCounter++;
     }
 
@@ -111,6 +111,7 @@ public class DialogUi {
         stopPlayingVoice();
 
         if (this.queue.size() > 0) {
+            this.resetTextAnimation();
             this.current = this.queue.poll();
             if (this.current.voicePath != null) {
                 lastPlayedSoundFile = soundManager.playOnce(this.current.voicePath);
@@ -121,10 +122,14 @@ public class DialogUi {
         return false;
     }
 
-    public void push(String msg, String teller) {
+    void resetTextAnimation () {
         this.frameCounter = 0;
         this.charIndex = 0;
-        this.queue.add(new DialogContent("0", msg, teller));
+    }
+
+    public void push(String msg, String teller) {
+        this.resetTextAnimation();
+        this.queue.add(new DialogContent("0", msg, teller, null));
     }
 
     public String getCurrentId() {
