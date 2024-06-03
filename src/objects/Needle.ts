@@ -27,11 +27,11 @@ export class Needle extends Drawable {
     p.fill("#ffffff");
     p.ellipse(abstractX + 258, abstractY + 71, 21, 20);
 
-    p.rotate(radians(-26));
+    p.rotate(p.radians(-26));
     p.fill("#ffffff");
     p.ellipse(abstractX + 126, abstractY + 193, 96, 8);
 
-    p.rotate(radians(0));
+    p.rotate(p.radians(0));
     p.fill("#ffffff");
     p.ellipse(abstractX + 66, abstractY + 193, 10, 6);
     p.pop(); // Restore the transformation
