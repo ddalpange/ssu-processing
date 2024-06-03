@@ -9,11 +9,18 @@ public class Scene_304 extends BaseScene {
     private MoveAnimation outMoveAnimation;
     private ScaleAnimation outScaleUpAnimation;
     private final float outDuration = 0.7f;
-    private float waitDuration = 5f;
+    private final float waitDuration = 2.5f;
+    private final float jumpHeight = 20;
+    private final float jumpDuration = 1f;
+    private final int divideValue = 5;
+    private final float verticalMoveSize = 10;
+
     private TimeTracker timeTracker = new TimeTracker();
 
     private float waitStartTime = 0;
     private int curCount = 0;
+    private float jumpStartTime = 0;
+    private boolean ableToJump = false;
 
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
@@ -53,42 +60,38 @@ public class Scene_304 extends BaseScene {
         startAnimation(outMoveAnimation);
         startAnimation(outScaleUpAnimation);
       }
+
+      if(timeTracker.IfTimeIs(waitDuration + outDuration))
+      {
+        jumpStartTime = timeTracker.GetCurrentTime();
+        ableToJump = true;
+      }
     
-    //if(waitStartTime) 점프뛰는 연출 만들고 싶은데 ㅁ머리가 안돌아간다
+    //if(waitStartTime) 점프뛰는 연출 만들고 싶은데 머리가 안돌아간다
     //jumpTargetTime가 매 업데이트가 아니라 진입하는 직후 딱 한번만 setting 되어야할거같음
-    Jump(10, 0.2f);
+    if(ableToJump)
+      Jump(jumpHeight, jumpDuration);
   }
 
   public void Jump(float height, float duration)
   {
-      float jumpTargetTime = timeTracker.GetCurrentTime() + duration/3 * curCount;
-      if(timeTracker.IfTimeOver(jumpTargetTime))
-      {
-        if(curCount % 3 == 0)
-        {
-          startAnimation(new MoveAnimation(tiger, tiger.getX() - height, duration/3))
-          
-        }
-        if(curCount % 3 == 1)
-        {
-          startAnimation(new MoveAnimation(tiger, tiger.getX() + height, duration/3))
-        }
+      float jumpTargetTime = duration/divideValue * curCount + jumpStartTime;
 
-        if(curCount % 3 == 2) // 그냥 대기용
-        {
-
-        }
-        curCount++;
-      }
+      //좌우로 움직임
+      tiger.setPosition(720 + (curCount/5 % 2 == 0 ? -verticalMoveSize : verticalMoveSize), tiger.getY());
 
       if(timeTracker.IfTimeOver(jumpTargetTime))
       {
-        startAnimation(new MoveAnimation(tiger, tiger.getX() + height, duration/2))
-        curCount++;
-      }
+        if(curCount % divideValue == 0)
+        {
+          startAnimation(new MoveAnimation(tiger, tiger.getX(), tiger.getY() - height, duration/divideValue));
+        }
+        if(curCount % divideValue == 1)
+        {
+          startAnimation(new MoveAnimation(tiger, tiger.getX(),tiger.getY() + height, duration/divideValue));
+        }
 
-      if(timeTracker.IfTimeOver(jumpTargetTime))
-      {
+
         curCount++;
       }
   }
