@@ -15,6 +15,8 @@ public class Scene_304 extends BaseScene {
     private final int divideValue = 5;
     private final float verticalMoveSize = 10;
 
+    private ShapeObject textBubble; // 화난거 강조
+
     private TimeTracker timeTracker = new TimeTracker();
 
     private float waitStartTime = 0;
@@ -38,6 +40,10 @@ public class Scene_304 extends BaseScene {
 
     outMoveAnimation = new MoveAnimation(tiger, 720, 560, outDuration, EaseType.InOutCirc);
     outScaleUpAnimation = new ScaleAnimation(tiger, 0.4f, 0.4f, outDuration);
+
+    textBubble = objectFactory.create("res/images/ui/question-mark.png");
+    textBubble.setPosition(0, 0);// 차피 아래에서 건드리니까 여기는 대충 넣어도 됨
+    textBubble.setScale(0.2f, 0.2f);
   }
  
   public void draw() {
@@ -46,9 +52,9 @@ public class Scene_304 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     animationManager.update();
-    uiManager.drawing();
     timeTracker.update();
     MoveUpdate();
+    uiManager.drawing();
     popStyle();
   }
 
@@ -90,9 +96,14 @@ public class Scene_304 extends BaseScene {
           startAnimation(new MoveAnimation(tiger, tiger.getX(),tiger.getY() + height, duration/divideValue));
         }
 
+        if(curCount%3 == 0) //포지션을 가끔씩 바꾸기 위함
+          textBubble.setPosition(random(500,900), random(150,500));
 
         curCount++;
       }
+
+      //여기에서부터 textBubble 추가함
+      textBubble.drawImage();
   }
   
   public void mousePressed() {
