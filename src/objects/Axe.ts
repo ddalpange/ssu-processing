@@ -1,10 +1,7 @@
 import { Drawable } from "../interfaces/Drawable";
 
 export class Axe extends Drawable {
-  constructor(
-    private x: number,
-    private y: number
-  ) {
+  constructor(x: number, y: number) {
     super(x, y, 100, 100);
   }
 
