@@ -12,12 +12,12 @@ public class Scene_310 extends BaseScene {
 
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.pray);
-    boy.setPosition(400, 500);
+    boy.setPosition(480, 330);
     boy.setScale(0.7, 0.7);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.pray);
-    girl.setPosition(600, 500);
+    girl.setPosition(720, 350);
     girl.setScale(0.7, 0.7);
     drawManager.addDrawable(girl);
 
