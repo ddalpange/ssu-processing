@@ -1,5 +1,6 @@
 public class HPBar extends Drawable {
-  public float hp = 10;
+  public int hp = 0;
+  public int maxHp = 10;
   private float borderWith = 4;
   public HPBar(float x, float y) {
     super(x, y, 300, 100);
@@ -33,7 +34,7 @@ public class HPBar extends Drawable {
     rotate(radians(zAngle));
     // stoke가 inside, outisde 반반으로 먹음. 
     float buffer = borderWith / 2;
-    rect(buffer, buffer, w * hp / 100 - buffer, h - buffer);
+    rect(buffer, buffer, w * (float)hp / maxHp - buffer, h - buffer);
     popMatrix();
     popStyle();
 

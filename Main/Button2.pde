@@ -1,5 +1,6 @@
 public class Button2 extends ShapeObject {
   public String text;
+  public PVector textOffset;
   public int fontSize = 24;
   public Button2(PImage image, float x, float y) {
     super(image);
@@ -24,7 +25,11 @@ public class Button2 extends ShapeObject {
 
     if (text != null) {
       float textX = x;
+      if (textOffset != null)
+        textX += textOffset.x;
       float textY = y;
+      if (textOffset != null)
+        textY += textOffset.y;
       textAlign(CENTER, CENTER);
       fontManager.drawText(text, (int)textX, (int)textY, fontSize);
     }

@@ -1,6 +1,7 @@
 public class ShapeObject extends Drawable {
   protected PShape shape;
   protected PImage image;
+  public PVector anchor;
 
   public ShapeObject(PShape shape) {
     super(0, 0, shape.width, shape.height);
@@ -38,6 +39,9 @@ public class ShapeObject extends Drawable {
     pushMatrix();
     
     imageMode(CENTER);
+    if (anchor != null) {
+      translate(anchor.x, anchor.y);
+    }
     rotate(radians(zAngle));
 
     if (scale.x < 0) {
