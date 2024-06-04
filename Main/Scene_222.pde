@@ -28,9 +28,9 @@ public class Scene_222 extends BaseScene {
   private final int scaleChangeTime = 1;
   private final int maxWaitCount = 6; // 호랑이 scale 변경은 여기까지만
 
-  private float curTime = 0;
-  private float prevTime = 0;
   private int curWaitCount = 1;
+
+  private TimeTracker timeTracker = new TimeTracker();
 
   private void SetUpObject()
   {
@@ -70,16 +70,15 @@ public class Scene_222 extends BaseScene {
     
     drawManager.drawing();
     DrawObject();
-    animationManager.update(); // 중요함
-
     uiManager.drawing();
-    
+    animationManager.update(); // 중요함
+    timeTracker.update();
     popStyle();
   }
 
   void DrawObject()
   {
-      boolean ableToMove = Util.InRange(waitTime, prevTime, curTime); // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
+      boolean ableToMove = timeTracker.IfTimeIs(waitTime);; // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
 
       if(ableToMove)
         startAnimation(tigerMoveAnimation.reset());
@@ -87,7 +86,7 @@ public class Scene_222 extends BaseScene {
       if(maxWaitCount >= curWaitCount)    
       { 
         int targetTime = curWaitCount * scaleChangeTime;
-      boolean needScaleChange = curTime >= targetTime;
+      boolean needScaleChange = timeTracker.IfTimeOver(targetTime);
 
       boolean needToScaleUp = needScaleChange && targetTime % 2 != 0;
       boolean needToScaleDown = needScaleChange && targetTime % 2 == 0;
@@ -106,9 +105,6 @@ public class Scene_222 extends BaseScene {
           curWaitCount++;
         }
       }
-
-      prevTime = curTime;
-      curTime += deltaTime;
   }
   
   public void mousePressed() {
