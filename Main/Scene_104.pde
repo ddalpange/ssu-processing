@@ -120,7 +120,7 @@ public class Scene_104 extends BaseScene {
     pushMatrix();
   
     // 우하단을 회전 축으로 이동
-    translate(500 + hammerImage.width, 50 + hammerImage.height);
+    translate(500 + hammerImage.width, 50 + hammerImage.height - 75);
     rotate(radians(hammerZAngle));
     
     // 회전 축을 기준으로 이미지를 그리기 위해 원점에서 이동
