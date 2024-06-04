@@ -38,7 +38,7 @@ public class ShapeObject extends Drawable {
     pushMatrix();
     
     imageMode(CENTER);
-    rotate(zAngle);
+    rotate(radians(zAngle));
 
     if (scale.x < 0) {
       pushMatrix();
