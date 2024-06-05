@@ -10,16 +10,15 @@ public class Scene_309 extends BaseScene {
 
     loadBackground("46", drawManager);
 
-
-    // 나무 필요
-
-    // 땅 필요
-
-    // 구름 필요
+    var axe = objectFactory.create("res/images/object/axe.png");
+    axe.setPosition(750, 100);
+    axe.setScale(0.6, 0.6);
+    //axe.d_rotate(30);
+    drawManager.addDrawable(axe);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb);
-    tiger.setPosition(500, 500);
-    tiger.setScale(0.3, 0.3);
+    tiger.setPosition(650, 330);
+    tiger.setScale(0.35, 0.36);
     drawManager.addDrawable(tiger);
   }
  
