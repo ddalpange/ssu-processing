@@ -12,8 +12,9 @@ public class Scene_210 extends BaseScene {
 
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
-    tiger.setPosition(width / 2, 500);
-    tiger.setScale(-0.6f, 0.6f);
+    // tiger.setPosition(width / 2, 500);
+    tiger.setPosition(width / 2 + 200, 390);
+    tiger.setScale(-0.5f, 0.5f);
     drawManager.addDrawable(tiger);
 
     drawManager.addDrawable(new Rock1(300f, 300f, #c0c0c0));

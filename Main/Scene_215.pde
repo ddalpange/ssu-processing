@@ -16,10 +16,10 @@ public class Scene_215 extends BaseScene {
     drawManager.addDrawable(tiger);
 
 
-    var 우물 = objectFactory.create("res/images/object/well.png");
-    우물.setPosition(200, 500);
-    우물.setScale(0.4, 0.4);
-    drawManager.addDrawable(우물);
+    // var 우물 = objectFactory.create("res/images/object/well.png");
+    // 우물.setPosition(200, 500);
+    // 우물.setScale(0.4, 0.4);
+    // drawManager.addDrawable(우물);
 
     // 배경 나중에
 

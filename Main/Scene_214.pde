@@ -8,7 +8,7 @@ public class Scene_214 extends BaseScene {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
 
-    loadBackground("29", drawManager);
+    loadBackground("41", drawManager);
 
     // Drawable house = objectFactory.create("res/images/object/hut_front.png");
     // house.setPosition(width / 2 + 200, height / 2 - 40);
