@@ -109,6 +109,11 @@ public class DialogUi {
     // true : 대화 표시 성공, false : 대화 표시 실패
     public boolean next() {
 
+        if (charIndex < this.current.text.length()) {
+            charIndex = this.current.text.length();
+            return true;
+        }
+
         stopPlayingVoice();
 
         if (this.queue.size() > 0) {
