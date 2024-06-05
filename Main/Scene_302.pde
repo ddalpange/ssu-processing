@@ -33,61 +33,16 @@ public class Scene_302 extends BaseScene {
     tree.setScale(treeDefaultScale, treeDefaultScale);
     drawManager.addDrawable(tree);
 
-    // int numStars = 30; // 별의 수
-    // float[] starX = new float[numStars];
-    // float[] starY = new float[numStars];
-    // float[] starBrightness = new float[numStars];
-    // float[] starBrightnessChange = new float[numStars];
-    // color[] starColor = new color[numStars];
-
-    // for (int i = 0; i < numStars; i++) {
-    //   starX[i] = random(width);
-    //   starY[i] = random(height / 2.5); // 상단 1/2.5 영역에만 별을 배치
-    //   starBrightness[i] = random(100, 255);
-    //   starBrightnessChange[i] = random(-10, 100); // 밝기 변화량 설정
-    // }
-
-    // Drawable starlight = new Starlight(numStars, starX, starY, starBrightness, starBrightnessChange, starColor);
-    // drawManager.addDrawable(starlight);
-    
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.point);
     boy.setPosition(300, 600);
-    boy.setScale(0.4, 0.4);
+    boy.setScale(0.6, 0.6);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
     girl.setPosition(160, 620);
-    girl.setScale(0.4, 0.4);
+    girl.setScale(0.6, 0.6);
     drawManager.addDrawable(girl);
 
-    // 구름 필요
-
-    // 나무 리소스 교체 필요
-
-    // var tree1 = objectFactory.create(BackgroundType.무서운나무);
-    // tree1.setPosition(200, 300);
-    // tree1.setScale(0.02, 0.02);
-    // drawManager.addDrawable(tree1);
-
-    // var tree2 = objectFactory.create(BackgroundType.무서운나무);
-    // tree2.setPosition(300, 300);
-    // tree2.setScale(0.02, 0.02);
-    // drawManager.addDrawable(tree2);
-
-    // var tree3 = objectFactory.create(BackgroundType.무서운나무);
-    // tree3.setPosition(400, 300);
-    // tree3.setScale(0.02, 0.02);
-    // drawManager.addDrawable(tree3);
-
-    // var tree4 = objectFactory.create(BackgroundType.무서운나무);
-    // tree4.setPosition(500, 300);
-    // tree4.setScale(0.02, 0.02);
-    // drawManager.addDrawable(tree4);
-
-    // var bigTree = objectFactory.create(BackgroundType.무서운나무);
-    // bigTree.setPosition(1200, 300);
-    // bigTree.setScale(0.05, 0.05);
-    // drawManager.addDrawable(bigTree);
 
     var upScale = treeDefaultScale + 0.0015f;
     treeScaleUpAnimation = new ScaleAnimation(tree, upScale,upScale,treeScaleDuration);

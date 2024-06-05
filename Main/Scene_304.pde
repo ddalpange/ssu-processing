@@ -30,9 +30,6 @@ public class Scene_304 extends BaseScene {
 
     loadBackground("41", drawManager);
 
-
-    setup_Scene_301_BG(drawManager);
-
     tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.front);
     tiger.setPosition(300, 200);
     tiger.setScale(0.15f, 0.15f);

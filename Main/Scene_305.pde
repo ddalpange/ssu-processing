@@ -25,12 +25,12 @@ public class Scene_305 extends BaseScene {
     
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.seat);
-    boy.setPosition(800, 200);
+    boy.setPosition(500, 140);
     boy.setScale(0.3, 0.3);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.seat);
-    girl.setPosition(880, 200);
+    girl.setPosition(615, 160);
     girl.setScale(0.3, 0.3);
     drawManager.addDrawable(girl);
 

@@ -14,8 +14,6 @@ public class Scene_318 extends BaseScene {
 
     loadBackground("55", drawManager);
 
-    setup_Scene_301_BG(drawManager);
-
     retryButton = new Button2(loadImage("res/images/UI/3button.png"), 1050, 400);
     retryButton.text = "Retry?";
     retryButton.setScale(2, 2);
