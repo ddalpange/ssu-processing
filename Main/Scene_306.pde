@@ -7,7 +7,7 @@ public class Scene_306 extends BaseScene {
 
   private ShapeObject speechBubble;
   private final int originXPos = 300;
-  private final int originYPos = 100;
+  private final int originYPos = 200;
   private final int maxSize = 200;
   private final float lerpValue = 0.01f;
 
@@ -25,23 +25,18 @@ public class Scene_306 extends BaseScene {
 
     loadBackground("43", drawManager);
 
-    var speechBubble = objectFactory.create("res/images/object/speech-bubble_3.png");
-    speechBubble.setPosition(300, 100);
-    speechBubble.setScale(0.7, 0.7);
+    speechBubble = objectFactory.create("res/images/UI/speech_bubble_think_２.png");
+    speechBubble.setPosition(originXPos, originYPos);
+    speechBubble.setScale(0.5, 0.5);
     drawManager.addDrawable(speechBubble);
 
     var tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.back);
-    tiger.setPosition(800, 800);
+    tiger.setPosition(800, 600);
     tiger.setScale(0.7, 0.7);
     drawManager.addDrawable(tiger);
 
     curXPos = originXPos;
     curYPos = originYPos;
-
-    speechBubble = objectFactory.create("res/images/ui/speech_bubble_think_1.png");
-    speechBubble.setPosition(curXPos, curYPos);
-    speechBubble.setScale(0.7, 0.7);
-    drawManager.addDrawable(speechBubble);
   }
  
   public void draw() {
@@ -68,6 +63,9 @@ public class Scene_306 extends BaseScene {
     speechBubble.setPosition(targetXPos, targetYPos);
     curXPos = targetXPos;
     curYPos = targetYPos;
+
+    fontManager.drawText("Is there a way to climb the tree?",
+    (int)targetXPos - 230, (int)targetYPos - 40, 30);
 
     curCount++;
   }
