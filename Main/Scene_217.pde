@@ -4,6 +4,10 @@ public class Scene_217 extends BaseScene {
 
   @Override
   public int getNextScene() { return -1; }
+
+  Button2 retryButton;
+  Button2 creditButton;
+
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -24,6 +28,16 @@ public class Scene_217 extends BaseScene {
     boy.setPosition(width / 2, 560);
     boy.setScale(0.6f, 0.6f);
     drawManager.addDrawable(boy);
+
+    retryButton = new Button2(loadImage("res/images/UI/3button.png"), 1080, 100);
+    retryButton.text = "Want to go back?";
+    retryButton.setScale(2, 2);
+    drawManager.addDrawable(retryButton);
+
+    creditButton = new Button2(loadImage("res/images/UI/3button.png"), 1080, 200);
+    creditButton.text = "Credits";
+    creditButton.setScale(2, 2);
+    drawManager.addDrawable(creditButton);
   }
  
   public void draw() {
@@ -36,6 +50,11 @@ public class Scene_217 extends BaseScene {
   }
   
   public void mousePressed() {
-    sceneManager.loadScene(new Scene_Ending());
+    if (retryButton.isClicked()) {
+      sceneManager.loadScene(new Scene_204());
+    }
+    if (creditButton.isClicked()) {
+      sceneManager.loadScene(new Scene_Ending());
+    }
   }
 }
