@@ -9,18 +9,18 @@ public class Scene_222 extends BaseScene {
   private PVector boyPos = new PVector(400,400);
   private PVector girlPos = new PVector(550,400);
 
-  private ShapeObject tiger;
+  //private ShapeObject tiger;
   private ShapeObject boy;
   private ShapeObject girl;
 
-  private MoveAnimation tigerMoveAnimation;
-  private ScaleAnimation tigerScaleUpAnimation;
-  private ScaleAnimation tigerScaleDownAnimation;
+  // private MoveAnimation tigerMoveAnimation;
+  // private ScaleAnimation tigerScaleUpAnimation;
+  // private ScaleAnimation tigerScaleDownAnimation;
   private MoveAnimation boyMoveAnimation;
   private MoveAnimation girlMoveAnimation;
 
   private final float imageBuffer = 300;
-  private final float moveDuration = 8f;
+  private final float moveDuration = 10.5f;
   private final float tigerMoveDuration = 3f;
   private final float tigerScaleDuration = 0.7f;
 
@@ -34,21 +34,21 @@ public class Scene_222 extends BaseScene {
 
   private void SetUpObject()
   {
-   tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.angry);
-   tiger.setPosition(tigerPos.x,tigerPos.y);
-   tiger.setScale(0.5f,0.5f);
-    tigerMoveAnimation = new MoveAnimation(tiger, width + imageBuffer, 400, tigerMoveDuration, EaseType.InBack);
-    tigerScaleUpAnimation = new ScaleAnimation(tiger, 0.52f,0.52f,tigerScaleDuration);
-    tigerScaleDownAnimation = new ScaleAnimation(tiger, 0.5f,0.5f,tigerScaleDuration);
-        drawManager.addDrawable(tiger);
+  //  tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.angry);
+  //  tiger.setPosition(tigerPos.x,tigerPos.y);
+  //  tiger.setScale(0.5f,0.5f);
+  //   tigerMoveAnimation = new MoveAnimation(tiger, width + imageBuffer, 400, tigerMoveDuration, EaseType.InBack);
+  //   tigerScaleUpAnimation = new ScaleAnimation(tiger, 0.52f,0.52f,tigerScaleDuration);
+  //   tigerScaleDownAnimation = new ScaleAnimation(tiger, 0.5f,0.5f,tigerScaleDuration);
+  //       drawManager.addDrawable(tiger);
 
-    boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
+    boy = objectFactory.create(CharacterType.boy, CharacterPoseType.left);
    boy.setPosition(boyPos.x,boyPos.y);
    boy.setScale(0.5f,0.5f);
     boyMoveAnimation = new MoveAnimation(boy, width + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
         drawManager.addDrawable(boy);
    
-    girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope); 
+    girl = objectFactory.create(CharacterType.girl, CharacterPoseType.left); 
    girl.setPosition(girlPos.x,girlPos.y);
    girl.setScale(0.5f,0.5f);
     girlMoveAnimation = new MoveAnimation(girl, width + 150 + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
@@ -61,7 +61,7 @@ public class Scene_222 extends BaseScene {
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
-    loadBackground("37", drawManager);
+    loadBackground("38", drawManager);
     SetUpObject();
   }
  
@@ -80,8 +80,8 @@ public class Scene_222 extends BaseScene {
   {
       boolean ableToMove = timeTracker.IfTimeIs(waitTime);; // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
 
-      if(ableToMove)
-        startAnimation(tigerMoveAnimation.reset());
+      // if(ableToMove)
+      //   startAnimation(tigerMoveAnimation.reset());
 
       if(maxWaitCount >= curWaitCount)    
       { 
@@ -93,15 +93,15 @@ public class Scene_222 extends BaseScene {
 
       if(needToScaleUp)
       {
-          stopAnimation(tigerScaleDownAnimation);
-          startAnimation(tigerScaleUpAnimation.reset());
+          // stopAnimation(tigerScaleDownAnimation);
+          // startAnimation(tigerScaleUpAnimation.reset());
           curWaitCount++;
       }
 
         if(needToScaleDown)
         {
-          stopAnimation(tigerScaleUpAnimation);
-          startAnimation(tigerScaleDownAnimation.reset());
+          // stopAnimation(tigerScaleUpAnimation);
+          // startAnimation(tigerScaleDownAnimation.reset());
           curWaitCount++;
         }
       }
