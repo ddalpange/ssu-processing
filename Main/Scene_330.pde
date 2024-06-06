@@ -18,12 +18,12 @@ public class Scene_330 extends BaseScene {
 
     var sun = objectFactory.create("res/images/object/sun.png");
     sun.setPosition(width/4, 250);
-    sun.setScale(0.16f, 0.16f);
+    sun.setScale(0.55f, 0.55f);
     drawManager.addDrawable(sun);
 
     var moon = objectFactory.create("res/images/object/moon.png");
     moon.setPosition(width/4 * 3, 250);
-    moon.setScale(-0.16f, 0.16f);
+    moon.setScale(-0.5f, 0.5f);
     drawManager.addDrawable(moon);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.seat);

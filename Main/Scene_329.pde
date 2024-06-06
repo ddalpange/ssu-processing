@@ -10,20 +10,25 @@ public class Scene_329 extends BaseScene {
 
     loadBackground("66", drawManager);
 
-    var newRope = objectFactory.create("res/images/object/rope_strong.png");
-    newRope.setPosition(width/2, 300);
-    newRope.setScale(0.13, 0.13);
-    drawManager.addDrawable(newRope);
+    var goldRope = objectFactory.create("res/images/character/gold rope handing.png");
+    goldRope.setPosition(width/2, 250);
+    goldRope.setScale(0.25, 0.25);
+    drawManager.addDrawable(goldRope);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    boy.setPosition(570, 200);
-    boy.setScale(0.4, 0.4);
-    drawManager.addDrawable(boy);
+    // var newRope = objectFactory.create("res/images/object/rope_strong.png");
+    // newRope.setPosition(width/2, 300);
+    // newRope.setScale(0.13, 0.13);
+    // drawManager.addDrawable(newRope);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    girl.setPosition(700, 440);
-    girl.setScale(-0.4, 0.4);
-    drawManager.addDrawable(girl);
+    // var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
+    // boy.setPosition(570, 200);
+    // boy.setScale(0.4, 0.4);
+    // drawManager.addDrawable(boy);
+
+    // var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
+    // girl.setPosition(700, 440);
+    // girl.setScale(-0.4, 0.4);
+    // drawManager.addDrawable(girl);
 
     // 구름 필요
   }

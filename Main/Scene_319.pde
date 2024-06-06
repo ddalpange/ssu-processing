@@ -11,11 +11,10 @@ public class Scene_319 extends BaseScene {
 
     loadBackground("56", drawManager);
 
-
-    var oldRope = objectFactory.create("res/images/character/gold rope handing.png");
-    oldRope.setPosition(width / 2, -100);
-    oldRope.setScale(0.5, 0.5);
-    drawManager.addDrawable(oldRope);
+    var goldRope = objectFactory.create("res/images/character/gold rope handing.png");
+    goldRope.setPosition(width / 2, 0);
+    goldRope.setScale(0.35, 0.35);
+    drawManager.addDrawable(goldRope);
     // 리소스 교체 필요?
     // var oldRope = objectFactory.create("res/images/object/rope_strong.png");
     // oldRope.setPosition(width / 2, 300);

@@ -12,15 +12,15 @@ public class Scene_312 extends BaseScene {
 
     PVector ropeScale = new PVector(0.1, 0.1);
     var newRope = objectFactory.create("res/images/object/rope_strong.png");
-    newRope.setPosition(350, 000);
+    newRope.setPosition(350, 0);
     newRope.setScale(ropeScale.x, ropeScale.y);
     startAnimation(new MoveAnimation(newRope, 350, 200, 2));
     drawManager.addDrawable(newRope);
 
     var oldRope = objectFactory.create("res/images/object/rope_weak.png");
-    oldRope.setPosition(width - 350, 000);
+    oldRope.setPosition(width - 350, -100);
     oldRope.setScale(ropeScale.x, ropeScale.y);
-    startAnimation(new MoveAnimation(oldRope, width - 350, 200, 2));
+    startAnimation(new MoveAnimation(oldRope, width - 350, 250, 2));
     drawManager.addDrawable(oldRope);
 
     // 구름, 동앗줄 내려오는 효과

@@ -41,7 +41,7 @@ public class Scene_304 extends BaseScene {
 
     textBubble = objectFactory.create("res/images/ui/red question.png");
     textBubble.setPosition(0, 0);// 차피 아래에서 건드리니까 여기는 대충 넣어도 됨
-    textBubble.setScale(0.2f, 0.2f);
+    textBubble.setScale(0.8f, 0.8f);
   }
  
   public void draw() {

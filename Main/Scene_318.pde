@@ -16,7 +16,7 @@ public class Scene_318 extends BaseScene {
 
     retryButton = new Button2(loadImage("res/images/UI/button_1.png"), 1050, 400);
     retryButton.text = "Retry?";
-    retryButton.setScale(2, 2);
+    retryButton.setScale(1, 1);
     drawManager.addDrawable(retryButton);
 
     soundManager.playOnce("res/sound/effect/318_바람소리.mp3");

@@ -25,13 +25,13 @@ public class Scene_313 extends BaseScene {
 
     PVector ropeScale = new PVector(0.15, 0.15);
     newRope = objectFactory.create("res/images/object/rope_strong.png");
-    newRope.setPosition(250, 0);
+    newRope.setPosition(250, -50);
     newRope.setScale(ropeScale.x, ropeScale.y);
     startAnimation(new MoveAnimation(newRope, 350, 200, 2));
     drawManager.addDrawable(newRope);
 
     oldRope = objectFactory.create("res/images/object/rope_weak.png");
-    oldRope.setPosition(width - 250, 0);
+    oldRope.setPosition(width - 250, -100);
     oldRope.setScale(ropeScale.x, ropeScale.y);
     startAnimation(new MoveAnimation(oldRope, width - 350, 200, 2));
     drawManager.addDrawable(oldRope);

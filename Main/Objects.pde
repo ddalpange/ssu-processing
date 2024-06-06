@@ -20,6 +20,7 @@ public enum CharacterPoseType {
   climb_rope("climb_rope"),
   black("black"),
   fall("fall"),
+  fall_purple("fall_purple"),
   point("point"),
   pray("pray"),
   seat("seat"),

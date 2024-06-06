@@ -12,6 +12,7 @@ public class Scene_324 extends BaseScene {
     loadBackground("61", drawManager);
 
     PVector ropeScale = new PVector(0.2, 0.2);
+
     var oldRope = objectFactory.create("res/images/object/rope_weak.png");
     oldRope.setPosition(width / 2, -200);
     oldRope.setScale(ropeScale.x, ropeScale.y);
@@ -19,7 +20,7 @@ public class Scene_324 extends BaseScene {
     drawManager.addDrawable(oldRope);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb_rope);
-    tiger.setPosition(width / 2, 420);
+    tiger.setPosition(width / 2 + 10, 435);
     tiger.setScale(0.6, 0.6);
     drawManager.addDrawable(tiger);
 
