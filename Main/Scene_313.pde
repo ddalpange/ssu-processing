@@ -91,6 +91,7 @@ public class Scene_313 extends BaseScene {
   }
   
   public void mousePressed() {
+    uiManager.dialogUi.next();
     gameManager.update();
     //loadNextScene();
   }

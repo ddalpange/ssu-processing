@@ -90,10 +90,10 @@ public class SceneManager {
         currentScene = scene;
         fadeIn = false;
         fadeOut = false;
+        stopPlayingVoice();
         currentScene.setup();
         bgmManager.onSceneLoaded(currentScene);
         nextScene = null;
-        stopPlayingVoice();
         return;
     }
 
@@ -101,6 +101,5 @@ public class SceneManager {
     fadeIn = false;
     fadeOut = true;
     nextScene = scene;
-    println("Next scene: " + nextScene.getClass().getName());
   }
 }

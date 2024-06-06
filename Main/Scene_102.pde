@@ -61,7 +61,10 @@ public class Scene_102 extends BaseScene {
   }
   
   public void mousePressed() {
-    // 테스트로 fade 연출 없애봄
-    loadNextScene(false);
+    if (uiManager.dialogUi.next()) {
+      return;
+    }
+
+    loadNextScene();
   }
 }
