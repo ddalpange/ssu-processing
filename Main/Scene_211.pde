@@ -33,8 +33,10 @@ public class Scene_211 extends BaseScene {
     tiger.setPosition(width / 2 + 150, 300);
     tiger.setScale(-1f, 1f);
     drawManager.addDrawable(tiger);
-
-
+    
+    var candle = new Candle(width / 2 + 5, 142);
+    drawManager.addDrawable(candle);
+    
     var needle = new Needle(width / 2 + 50, 50);
     needle.setScale(0.2, 0.2); // scale이 안먹는듯?
     drawManager.addDrawable(needle);

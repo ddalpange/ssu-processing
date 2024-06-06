@@ -14,6 +14,9 @@ public class Scene_203 extends BaseScene {
 
     Scene_202_bg_setup(drawManager);
 
+    var candle = new Candle(width / 2 + 5, 142);
+    drawManager.addDrawable(candle);
+
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
     boy.setPosition(300, 600);
     boy.setScale(0.6f, 0.6f);

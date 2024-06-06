@@ -17,12 +17,15 @@ public class Scene_210 extends BaseScene {
     tiger.setScale(-0.5f, 0.5f);
     drawManager.addDrawable(tiger);
 
-    drawManager.addDrawable(new Rock1(300f, 300f, #c0c0c0));
-    drawManager.addDrawable(new Rock1(350f, 300f, #c0c0c0));
-    drawManager.addDrawable(new Rock1(400f, 300f, #c0c0c0));
-    drawManager.addDrawable(new Rock1(450f, 300f, #c0c0c0));
-    drawManager.addDrawable(new Rock1(500f, 300f, #c0c0c0));
-    drawManager.addDrawable(new Rock1(550f, 300f, #c0c0c0));
+    // drawManager.addDrawable(new Rock1(300f, 300f, #c0c0c0));
+    // drawManager.addDrawable(new Rock1(350f, 300f, #c0c0c0));
+    // drawManager.addDrawable(new Rock1(400f, 300f, #c0c0c0));
+    // drawManager.addDrawable(new Rock1(450f, 300f, #c0c0c0));
+    // drawManager.addDrawable(new Rock1(500f, 300f, #c0c0c0));
+    // drawManager.addDrawable(new Rock1(550f, 300f, #c0c0c0));
+
+    var candle = new Candle(width / 2 + 5, 142);
+    drawManager.addDrawable(candle);
 
     soundManager.playOnce("res/sound/effect/207.210.212_잠자는소리.mp3");
   }
