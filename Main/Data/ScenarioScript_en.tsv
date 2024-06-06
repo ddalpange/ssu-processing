@@ -1,124 +1,124 @@
-id	comment	character	yes	no	voice	scene
-102001	Once upon a time, mother and sibling who are poor, were living happily in the deep mountain 	NARR			102001	102
-103001	Their father passed away early, but the mother was taking responsibility of their family’s wealth by selling handmade rice cakes at the market which located on over several hills.	NARR			103001	103
-103002	Shall i start to make some rice cake??	MOM			103002	103
-103003	Rice cake making mini game	OHNUI			103003	103
-104001			105001	104001		104
-105001	Mother! the rice cake is so well made!	BOY			105001	105
-105002	I think it'll be so delicious!	GIRL			105002	105
-105003	Mother had a hard time to sell her rice cake at the market, but she got strength from seeing her daughter and son who get along well	NARR			105003	105
-106001	It was late at night as usual when the mother finished working at the market and returning to home with the leftover rice cake	NARR			106001	106
-106002	I think the forest is darker today	MOM			106002	106
-107001	It was very dark in the forest like before she was use to walk, but this time she hurried her steps. all of the sudden, on the behind tree, she began to see a black figure. Glowing eyes, sharp fangs. It was a giant tiger.	NARR	107002		107001	107
-107002	(tiger growling)	TIGER			107002	
-107003	It's a tiger!	MOM			107003	107
-108001	The tiger was drooling and looked at the mother who smells like delicious rice cake and said  	NARR			108001	108
-108002	I won't eat you if you give me a piece of rice cake	TIGER			108002	108
-109001	A mini game that gives you rice cake		110001			109
-110001	(mom screaming)	MOM			110001	
-110002	Mother gave all the rice cakes to the tiger, but he was still hungry, and eventually he ate the mother.	NARR			110002	110
-111001	Well, I'm still hungry.	TIGER			111001	111
-113001	Shall i go to her house?	TIGER			113001	113
-113002	The tiger who stole his mother's clothes to eat the sibling	NARR			113002	113
-114001	Dressed up like their mother and walked toward to the sibling’s house.	NARR			114001	114
-201001	While the sibling were playing with toys at home, sister smiled brightly at the sound of footsteps she heard outside.	NARR			201001	201
-201002	I think mom must have come back!	GIRL			201002	201
-201003	When the sister tried to open the door with joy, her brother, who felt different from usual, held her hand and pulled back	NARR			201003	201
-201004	Are you sure that you are our mother?	BOY			201004	201
-201005	At that moment, loud and husky voice came out from beyond the door.	NARR			201005	201
-201006	Guys, Mom, open the door.	TIGER			201006	201
-201007	The brother who thought the voice is strange asked to tiger				201007	
-201008	Then show me your hand through the doorstep.	BOY			201008	201
-202001	What they could see below the doorstep was fluffy fur and thick, jelly-like hands. It was obviously tiger's hands but he thought her hands had "swelled up from the hard work" and that belief came from the strong anticipation and desire to be reunited with his beloved mother as soon as possible, so he let go and opened the door with confidence	NARR			202001	202
-202002	Mom, you did a great job. I missed you!	BOY			202002	202
-203001	Then, there was a huge tiger in his mother's clothes standing in front of his eyes. 	NARR			203001	203
-203002	Roar!!	TIGER			203002	
-203003	When they saw a tiger drooling and trying to devour them, they began to tremble and looking around.	NARR			203003	
-204001	Brother!, I think that tiger wants us because he's hungry... Oh! I see the rice cake basket that mom prepared! Mom said there is a rice cake that the tiger especially likes... What was that?	GIRL			204001	204
-204002	[Picking rice cake for the tiger] You have to decide on the rice cake for the tiger. The outcome of the game depends on the rice cake you choose, and you can experience various endings.	NARR			204002	204
-204003	Option 1. Red bean rice cake: Rice cake full of traditional sweet red beans. Option 2. Mugwort rice cake: Rice cake with a bitter scent of mugwort.	NARR	205001	219001		204
-205001	Here...this is the rice cake that you like the most	OHNUI			205001	205
-205002	The sister carefully placed delicious rice cakes made by her mother in front of the tiger.	NARR			205002	205
-206001	The tiger was hungry, so as soon as he saw the rice cakes, he began to eat in hurry with joy.	NARR			206001	206
-206002	The tiger, who liked sweet red bean cakes, continued to eat them, becoming more and more greedy with the endless rice cakes. The tiger's stomach slowly became full.	NARR			206002	206
-207001	Time has passed... Finally, the tiger fell into a sweet slumber.	NARR			207001	207
-207002	Let’s Fill up the tiger's belly with stones to make him feel full!	NARR			207002	207
-208001	when they open sleeping tiger's belly, there were mother that they have been looking for, 	NARR			208001	208
-208002	Mom!!!	OHNUI			208002	208
-208003	The sibling and mother share the joyfulness of reunion briefly, but soon they were thinking how to handle with the tiger 	NARR			208003	208
-209001	Let’s Fill up the tiger's belly with stones to make him feel full!	BOY			209001	209
-210001	While the tiger was asleep, the sibling and mother walked around the house and collected the stones, and fill the tiger's big stomach with it	NARR			210001	210
-211001	My mother sewed the tiger's belly skillfully. After finishing everything, the sibling and mother quietly left the house, holding hands, and fled to the faraway place.	NARR			211001	211
-212001	The tiger, who was asleep deeply without realizing his stomach had been split, woke up a few hours after sibling and mother had left.	NARR			212001	212
-213001	Sighing...	TIGER			213001	213
-213002	Bcs i ate too much rice cake im so thirsty 	TIGER			213002	213
-214001	The tiger, who was Feeling something strange but full and thirsty at the same time, left the house, to search the well for quenching his thirst. 	NARR			214001	214
-215001	After wandering for a long time, the tiger found a well when he was so tired that he could hardly walk. He approached the well to quench his thirst.	NARR			215001	215
-215002	(gasping)	TIGER			215002	
-216001	The tiger leaned into the well in a hurry with joy. At that moment! The weight of the stones in his body pushed him forward and he lost his balance.	NARR			216001	216
-216002	OHOHOH..!!! AHHHHHHH!!	TIGER			216002	216
-216003	THE tiger fell into the well	NARR			216003	216
-216004	AHHHHH!! PLS Save....me...	TIGER			216004	216
-217001	There is a story that the sibling and the mother, who ran away while the tiger was asleep, are living happily in a new village and selling rice cakes.	NARR			217001	217
-217002	(hahaha giggling)	ALL			217002	
-218001	Here... It's your favorite rice cake!!	OHNUI			218001	218
-218002	The sibling carefully placed delicious rice cakes made by her mother in front of the tiger.	NARR			218002	219
-219001	The tiger was so hungry, as soon as he saw the rice cake, he started to devour it in hurry with joy	NARR			219001	220
-220001	Ewww What’s this awful taste?	TIGER			220001	221
-220002	He was a tiger who hated mugwort rice cake with a bitter scent of mugwort.	NARR			220002	221
-221001	(Roaring from furious tiger)	TIGER			221001	
-221002	Rather, the brother who saw a tiger who was more angry by eating mugwort rice cake	NARR			221001	222
-222001	Grabbed his sister's hand and ran out of the back door in a hurry.	NARR			222001	222
-222002	Ahhhhhhhh!!!	OHNUI			222002	222
-301001	After sibling fled through the back door, find a towering tree after looking around to see where to run.	NARR			301001	301
-302001	Sister, let's climb up the tree over there! The tiger's thick feet will not make it up there. 	BOY NARR			302001	302
-302002	So The sibling started running toward the tree.	NARR			302002	
-303001	When they arrived at the tree, they started climbing it to avoid being caught by the tiger. 	NARR			303001	
-303002	Sister, I don't think the tiger noticed yet, sister. Don't worry and go up safely.	BOY			303002	
-303003	A mini game that hits a certain number of space bars in a row within a limited time	NARR				303
-304001	Later, when the tiger realized that sibling had disappeared in the quiet room, the tiger came out from back door and found them on the tree	NARR			304001	304
-305001	Fortunately, sibling had already climbed to the top of the tree. the tiger ran to the tree desperately although it seemed never to be able to climb with his feet.	NARR			305001	
-305002	See sister, I was right! right? he can't climb a tree with his own feet.	BOY			305002	305
-306001	Is there any way?	TIGER			306001	306
-306002	At that time, the tiger saw the tools that are sesame oil and axe in front of the tiger's eyes.	NARR			306002	307
-308001	I need to use this to go up! What should I pick?	TIGER	301009	301008	308001	308
-309001	The tiger found the ax start to climbing up the tree by axing it.	NARR			309001	309
-309002	You guys don't move there! Did you guys think I couldn't climb the tree? I'll catch up soon!	TIGER			309002	
-310001	Oh no! The tiger is coming up! What? What should we do?	GIRL BOY			310001	310
-310002	What should we do?	BOY			310001	310
-310003	The sibling, who had no choice but to look at the tiger coming up, cried with the feeling of catching a straw and prayed by begging hands to the sky.	NARR			310002	311
-311001	God, tiger is trying to eat us, if you want us to be saved give us the new rope, but if you want us to be killed give us the rotten rope	OHNUI			311001	311
-312001	Then, the heaven, which recognized the pitifulness of the sibling, slowly lowered the new and rotten ropes	NARR			312001	312
-313001	What kind of rope should we choose?	OHNUI	301014	301013	313001	313
-314001	The sibling, who was thinking about which to grab between two rope that came down from the sky, grabbed one of rope	NARR			314001	314
-315001	Unfortunately, however, the rope that the sibling caught was a rotten rope.	NARR			315001	
-315002	Brother, why is this rope swaying so much? I'm so nervous.	GIRL			315001	315
-316001	The rotten rope that couldn't withstand the heavy force began to cut off.	NARR			316001	
-316002	brother -> sister Brother, the roping is cutting off!	BOY			316001	316
-317001	Brother, save me!	GIRL			317001	317
-317002	Eventually the rotten rope has cutted off, and the tiger can't do anything but just looking at the sibling	NARR			317002	318
-318001	After that it happend there was only a calm wind left in the village.	NARR			318001	
-319001	The sibling, who was thinking about which to grab between two rope that came down from the sky,	NARR			319001	319
-320001	Grabbed one of rope Then, the new rope began to rise to the sky.	NARR			320001	
-320002	Wow! we survived! we are going up into the sky! 	OHNUI			320002	320
-320003	What's that rope?	TIGER				
-321001	The tiger quickly climbed up the tree and said the same thing after seeing the sibling climb up to the sky in front of his eyes.	NARR			321001	321
-321002	If I shout the same thing, the heaven will drop me a new rope	TIGER			321002	
-322001	God, if you want us to be saved give us the new rope, but if you want us to be killed give us the rotten rope!	TIGER			322001	322
-323001	Then, thunderstorms came down from the sky with the rumbling sound Heaven, who was very angry at the tiger for trying to devour the sibling, gave only the rotten rope with the strong thunderstorms.	NARR			323001	323
-324001	The tiger didn't know that and grabbed the rotten rope.	NARR			324001	
-324002	Haha! see! THE heaven knows me!. Shall we go get the sibling?	TIGER			324002	324
-325001	When the tiger came up holding the rope, the sibling was surprised.	NARR			325001	325
-325002	Brother, look over there. tiger is following us up into the sky!	GIRL			325002	
-325003	Sibling, stop there! I'll never miss it this time!	TIGER			325003	
-326001	At that moment. the rope that tiger was holding, made craking sound and start to cutting off	NARR TIGER			326001	326
-326002	Huh? It wasn't a new rope? It can't be cut off!	TIGER			326002	
-327001	Ohhhhhhh, please save me!	TIGER			327001	
-327002	동생아, 호랑이가 잡고 있는 동아줄이 끊어지고 있어! 하늘님께서 썩은 동아줄을 내려 주신 모양이야. sister로 변경해야할 것 같아요 Brother, the rope that the tiger is holding is cutting off! It seems that heaven gave him the rotten rope.	BOY			327002	327
-328001	결국 호랑이가 잡고 있던 썩은 동아줄은 끊어져 버렸고, 호랑이는 수수밭으로 떨어져 수수를 붉게 물들이게 되었답니다. All of the sudden, the rotten rope that tiger was holding was starting to break. The tiger fell into the sorghum field and turned the sorghum red. - > 대사 변경되고 번역기 돌려봤어유 괜찮은 걸로 쓰세유 Eventually, the rotten rope that the tiger was holding broke, and the tiger fell into the sorghum field and turned the sorghum red.	NARR			328001	328
-329001	When the tiger fell, the sibling were relieved, and they continued to climb up the rope to the sky.	NARR BOY GIRL			329001	329
-329002	Brother, we really survived. I'm glad!	GIRL			329002	
-329003	I'm so glad too. But where are we going?	BOY			329002	
-330001	After reaching heaven, the rope finally stopped, and the sibling asked god how to return the favor. Then, god began to talk. Welcome, sibling. I have some mission to leave it up to you guys. Why don't you become the sun and moon of the sky and protect the sky? You, the younger become the sun and you, the older, become the moon. In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness so can make the world more brighter. And they lived happily together for a long time.	NARR 			330001	330
-330002	Welcome, sibling. I have some mission to leave it up to you guys. Why don't you become the sun and moon of the sky and protect the sky? You, the younger become the sun and you, the older, become the moon.	GOD			330001	330
-330003	In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness so can make the world more brighter. And they lived happily together for a long time.	NARR			330001	330
+id	comment	character	voice
+102001	Once upon a time, mother and sibling who are poor, were living happily in the deep mountain.	NARR	102001
+103001	Their father passed away early, but the mother was taking responsibility of their family’s wealth by selling handmade rice cakes at the market which located on over several hills.	NARR	103001
+103002	Shall i start to make some rice cake?	MOM	103002
+103003	[Rice cake making mini game]	OHNUI	103003
+104001			
+105001	Mother the rice cake is so well made!	BOY	105001
+105002	I think it'll be so delicious!	GIRL	105002
+105003	Mother had a hard time to sell her rice cake at the market but she got strength from seeing her daughter and son who get along well.	NARR	105003
+106001	It was late at night as usual when the mother finished working at the market and returning to home with the leftover rice cake.	NARR	106001
+106002	I think the forest is darker today.	MOM	106002
+107001	It was very dark in the forest like before she was use to walk but this time she hurried her steps.\nall of the sudden, on the behind tree she began to see a black figure. \nGlowing eyes, sharp fangs. It was a giant tiger.	NARR	107001
+107002	(Tiger growling)	TIGER	107002
+107003	It's a tiger!	MOM	107003
+108001	The tiger was drooling and looked at the mother who smells like delicious rice cake and said.	NARR	108001
+108002	I won't eat you if you give me a piece of rice cake!	TIGER	108002
+109001	[A mini game that gives you rice cake] \nThe tiger is threatening dreadfully! Please throw rice cake at the tiger!		
+110001	(Mom screaming)	MOM	110001
+110002	Mother gave all the rice cakes to the tiger but he was still hungry, and eventually he ate the mother.	NARR	110002
+111001	Well, I'm still hungry.	TIGER	111001
+113001	Shall i go to her house?	TIGER	113001
+113002	The tiger who stole his mother's clothes to eat the sibling.	NARR	113002
+114001	Dressed up like their mother and walked toward to the sibling’s house.	NARR	114001
+201001	While the sibling were playing with toys at home, sister smiled brightly at the sound of footsteps she heard outside.	NARR	201001
+201002	I think mom must have come back!	GIRL	201002
+201003	When the sister tried to open the door with joy, her brother who felt different from usual, held her hand and pulled back.	NARR	201003
+201004	Are you sure that you are our mother?	BOY	201004
+201005	At that moment, loud and husky voice came out from beyond the door.	NARR	201005
+201006	Guys, Mom. open the door.	TIGER	201006
+201007	The brother who thought the voice is strange asked to tiger.	NARR	201007
+201008	Then show me your hand through the doorstep.	BOY	201008
+202001	What they could see below the doorstep was fluffy fur and thick jelly-like hands. \nIt was obviously tiger's hands but \nhe thought her hands had "swelled up from the hard work" and that belief came from the strong anticipation and desire to be reunited with his beloved mother as soon as possible, so he let go and opened the door with confidence.	NARR	202001
+202002	Mom, you did a great job. I missed you!	BOY	202002
+203001	Then, there was a huge tiger in his mother's clothes standing in front of his eyes. 	NARR	203001
+203002	Roar!!	TIGER	203002
+203003	When they saw a tiger drooling and trying to devour them and they began to tremble and looking around.	NARR	203003
+204001	Brother, I think that tiger wants us because he's hungry... Oh! I see the rice cake basket that mom prepared, Mom said there is a rice cake that the tiger especially likes... What was that?	GIRL	204001
+204002	[Picking rice cake for the tiger mini game]\n You have to decide on the rice cake for the tiger. The outcome of the game depends on the rice cake you choose, and you can experience various endings.	NARR	204002
+204003	Option 1. Red bean rice cake: Rice cake full of traditional sweet red beans.\nOption 2. Mugwort rice cake: Rice cake with a bitter scent of mugwort.	NARR	
+205001	Here...this is the rice cake that you like the most !!!	OHNUI	205001
+205002	The sister carefully placed delicious rice cakes made by her mother in front of the tiger.	NARR	205002
+206001	The tiger was hungry, so as soon as he saw the rice cakes, he began to eat in hurry with joy.	NARR	206001
+206002	The tiger who liked sweet red bean cakes continuously eat them, becoming more and more greedy with the endless rice cakes. The tiger's stomach slowly became full.	NARR	206002
+207001	Time has passed... Finally, the tiger fell into a sweet slumber.	NARR	207001
+207002	Now when tiger's sleeping sound reverberates and fill the room quietly, it was the chance for sibling.	NARR	207002
+208001	When they open sleeping tiger's belly, there were mother that they have been looking for.	NARR	208001
+208002	Mom!!!	OHNUI	208002
+208003	The sibling and mother share the joyfulness of reunion briefly, but soon they were thinking how to handle with the tiger.	NARR	208003
+209001	Let’s Fill up the tiger's belly with stones to make him feel full!	BOY	209001
+210001	While the tiger was asleep, the sibling and mother walked around the house and collected the stones, and fill the tiger's big stomach with it.	NARR	210001
+211001	The mother sewed the tiger's belly skillfully. After finishing everything, the sibling and mother held hands and quietly left the house to the faraway place.	NARR	211001
+212001	The tiger who was asleep deeply without realizing his stomach had been split, woke up a few hours after sibling and mother had left.	NARR	212001
+213001	Sighing...	TIGER	213001
+213002	Bcs i ate too much rice cake im so thirsty! 	TIGER	213002
+214001	The tiger who was Feeling something strange but full and thirsty at the same time and left the house to search the well for quenching his thirst. 	NARR	214001
+215001	After wandering for a long time, the tiger found a well when he was so tired that he could hardly walk. He approached the well to quench his thirst.	NARR	215001
+215002	(Gasping)	TIGER	215002
+216001	The tiger leaned into the well in a hurry with joy. At that moment! The weight of the stones in his body pushed him forward and he lost his balance.	NARR	216001
+216002	OHOHOH..!!! AHHHHHHH~~AH	TIGER	216002
+216003	The tiger fell into the well.	NARR	216003
+216004	AHHHHH!! PLS Save....me...	TIGER	216004
+217001	There is a story that the sibling and the mother who ran away while the tiger was asleep, are living happily in a new village and selling rice cakes.	NARR	217001
+217002	(HAHAHA giggling)	ALL	217002
+218001	Here... It's your favorite rice cake!!!	OHNUI	218001
+218002	The sibling carefully placed delicious rice cakes made by her mother in front of the tiger.	NARR	218002
+219001	The tiger was so hungry, as soon as he saw the rice cake, he started to devour it in hurry with joy.	NARR	219001
+220001	Ewww!!! What’s this awful taste?!	TIGER	220001
+220002	He was a tiger who hated mugwort rice cake with a bitter scent of mugwort.	NARR	220002
+221001	(Roaring from furious tiger)	TIGER	221001
+221002	The brother who saw the tiger who was rather more angry by eating mugwort rice cake,	NARR	221001
+222001	Grabbed his sister's hand and ran out of the back door in a hurry.	NARR	222001
+222002	Ahhhhhhhh!!!	OHNUI	222002
+301001	After sibling fled through the back door, find a towering tree after looking around to see where to run.	NARR	301001
+302001	Sister, let's climb up the tree over there! The tiger's thick feet will not make it up there. 	BOY	302001
+302002	So the sibling started running toward the tree.	NARR	302002
+303001	When they arrived at the tree, they started climbing it to avoid being caught by the tiger. 	NARR	303001
+303002	Sister, I don't think the tiger noticed yet,\n don't worry and go up safely.	BOY	303002
+303003	[A mini game that hits a certain number of space bars in a row within a limited time]	NARR	
+304001	Later when the tiger realized that sibling had disappeared in the quiet room, the tiger came out from back door and found them on the tree.	NARR	304001
+305001	Fortunately sibling had already climbed to the top of the tree. the tiger ran to the tree desperately although it seemed never to be able to climb with his feet.	NARR	305001
+305002	See sister, I was right? a tiger can't climb a tree with his own feet.	BOY	305002
+306001	Is there any way?	TIGER	306001
+306002	At that time the tiger saw the tools that are sesame oil and axe in front of the tiger's eyes.	NARR	306002
+308001	I need to use this to go up! What should I pick?	TIGER	308001
+309001	The tiger found the ax start to climbing up the tree by axing it.	NARR	309001
+309002	You guys don't move there! Did you guys think I couldn't climb the tree? I'll catch up soon!	TIGER	309002
+310001	Brother, what should we do! The tiger is coming up! 	GIRL BOY	310001
+310002	What? What should we do?	BOY	310001
+310003	The sibling who had no choice but to look at the tiger coming up, cried with the feeling of catching a straw and prayed by begging hands to the sky.	NARR	310002
+311001	God, tiger is trying to eat us. if you want us to be saved give us the new rope, but if you want us to be killed give us the rotten rope.	OHNUI	311001
+312001	Then the heaven which recognized the pitifulness of the sibling, slowly lowered the new and rotten ropes.	NARR	312001
+313001	What kind of rope should we choose?	OHNUI	313001
+314001	The sibling who was thinking about which to grab between two rope that came down from the sky, grabbed one of rope.	NARR	314001
+315001	But unfortunately the rope that the sibling caught was a rotten rope.	NARR	315001
+315002	Brother, why is this rope swaying so much? I'm so nervous.	GIRL	315001
+316001	The rotten rope that couldn't withstand the heavy force began to cut off.	NARR	316001
+316002	Sister, the roping is cutting off!	BOY	316001
+317001	Brother, save me!	GIRL	317001
+317002	Eventually the rotten rope has cutted off, and the tiger can't do anything but just looking at the sibling falling down from the sky.	NARR	317002
+318001	After that it happend there was only a calm wind left in the village.	NARR	318001
+319001	The sibling who was thinking about which to grab between two rope that came down from the sky, Grabbed robust new rope.	NARR	319001
+320001	Then the new rope began to rise to the sky.	NARR	320001
+320002	Wow! we survived! we are going up into the sky! 	OHNUI	320002
+320003	What's that rope?	TIGER	
+321001	The tiger quickly climbed up the tree and said the same thing after seeing the sibling climb up to the sky in front of his eyes.	NARR	321001
+321002	If I shout the same thing, the heaven will drop me a new rope	TIGER	321002
+322001	God, if you want us to be saved give us the new rope, but if you want us to be killed give us the rotten rope!	TIGER	322001
+323001	Then, thunderstorms came down from the sky with the rumbling sound. \n the Heaven who was very angry at the tiger for try to devour the sibling, gave only the rotten rope with the strong thunderstorms.	NARR	323001
+324001	The tiger didn't know that and grabbed the rotten rope.	NARR	324001
+324002	Haha! See! THE heaven knows me. Shall we go get the sibling?	TIGER	324002
+325001	When the tiger was holding the rope and came up to them, they were surprised.	NARR	325001
+325002	Brother, look over there. tiger is following us up into the sky!	GIRL	325002
+325003	Sibling, stop there! I'll never miss it this time!	TIGER	325003
+326001	At that moment. the rope that tiger was holding, made craking sound and start to cutting off.	NARR TIGER	326001
+326002	Huh? It wasn't a new rope? It can't be cut off!	TIGER	326002
+327001	Ahhhhhhh, please save me!	TIGER	327001
+327002	Sister, the rope that the tiger is holding is cutting off! It seems that heaven gave him the rotten rope.	NARR	328001
+328001	Eventually, the rotten rope that the tiger was holding broke, and the tiger fell into the sorghum field and turned the sorghum red.	NARR	
+329001	When the tiger fell, the sibling were relieved, and they continued to climb up the rope to the sky.	NARR BOY GIRL	329001
+329002	Brother, we survived. I'm glad!	GIRL	329002
+329003	I'm so glad too. But where are we going?	BOY	329002
+330001	After reaching heaven, the rope finally stopped, and the sibling asked god how to return the favor. Then, god began to talk.	NARR 	330001
+330002	Welcome, sibling. I have some mission to leave it up to you guys. Why don't you become the sun and moon of the sky and protect the sky? You, the younger become the sun and you, the older become the moon.	GOD	330001
+330003	In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness, so can make the world more brighter. \nand they lived happily together for a long time.	NARR	330001
