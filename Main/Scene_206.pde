@@ -11,13 +11,13 @@ public class Scene_206 extends BaseScene {
     loadBackground("20", drawManager);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.ricecake_02);
-    tiger.setPosition(width / 2, height);
-    tiger.setScale(1, 1);
+    tiger.setPosition(width / 2, height - 160);
+    tiger.setScale(0.8, 0.8);
     drawManager.addDrawable(tiger);
 
     var riceCake = objectFactory.create("res/images/object/ricecake_02_02.png");
-    riceCake.setPosition(width / 2, height - 120);
-    riceCake.setScale(2f, 2f);
+    riceCake.setPosition(width / 2, height - 255);
+    riceCake.setScale(1.5f, 1.5f);
     drawManager.addDrawable(riceCake);
 
     soundManager.playOnce("res/sound/effect/206_먹는소리.mp3");
