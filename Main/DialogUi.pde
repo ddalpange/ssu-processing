@@ -71,7 +71,7 @@ public class DialogUi {
 
         String showingText = msg.substring(0, charIndex);
 
-        fontManager.drawText(showingText, x + 150, this.y + 100, imageWidth - 300, imageHeight - 100, MSG_TEXT_SIZE);
+        fontManager.drawText(showingText, x + 130, this.y + 80, imageWidth - 250, imageHeight - 80, MSG_TEXT_SIZE);
         frameElapsed += deltaTime;
     }
 
