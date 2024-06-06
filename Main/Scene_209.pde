@@ -16,15 +16,20 @@ public class Scene_209 extends BaseScene {
     boy.setScale(1.2f, 1.2f);
     drawManager.addDrawable(boy);
 
-    var speechBubble = objectFactory.create("res/images/object/speech-bubble_3.png");
-    speechBubble.setPosition(300, 250);
-    speechBubble.setScale(0.7f, 0.7f);
+    var speechBubble = objectFactory.create("res/images/ui/speech-bubble.png");
+    speechBubble.setPosition(350, 250);
+    speechBubble.setScale(0.55f, 0.55f);
     drawManager.addDrawable(speechBubble);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
-    tiger.setPosition(300, 200);
-    tiger.setScale(0.26f, 0.26f);
+    tiger.setPosition(350, 200);
+    tiger.setScale(-0.28f, 0.28f);
     drawManager.addDrawable(tiger);
+
+    var stones = objectFactory.create("res/images/object/stones.png");
+    stones.setPosition(350, 140);
+    stones.setScale(0.17f, 0.17f);
+    drawManager.addDrawable(stones);
 
     soundManager.playOnce("res/sound/effect/209_아이디어효과음.mp3");
   }

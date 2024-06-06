@@ -10,11 +10,11 @@ public class Scene_216 extends BaseScene {
 
     loadBackground("30", drawManager);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.well);
+    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.well_1);
     // tiger.setPosition(470, 550);
     // tiger.setScale(0.6f, 0.6f);
-    tiger.setPosition(width / 2 + 180, 340);
-    tiger.setScale(0.4f, 0.4f);
+    tiger.setPosition(width / 2 + 30, 340);
+    tiger.setScale(-0.4f, 0.4f);
     drawManager.addDrawable(tiger);
 
     // TODO: 타이밍 조절해야 할 듯?

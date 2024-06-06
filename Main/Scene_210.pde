@@ -10,12 +10,16 @@ public class Scene_210 extends BaseScene {
 
     loadBackground("25", drawManager);
 
-
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
-    // tiger.setPosition(width / 2, 500);
-    tiger.setPosition(width / 2 + 200, 390);
+    tiger.setPosition(width / 2 + 208, 460);
     tiger.setScale(-0.5f, 0.5f);
     drawManager.addDrawable(tiger);
+
+    var stones = objectFactory.create("res/images/object/stones.png");
+    stones.setPosition(width / 2 + 212, 355);
+    stones.setScale(-0.24f, 0.24f);
+    drawManager.addDrawable(stones);
+
 
     // drawManager.addDrawable(new Rock1(300f, 300f, #c0c0c0));
     // drawManager.addDrawable(new Rock1(350f, 300f, #c0c0c0));
@@ -37,12 +41,12 @@ public class Scene_210 extends BaseScene {
     sleepEffectRemainSeconds -= deltaTime;
     if (sleepEffectRemainSeconds < 0) {
       sleepEffectRemainSeconds = 1f;
-      effectManager.addParticles(width / 2 + 250, 350, EffectType.SLEEP);
+      effectManager.addParticles(width / 2 + 440, 340, EffectType.SLEEP);
     }
     
     drawManager.drawing();
-    effectManager.updateAndDraw();
     uiManager.drawing();
+    effectManager.updateAndDraw();
     
     popStyle();
   }

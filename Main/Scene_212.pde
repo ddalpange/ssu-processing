@@ -10,10 +10,9 @@ public class Scene_212 extends BaseScene {
 
     loadBackground("27-1", drawManager);
 
-    // 호랑이 배에 꼬매진 자국이 없는데?
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
-    tiger.setPosition(width / 2 -50, 240);
-    tiger.setScale(0.45f, 0.45f);
+    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_03);
+    tiger.setPosition(width / 2 -160, 280);
+    tiger.setScale(0.9f, 0.9f);
     drawManager.addDrawable(tiger);
 
     loadBackground("27-2", drawManager);
@@ -25,14 +24,18 @@ public class Scene_212 extends BaseScene {
 
     soundManager.playOnce("res/sound/effect/207.210.212_잠자는소리.mp3");
   }
- 
+  float sleepEffectRemainSeconds = 0;
   public void draw() {
     pushStyle();
-    
+    sleepEffectRemainSeconds -= deltaTime;
+    if (sleepEffectRemainSeconds < 0) {
+      sleepEffectRemainSeconds = 1f;
+      effectManager.addParticles(310, 160, EffectType.SLEEP);
+    }
     background(#F5E8A8);
     drawManager.drawing();
     uiManager.drawing();
-    
+    effectManager.updateAndDraw();
     popStyle();
   }
   

@@ -15,6 +15,7 @@ public enum CharacterType {
 public enum CharacterPoseType {
   front("f"),
   left("left"),
+  left_half("left_half"),
   climb("climb"),
   climb_rope("climb_rope"),
   black("black"),
@@ -45,7 +46,10 @@ public enum CharacterPoseType {
   scream("scream"),
   thirsty("thirsty"),
   threat("threat"),
-  well("well");
+  well("well"),
+  well_1("well_1"),
+  well_2_1("well_2_1"),
+  well_2_2("well_2_2");
 
 
   

@@ -27,34 +27,36 @@ public class Scene_211 extends BaseScene {
 
     loadBackground("25", drawManager);
 
-
-    // 호랑이 배에 꼬매진 자국이 없는데?
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_03);
-    tiger.setPosition(width / 2 + 150, 300);
-    tiger.setScale(-1f, 1f);
+    tiger.setPosition(width / 2 + 200, 450);
+    tiger.setScale(-1, 1);
     drawManager.addDrawable(tiger);
     
     var candle = new Candle(width / 2 + 5, 142);
     drawManager.addDrawable(candle);
     
-    var needle = new Needle(width / 2 + 50, 50);
-    needle.setScale(0.2, 0.2); // scale이 안먹는듯?
-    drawManager.addDrawable(needle);
+    // var needle = new Needle(width / 2 + 50, 500);
+    // needle.setScale(0.5, 0.5); 
+    // drawManager.addDrawable(needle);
 
     Scene_211_Family_Setup(drawManager);
   }
  
+  float sleepEffectRemainSeconds = 0;
   public void draw() {
     pushStyle();
-    
-    
+    sleepEffectRemainSeconds -= deltaTime;
+    if (sleepEffectRemainSeconds < 0) {
+      sleepEffectRemainSeconds = 1f;
+      effectManager.addParticles(width / 2 + 440, 340, EffectType.SLEEP);
+    }
     drawManager.drawing();
     uiManager.drawing();
-    
+    effectManager.updateAndDraw();
     popStyle();
   }
-  
   public void mousePressed() {
+    
     if (uiManager.dialogUi.next()) {
       return;
     }
