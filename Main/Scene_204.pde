@@ -61,5 +61,9 @@ public class Scene_204 extends BaseScene {
   
   public void mousePressed() {
     gameManager.update();
+    soundManager.playOnce("res/sound/effect/303.308_미니게임클릭소리.mp3");
+    if (uiManager.dialogUi.next()) {
+      return;
+    }
   }
 }
