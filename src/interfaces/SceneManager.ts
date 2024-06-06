@@ -87,9 +87,9 @@ export class SceneManager {
       this.currentScene = scene;
       this.fadeIn = false;
       this.fadeOut = false;
+      // stopPlayingVoice();
       this.currentScene.setup();
       this.nextScene = null;
-      // stopPlayingVoice();
       return;
     }
 

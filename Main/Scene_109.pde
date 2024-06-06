@@ -125,9 +125,6 @@ public class Scene_109 extends BaseScene {
     }
 
     elapsedTime += deltaTime;
-    if (elapsedTime > 2f) {
-      uiManager.dialogUi.hide();
-    }
 
     pushStyle();
     background(255);
@@ -178,6 +175,12 @@ public class Scene_109 extends BaseScene {
   }
 
   public void mousePressed() {
+    if (uiManager.dialogUi.next()) {
+      return;
+    } else if (uiManager.dialogUi.isVisible()) {
+      uiManager.dialogUi.hide();
+    }
+
     for (Item item : items) {
       if (item.mousePressed()) {
         float w = item.getW();

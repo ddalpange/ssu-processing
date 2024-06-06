@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 public class DialogUi {
     private boolean visible;
-    private DialogContent current;
+    public DialogContent current;
     private Queue<DialogContent> queue = new LinkedList<>();
 
     private int x;
@@ -89,6 +89,10 @@ public class DialogUi {
 
     public void hide() {
         this.visible = false;
+    }
+
+    public boolean isVisible() {
+        return this.visible;
     }
 
     public void set(DialogContent content) {

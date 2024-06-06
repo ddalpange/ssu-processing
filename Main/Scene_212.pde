@@ -59,6 +59,9 @@ public class Scene_212 extends BaseScene {
   }
 
   public void mousePressed() {
+    if (uiManager.dialogUi.next()) {
+      return;
+    }
     loadNextScene();
   }
 }

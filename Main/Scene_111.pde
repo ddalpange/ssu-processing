@@ -13,8 +13,8 @@ public class Scene_111 extends BaseScene {
     Scene_108_background_setup(drawManager);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.hungry);
-    tiger.setPosition(450, 400);
-    tiger.setScale(0.5, 0.5);
+    tiger.setPosition(width / 2, 430);
+    tiger.setScale(0.45, 0.45);
     drawManager.addDrawable(tiger);
 
     loadBackground("12-2", drawManager);
@@ -24,7 +24,6 @@ public class Scene_111 extends BaseScene {
   public void draw() {
     pushStyle();
     
-    
     drawManager.drawing();
     uiManager.drawing();
     
@@ -32,6 +31,9 @@ public class Scene_111 extends BaseScene {
   }
   
   public void mousePressed() {
+    if (uiManager.dialogUi.next()) {
+      return;
+    }
     loadNextScene();
   }
 }

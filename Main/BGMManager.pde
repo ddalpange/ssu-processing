@@ -79,7 +79,7 @@ public class BGMManager {
 
     if (targetSequence == currentSequence) {
       // Nothing to do. Keep playing.
-      println("Nothing to do. Keep playing.");
+      //println("Nothing to do. Keep playing.");
       return;
     }
 

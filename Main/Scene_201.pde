@@ -8,10 +8,12 @@ public class Scene_201 extends BaseScene {
     public int getNextScene() {
     return 202;
   }
-  public void setup() {
-    uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
-    uiManager.dialogUi.next();
 
+  private float elapsed = 0;
+  private boolean knockSoundPlayed = false;
+  private boolean dialogShowed = false;
+
+  public void setup() {
     loadBackground("16", drawManager);
 
     var ground = new Ground(0, 500, width, height, 0, #DAC4A2);
@@ -29,12 +31,6 @@ public class Scene_201 extends BaseScene {
     drawManager.addDrawable(tiger);
 
     soundManager.playOnce("res/sound/effect/201_발자국소리.mp3");
-    try {
-      Thread.sleep(5000);
-    }
-    catch (InterruptedException e) {
-    }
-    soundManager.playOnce("res/sound/effect/201_노크소리.mp3");
   }
 
   public void draw() {
@@ -44,10 +40,24 @@ public class Scene_201 extends BaseScene {
     drawManager.drawing();
     uiManager.drawing();
 
+    elapsed += deltaTime;
+    if (elapsed > 5 && knockSoundPlayed == false) {
+      knockSoundPlayed = true;
+      soundManager.playOnce("res/sound/effect/201_노크소리.mp3");
+    }
+    if (elapsed > 7 && dialogShowed == false) {
+      dialogShowed = true;
+      uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
+      uiManager.dialogUi.next();
+    }
+
     popStyle();
   }
 
   public void mousePressed() {
+    if (dialogShowed == false) {
+      return;
+    }
     if (uiManager.dialogUi.next()) {
       return;
     }

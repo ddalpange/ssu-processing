@@ -47,7 +47,8 @@ void mousePressed() {
   mouseClickedThisFrame = true;
   BaseScene scene = sceneManager.getCurrentScene();
   if (scene != null) {
-    scene.mousePressed();
+    if (sceneManager.getNextScene() == null)
+      scene.mousePressed();
   } else {
     println("scene is null!");
   }
@@ -56,7 +57,8 @@ void mousePressed() {
 void mouseReleased() {
   BaseScene scene = sceneManager.getCurrentScene();
   if (scene != null) {
-    scene.mouseReleased();
+    if (sceneManager.getNextScene() == null)
+      scene.mouseReleased();
   } else {
     println("scene is null!");
   }
