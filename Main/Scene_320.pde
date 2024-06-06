@@ -12,24 +12,28 @@ public class Scene_320 extends BaseScene {
 
     // 리소스 교체 필요
     var rope = objectFactory.create("res/images/object/rope_strong.png");
-    rope.setPosition(255, -240);
-    rope.setScale(0.125, 0.125);
+    rope.setPosition(260, 410);
+    rope.setScale(0.1, 0.1);
     drawManager.addDrawable(rope);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    boy.setPosition(225, 100);
-    boy.setScale(0.15, 0.15);
+    boy.setPosition(210, 430);
+    boy.setScale(0.3, 0.3);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    girl.setPosition(285, 100);
-    girl.setScale(-0.15, 0.15);
+    girl.setPosition(300, 780);
+    girl.setScale(-0.3, 0.3);
     drawManager.addDrawable(girl);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb);
     tiger.setPosition(1200, 400);
     tiger.setScale(0.3, 0.3);
     drawManager.addDrawable(tiger);
+
+    startAnimation(new MoveAnimation(rope, 260, 110 - 300, 16, EaseType.OutCirc));
+    startAnimation(new MoveAnimation(boy, 210, 130 - 300, 16, EaseType.OutCirc));
+    startAnimation(new MoveAnimation(girl,300, 380 - 300, 16, EaseType.OutCirc));
   }
  
   public void draw() {
@@ -38,6 +42,7 @@ public class Scene_320 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
+    animationManager.update();
     
     popStyle();
   }

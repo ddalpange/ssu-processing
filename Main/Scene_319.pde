@@ -13,10 +13,20 @@ public class Scene_319 extends BaseScene {
 
 
     // 리소스 교체 필요?
-    var rope = objectFactory.create("res/images/object/rope_strong.png");
-    rope.setPosition(width / 2, -650);
-    rope.setScale(0.3, 0.3);
-    drawManager.addDrawable(rope);
+    var oldRope = objectFactory.create("res/images/object/rope_strong.png");
+    oldRope.setPosition(width / 2, 300);
+    oldRope.setScale(0.15, 0.15);
+    drawManager.addDrawable(oldRope);
+
+    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
+    boy.setPosition(550, 210);
+    boy.setScale(0.5, 0.5);
+    drawManager.addDrawable(boy);
+
+    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
+    girl.setPosition(730, 500);
+    girl.setScale(-0.5, 0.5);
+    drawManager.addDrawable(girl);
 
     soundManager.playOnce("res/sound/effect/314.319_밧줄잡는소리.mp3");
   }

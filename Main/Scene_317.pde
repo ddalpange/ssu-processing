@@ -17,14 +17,14 @@ public class Scene_317 extends BaseScene {
     // oldRope.setScale(0.03, 0.03);
     // drawManager.addDrawable(oldRope);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
-    boy.setPosition(200, 500);
+    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.fall);
+    boy.setPosition(120, -400);
     boy.setScale(0.3, 0.3);
     drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
-    girl.setPosition(400, 500);
-    girl.setScale(-0.3, 0.3);
+    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.fall);
+    girl.setPosition(400, -400);
+    girl.setScale(0.3, 0.3);
     drawManager.addDrawable(girl);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb);
@@ -33,6 +33,9 @@ public class Scene_317 extends BaseScene {
     drawManager.addDrawable(tiger);
 
     // 구름 별 마을 필요
+    startAnimation(new MoveAnimation(boy, 120, 280, 10, EaseType.OutCubic));
+
+    startAnimation(new MoveAnimation(girl, 400, 340, 10, EaseType.OutCubic));
   }
  
   public void draw() {
@@ -42,7 +45,7 @@ public class Scene_317 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
-    
+    animationManager.update();
     popStyle();
   }
   
