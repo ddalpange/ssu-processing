@@ -4,6 +4,9 @@ public class Scene_216 extends BaseScene {
 
   @Override
   public int getNextScene() { return 217; }
+
+  private float elapsed = 0;
+  private int step = 0;
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -16,16 +19,6 @@ public class Scene_216 extends BaseScene {
     tiger.setPosition(width / 2 + 30, 340);
     tiger.setScale(-0.4f, 0.4f);
     drawManager.addDrawable(tiger);
-
-    // TODO: 타이밍 조절해야 할 듯?
-    try {
-      Thread.sleep(5000);
-    }
-    catch (InterruptedException e) {
-    }
-    soundManager.playOnce("res/sound/effect/216_으아아소리.mp3");
-    soundManager.playOnce("res/sound/effect/216_풍덩소리.mp3");
- 
   }
  
   public void draw() {
@@ -34,6 +27,24 @@ public class Scene_216 extends BaseScene {
     
     drawManager.drawing();
     uiManager.drawing();
+
+    if (step >= 1) {
+      elapsed += deltaTime;
+      // if (elapsed > 1.5f && step == 1) {
+        // 대사의 으악 소리만 써도 될 듯.
+      //   soundManager.playOnce("res/sound/effect/216_으아아소리.mp3");
+      //   step = 2;
+      //   elapsed = 0;
+      // }
+      if (elapsed > 2f && step == 2) {
+        soundManager.playOnce("res/sound/effect/216_풍덩소리.mp3");
+        step = 3;
+      }
+    }
+
+    if (step == 0 && uiManager.dialogUi.current != null && uiManager.dialogUi.current.id.equals("216002")) {
+      step = 2;
+    }
     
     popStyle();
   }
