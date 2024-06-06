@@ -49,7 +49,7 @@ export class ScaleAnimation extends BaseAnimation {
 
     this.target.setScale(currentScaleX, currentScaleY);
 
-    if (this.isDone && this.repeatCount !== 0 && this.repeatCount > 0) {
+    if (this.isDone && this.repeatCount !== 0) {
       if (this.reverse) {
         if (this.repeatCount !== 0) {
           this.repeatCount--;

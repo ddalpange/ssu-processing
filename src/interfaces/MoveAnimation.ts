@@ -49,7 +49,7 @@ export class MoveAnimation extends BaseAnimation {
 
     this.target.setPosition(Math.floor(currentX), Math.floor(currentY));
 
-    if (this.isDone && this.repeatCount !== 0 && this.repeatCount > 0) {
+    if (this.isDone && this.repeatCount !== 0) {
       if (this.reverse) {
         if (this.repeatCount !== 0) {
           this.repeatCount--;

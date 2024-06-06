@@ -73,7 +73,11 @@ public class MoveAnimation extends BaseAnimation {
 
     target.setPosition((int)currentX, (int)currentY);
 
-    if (isDone && (repeatCount != 0 && repeatCount > 0)) {
+    if (isDone && (repeatCount != 0)) {
+      if (repeatCount > 0) {
+        repeatCount--;
+      }
+
       if (reverse) {
         if (repeatCount != 0) {
           repeatCount--;
@@ -146,7 +150,11 @@ public class ScaleAnimation extends BaseAnimation {
 
     target.setScale(currentScaleX, currentScaleY);
 
-    if (isDone && (repeatCount != 0 && repeatCount > 0)) {
+    if (isDone && (repeatCount != 0)) {
+      if (repeatCount > 0) {
+        repeatCount--;
+      }
+
       if (reverse) {
         if (repeatCount != 0) {
           repeatCount--;
