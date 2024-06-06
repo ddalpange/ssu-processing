@@ -11,9 +11,9 @@ void Scene_103_Setup(DrawManager drawManager) {
     girl.setScale(0.65f, 0.65f);
     drawManager.addDrawable(girl);
     
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.front_ricecake);
+    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.smile);
     mom.setPosition(600, 400);
-    mom.setScale(0.6f, 0.6f);
+    mom.setScale(1.2f, 1.2f);
     drawManager.addDrawable(mom);
 }
 
