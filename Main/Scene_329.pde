@@ -11,18 +11,18 @@ public class Scene_329 extends BaseScene {
     loadBackground("66", drawManager);
 
     var newRope = objectFactory.create("res/images/object/rope_strong.png");
-    newRope.setPosition(400, 50);
-    newRope.setScale(0.2, 0.2);
+    newRope.setPosition(width/2, 300);
+    newRope.setScale(0.13, 0.13);
     drawManager.addDrawable(newRope);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    boy.setPosition(310, 300);
-    boy.setScale(0.6, 0.6);
+    boy.setPosition(570, 200);
+    boy.setScale(0.4, 0.4);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    girl.setPosition(490, 300);
-    girl.setScale(-0.6, 0.6);
+    girl.setPosition(700, 440);
+    girl.setScale(-0.4, 0.4);
     drawManager.addDrawable(girl);
 
     // 구름 필요
