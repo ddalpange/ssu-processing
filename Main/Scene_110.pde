@@ -1,4 +1,13 @@
 public class Scene_110 extends BaseScene {
+  private ShapeObject tiger;
+  private final float tigerScale = 2.3f;
+  private ScaleAnimation tigerScaleUpAnimation;
+  private ScaleAnimation tigerScaleDownAnimation;
+  private int tigerScaleDuration = 1;
+  private int curCount = 0;
+
+  private TimeTracker timeTracker = new TimeTracker();
+
   @Override
   public int getPreviousScene() { return 109; }
 
@@ -10,10 +19,12 @@ public class Scene_110 extends BaseScene {
 
     loadBackground("11", drawManager);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.scream);
+    tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.scream);
     tiger.setPosition(width/2, height / 2);
-    tiger.setScale(2.3, 2.3);
+    tiger.setScale(tigerScale, tigerScale);
     drawManager.addDrawable(tiger);
+    tigerScaleUpAnimation = new ScaleAnimation(tiger, tigerScale + tigerScale * 0.03, tigerScale + tigerScale * 0.03, tigerScaleDuration);
+    tigerScaleDownAnimation = new ScaleAnimation(tiger, tigerScale - tigerScale * 0.03, tigerScale - tigerScale * 0.03, tigerScaleDuration);
 
     var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.back);
     mom.setPosition(width / 2, 650);
@@ -28,6 +39,9 @@ public class Scene_110 extends BaseScene {
     
     drawManager.drawing();
     uiManager.drawing();
+    animationManager.update();
+    timeTracker.update();
+    updateScale();
     
     popStyle();
   }
@@ -37,5 +51,14 @@ public class Scene_110 extends BaseScene {
       return;
     }
     loadNextScene();
+  }
+
+  private void updateScale() {
+    if (timeTracker.IfTimeOver(curCount * tigerScaleDuration) && curCount < 10) {
+      clearAnimation();
+      var isEven = curCount % 2 == 0;
+      startAnimation(isEven ? tigerScaleUpAnimation.reset() : tigerScaleDownAnimation.reset());
+      curCount++;
+    }
   }
 }
