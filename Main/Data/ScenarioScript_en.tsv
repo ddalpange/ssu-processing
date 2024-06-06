@@ -9,7 +9,7 @@ id	comment	character	voice
 105003	Mother had a hard time to sell her rice cake at the market but she got strength from seeing her daughter and son who get along well.	NARR	105003
 106001	It was late at night as usual when the mother finished working at the market and returning to home with the leftover rice cake.	NARR	106001
 106002	I think the forest is darker today.	MOM	106002
-107001	It was very dark in the forest like before she was use to walk but this time she hurried her steps.\nall of the sudden, on the behind tree she began to see a black figure. \nGlowing eyes, sharp fangs. It was a giant tiger.	NARR	107001
+107001	It was very dark in the forest like before she was use to walk but this time she hurried her steps.\nAll of the sudden, on the behind tree she began to see a black figure. \nGlowing eyes, sharp fangs. It was a giant tiger.	NARR	107001
 107002	(Tiger growling)	TIGER	107002
 107003	It's a tiger!	MOM	107003
 108001	The tiger was drooling and looked at the mother who smells like delicious rice cake and said.	NARR	108001
@@ -29,7 +29,7 @@ id	comment	character	voice
 201006	Guys, Mom. open the door.	TIGER	201006
 201007	The brother who thought the voice is strange asked to tiger.	NARR	201007
 201008	Then show me your hand through the doorstep.	BOY	201008
-202001	What they could see below the doorstep was fluffy fur and thick jelly-like hands. It was obviously tiger's hands but he thought her hands had "swelled up from the hard work" and that belief came from the strong anticipation and desire to be reunited with his beloved mother as soon as possible, so he let go and opened the door with confidence.	NARR	202001
+202001	What they could see below the doorstep was fluffy fur and thick jelly-like hands. \nIt was obviously tiger's hands but \nhe thought her hands had "swelled up from the hard work" and that belief came from the strong anticipation and desire to be reunited with his beloved mother as soon as possible, so he let go and opened the door with confidence.	NARR	202001
 202002	Mom, you did a great job. I missed you!	BOY	202002
 203001	Then, there was a huge tiger in his mother's clothes standing in front of his eyes. 	NARR	203001
 203002	Roar!!	TIGER	203002
@@ -67,7 +67,7 @@ id	comment	character	voice
 220001	Ewww!!! What’s this awful taste?!	TIGER	220001
 220002	He was a tiger who hated mugwort rice cake with a bitter scent of mugwort.	NARR	220002
 221001	(Roaring from furious tiger)	TIGER	221001
-221002	The brother who saw the tiger who was rather more angry by eating mugwort rice cake,	NARR	221001
+221002	The brother who saw tiger that rather be mad 	NARR	221002
 222001	Grabbed his sister's hand and ran out of the back door in a hurry.	NARR	222001
 222002	Ahhhhhhhh!!!	OHNUI	222002
 301001	After sibling fled through the back door, find a towering tree after looking around to see where to run.	NARR	301001
@@ -80,28 +80,28 @@ id	comment	character	voice
 305001	Fortunately sibling had already climbed to the top of the tree. The tiger ran to the tree desperately although it seemed never to be able to climb with his feet.	NARR	305001
 305002	See sister, I was right? A tiger can't climb a tree with his own feet.	BOY	305002
 306001	Is there any way?	TIGER	306001
-306002	At that time the tiger saw that are sesame oil and axe in front of the tiger's eyes.	NARR	306002
+306002	At that time, tiger saw the sesame oil and the axe in front of the his eyes.	NARR	306002
 308001	I need to use this to go up! What should I pick?	TIGER	308001
 309001	The tiger found the ax start to climbing up the tree by axing it.	NARR	309001
 309002	You guys don't move there! Did you guys think I couldn't climb the tree? I'll catch up soon!	TIGER	309002
 310001	Brother, what should we do! The tiger is coming up! 	GIRL	310001
-310002	What? What should we do?	BOY	310001
-310003	The sibling who had no choice but to look at the tiger coming up, cried with the feeling of catching a straw and prayed by begging hands to the sky.	NARR	310002
+310002	What? What should we do?	BOY	310002
+310003	The sibling who had no choice but to look at the tiger coming up, cried with the feeling of catching a straw and prayed by begging hands to the sky.	NARR	310003
 311001	God, tiger is trying to eat us. if you want us to be saved give us the new rope, but if you want us to be killed give us the rotten rope.	OHNUI	311001
 312001	Then the heaven which recognized the pitifulness of the sibling, slowly lowered the new and rotten ropes.	NARR	312001
 313001	What kind of rope should we choose?	OHNUI	313001
 314001	The sibling who was thinking about which to grab between two rope that came down from the sky, grabbed one of rope.	NARR	314001
 315001	But unfortunately the rope that the sibling caught was a rotten rope.	NARR	315001
-315002	Brother, why is this rope swaying so much? I'm so nervous.	GIRL	315001
+315002	Brother, why is this rope swaying so much? I'm so nervous.	GIRL	315002
 316001	The rotten rope that couldn't withstand the heavy force began to cut off.	NARR	316001
-316002	Sister, the roping is cutting off!	BOY	316001
+316002	Sister, the roping is cutting off!	BOY	316002
 317001	Brother, save me!	GIRL	317001
 317002	Eventually the rotten rope has cutted off, and the tiger can't do anything but just looking at the sibling falling down from the sky.	NARR	317002
 318001	After that it happend there was only a calm wind left in the village.	NARR	318001
 319001	The sibling who was thinking about which to grab between two rope that came down from the sky, Grabbed robust new rope.	NARR	319001
 320001	Then the new rope began to rise to the sky.	NARR	320001
 320002	Wow! we survived! we are going up into the sky! 	OHNUI	320002
-320003	What's that rope?	TIGER	
+320003	What's that rope?	TIGER	320003
 321001	The tiger quickly climbed up the tree and said the same thing after seeing the sibling climb up to the sky in front of his eyes.	NARR	321001
 321002	If I shout the same thing, the heaven will drop me a new rope?	TIGER	321002
 322001	God, if you want me to be saved give me the new rope, but if you want me to be killed give me the rotten rope!	TIGER	322001
@@ -114,11 +114,12 @@ id	comment	character	voice
 326001	At that moment. The rope that tiger was holding, made craking sound and start to cutting off.	NARR	326001
 326002	Huh? It wasn't a new rope? It can't be cut off!	TIGER	326002
 327001	Ahhhhhhh, please save me!	TIGER	327001
-327002	Sister, the rope that the tiger is holding is cutting off! It seems that heaven gave him the rotten rope.	BOY	328001
-328001	Eventually, the rotten rope that the tiger was holding broke, and the tiger fell into the sorghum field and turned the sorghum red.	NARR	
+327002	Sister, the rope that the tiger is holding is cutting off! It seems that heaven gave him the rotten rope.	BOY	327002
+328001	Eventually, the rotten rope that the tiger was holding broke,	NARR	328001
+328002	And the tiger fell into the sorghum field and turned the sorghum red.	NARR	328002
 329001	When the tiger fell, the sibling were relieved, and they continued to climb up the rope to the sky.	NARR	329001
 329002	Brother, we survived. I'm really glad!	GIRL	329002
-329003	I'm so glad too. But where are we going?	BOY	329002
+329003	I'm so glad too. But where are we going?	BOY	329003
 330001	After reaching heaven, the rope finally stopped, and the sibling asked god how to return the favor. Then, god began to talk.	NARR	330001
-330002	Welcome, sibling. I have some mission to leave it up to you guys. Why don't you become the sun and moon of the sky and protect the sky? You, the younger become the sun and you, the older become the moon.	GOD	330001
-330003	In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness, so can make the world more brighter. \nand they lived happily together for a long time.	NARR	330001
+330002	Welcome, sibling. I have some mission to leave it up to you guys. Why don't you become the sun and moon of the sky and protect the sky? You, the younger become the sun and you, the older become the moon.	GOD	330002
+330003	In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness, so can make the world more brighter. \nand they lived happily together for a long time.	NARR	330003

@@ -50,6 +50,7 @@ public class Scene_217 extends BaseScene {
   }
   
   public void mousePressed() {
+    uiManager.dialogUi.next();
     if (retryButton.isClicked()) {
       sceneManager.loadScene(new Scene_204());
     }
