@@ -1,9 +1,13 @@
 public class Scene_201 extends BaseScene {
   @Override
-  public int getPreviousScene() { return 114; }
+    public int getPreviousScene() {
+    return 114;
+  }
 
   @Override
-  public int getNextScene() { return 202; }
+    public int getNextScene() {
+    return 202;
+  }
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -24,21 +28,25 @@ public class Scene_201 extends BaseScene {
     tiger.setScale(0.52, 0.52);
     drawManager.addDrawable(tiger);
 
-    // TODO: 타이밍 조절해야 할듯?
     soundManager.playOnce("res/sound/effect/201_발자국소리.mp3");
+    try {
+      Thread.sleep(5000);
+    }
+    catch (InterruptedException e) {
+    }
     soundManager.playOnce("res/sound/effect/201_노크소리.mp3");
   }
- 
+
   public void draw() {
     pushStyle();
     background(#cfe2f3);
-    
+
     drawManager.drawing();
     uiManager.drawing();
-    
+
     popStyle();
   }
-  
+
   public void mousePressed() {
     if (uiManager.dialogUi.next()) {
       return;
