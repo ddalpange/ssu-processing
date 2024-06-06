@@ -30,7 +30,9 @@ public class Scene_Intro_New extends BaseScene {
 
   public void setup() {
 
-    Scene_103_Setup(drawManager);
+    //Scene_103_Setup(drawManager);
+    loadBackground("intro", drawManager);
+
     // 0
     title = objectFactory.create("res/images/UI/Opening_TItle.png");
     title.setPosition(width / 2, 100);
