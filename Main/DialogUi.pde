@@ -91,6 +91,10 @@ public class DialogUi {
         this.visible = false;
     }
 
+    public boolean isVisible() {
+        return this.visible;
+    }
+
     public void set(DialogContent content) {
         this.current = content;
         this.queue.clear();
