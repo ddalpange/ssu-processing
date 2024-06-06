@@ -77,14 +77,14 @@ id	comment	character	voice
 303002	Sister, I don't think the tiger noticed yet,\n don't worry and go up safely.	BOY	303002
 303003	[A mini game that hits a certain number of space bars in a row within a limited time]	NARR	
 304001	Later when the tiger realized that sibling had disappeared in the quiet room, the tiger came out from back door and found them on the tree.	NARR	304001
-305001	Fortunately sibling had already climbed to the top of the tree. the tiger ran to the tree desperately although it seemed never to be able to climb with his feet.	NARR	305001
-305002	See sister, I was right? a tiger can't climb a tree with his own feet.	BOY	305002
+305001	Fortunately sibling had already climbed to the top of the tree. The tiger ran to the tree desperately although it seemed never to be able to climb with his feet.	NARR	305001
+305002	See sister, I was right? A tiger can't climb a tree with his own feet.	BOY	305002
 306001	Is there any way?	TIGER	306001
-306002	At that time the tiger saw the tools that are sesame oil and axe in front of the tiger's eyes.	NARR	306002
+306002	At that time the tiger saw that are sesame oil and axe in front of the tiger's eyes.	NARR	306002
 308001	I need to use this to go up! What should I pick?	TIGER	308001
 309001	The tiger found the ax start to climbing up the tree by axing it.	NARR	309001
 309002	You guys don't move there! Did you guys think I couldn't climb the tree? I'll catch up soon!	TIGER	309002
-310001	Brother, what should we do! The tiger is coming up! 	GIRL BOY	310001
+310001	Brother, what should we do! The tiger is coming up! 	GIRL	310001
 310002	What? What should we do?	BOY	310001
 310003	The sibling who had no choice but to look at the tiger coming up, cried with the feeling of catching a straw and prayed by begging hands to the sky.	NARR	310002
 311001	God, tiger is trying to eat us. if you want us to be saved give us the new rope, but if you want us to be killed give us the rotten rope.	OHNUI	311001
@@ -103,22 +103,22 @@ id	comment	character	voice
 320002	Wow! we survived! we are going up into the sky! 	OHNUI	320002
 320003	What's that rope?	TIGER	
 321001	The tiger quickly climbed up the tree and said the same thing after seeing the sibling climb up to the sky in front of his eyes.	NARR	321001
-321002	If I shout the same thing, the heaven will drop me a new rope	TIGER	321002
-322001	God, if you want us to be saved give us the new rope, but if you want us to be killed give us the rotten rope!	TIGER	322001
-323001	Then, thunderstorms came down from the sky with the rumbling sound. \n the Heaven who was very angry at the tiger for try to devour the sibling, gave only the rotten rope with the strong thunderstorms.	NARR	323001
+321002	If I shout the same thing, the heaven will drop me a new rope?	TIGER	321002
+322001	God, if you want me to be saved give me the new rope, but if you want me to be killed give me the rotten rope!	TIGER	322001
+323001	Then, thunderstorms came down from the sky with the rumbling sound. \nThe Heaven who was very angry at the tiger for try to devour the sibling, gave only the rotten rope with the strong thunderstorms.	NARR	323001
 324001	The tiger didn't know that and grabbed the rotten rope.	NARR	324001
-324002	Haha! See! THE heaven knows me. Shall we go get the sibling?	TIGER	324002
+324002	Haha! See! The heaven knows me. Shall we go get the sibling?	TIGER	324002
 325001	When the tiger was holding the rope and came up to them, they were surprised.	NARR	325001
 325002	Brother, look over there. tiger is following us up into the sky!	GIRL	325002
 325003	Sibling, stop there! I'll never miss it this time!	TIGER	325003
-326001	At that moment. the rope that tiger was holding, made craking sound and start to cutting off.	NARR TIGER	326001
+326001	At that moment. The rope that tiger was holding, made craking sound and start to cutting off.	NARR	326001
 326002	Huh? It wasn't a new rope? It can't be cut off!	TIGER	326002
 327001	Ahhhhhhh, please save me!	TIGER	327001
-327002	Sister, the rope that the tiger is holding is cutting off! It seems that heaven gave him the rotten rope.	NARR	328001
+327002	Sister, the rope that the tiger is holding is cutting off! It seems that heaven gave him the rotten rope.	BOY	328001
 328001	Eventually, the rotten rope that the tiger was holding broke, and the tiger fell into the sorghum field and turned the sorghum red.	NARR	
-329001	When the tiger fell, the sibling were relieved, and they continued to climb up the rope to the sky.	NARR BOY GIRL	329001
-329002	Brother, we survived. I'm glad!	GIRL	329002
+329001	When the tiger fell, the sibling were relieved, and they continued to climb up the rope to the sky.	NARR	329001
+329002	Brother, we survived. I'm really glad!	GIRL	329002
 329003	I'm so glad too. But where are we going?	BOY	329002
-330001	After reaching heaven, the rope finally stopped, and the sibling asked god how to return the favor. Then, god began to talk.	NARR 	330001
+330001	After reaching heaven, the rope finally stopped, and the sibling asked god how to return the favor. Then, god began to talk.	NARR	330001
 330002	Welcome, sibling. I have some mission to leave it up to you guys. Why don't you become the sun and moon of the sky and protect the sky? You, the younger become the sun and you, the older become the moon.	GOD	330001
 330003	In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness, so can make the world more brighter. \nand they lived happily together for a long time.	NARR	330001
