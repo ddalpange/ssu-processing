@@ -29,14 +29,14 @@ public class Scene_217 extends BaseScene {
     mom.setScale(1f, 1f);
     drawManager.addDrawable(mom);
 
-    retryButton = new Button2(loadImage("res/images/UI/3button.png"), 1080, 100);
+    retryButton = new Button2(loadImage("res/images/UI/button_1.png"), 1080, 100);
     retryButton.text = "Want to go back?";
-    retryButton.setScale(2, 2);
+    retryButton.setScale(1, 1);
     drawManager.addDrawable(retryButton);
 
-    creditButton = new Button2(loadImage("res/images/UI/3button.png"), 1080, 200);
+    creditButton = new Button2(loadImage("res/images/UI/button_1.png"), 1080, 200);
     creditButton.text = "Credits";
-    creditButton.setScale(2, 2);
+    creditButton.setScale(1, 1);
     drawManager.addDrawable(creditButton);
   }
  

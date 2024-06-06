@@ -53,7 +53,6 @@ public class Scene_303 extends BaseScene {
     button.text = text;
     button.position = new PVector(x, y);
     button.size = new PVector(300, 100);
-
     return button;
   }
 

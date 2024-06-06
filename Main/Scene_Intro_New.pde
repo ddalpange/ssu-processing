@@ -45,7 +45,8 @@ public class Scene_Intro_New extends BaseScene {
 
     creditButton = new Button2(loadImage("res/images/UI/Opening_UI_01_03.png"), width / 2, 600);
 
-    localeButton = new Button2(loadImage("res/images/UI/2button.png"), width - 150, 200);
+    localeButton = new Button2(loadImage("res/images/UI/koreng.png"), width - 150, 200);
+    localeButton.setScale(0.6, 0.6);
     localeButton.text = locale;
     
     

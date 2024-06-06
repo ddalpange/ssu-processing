@@ -39,7 +39,7 @@ public class Scene_304 extends BaseScene {
     outScaleUpAnimation = new ScaleAnimation(tiger, 0.4f, 0.4f, outDuration);
     soundManager.playOnce("res/sound/effect/301.302.304_뛰는발걸음소리.mp3");
 
-    textBubble = objectFactory.create("res/images/ui/question-mark.png");
+    textBubble = objectFactory.create("res/images/ui/red question.png");
     textBubble.setPosition(0, 0);// 차피 아래에서 건드리니까 여기는 대충 넣어도 됨
     textBubble.setScale(0.2f, 0.2f);
   }

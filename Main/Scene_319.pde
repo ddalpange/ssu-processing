@@ -12,21 +12,25 @@ public class Scene_319 extends BaseScene {
     loadBackground("56", drawManager);
 
 
-    // 리소스 교체 필요?
-    var oldRope = objectFactory.create("res/images/object/rope_strong.png");
-    oldRope.setPosition(width / 2, 300);
-    oldRope.setScale(0.15, 0.15);
+    var oldRope = objectFactory.create("res/images/character/gold rope handing.png");
+    oldRope.setPosition(width / 2, -100);
+    oldRope.setScale(0.5, 0.5);
     drawManager.addDrawable(oldRope);
+    // 리소스 교체 필요?
+    // var oldRope = objectFactory.create("res/images/object/rope_strong.png");
+    // oldRope.setPosition(width / 2, 300);
+    // oldRope.setScale(0.15, 0.15);
+    // drawManager.addDrawable(oldRope);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    boy.setPosition(550, 210);
-    boy.setScale(0.5, 0.5);
-    drawManager.addDrawable(boy);
+    // var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
+    // boy.setPosition(550, 210);
+    // boy.setScale(0.5, 0.5);
+    // drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    girl.setPosition(730, 500);
-    girl.setScale(-0.5, 0.5);
-    drawManager.addDrawable(girl);
+    // var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
+    // girl.setPosition(730, 500);
+    // girl.setScale(-0.5, 0.5);
+    // drawManager.addDrawable(girl);
 
     soundManager.playOnce("res/sound/effect/314.319_밧줄잡는소리.mp3");
   }

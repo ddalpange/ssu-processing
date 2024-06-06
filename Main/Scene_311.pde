@@ -12,7 +12,7 @@ public class Scene_311 extends BaseScene {
     loadBackground("48", drawManager);
     
     var speechBubble = objectFactory.create("res/images/ui/tx box.png");
-    speechBubble.setPosition(600, 400);
+    speechBubble.setPosition(600, 300);
     drawManager.addDrawable(speechBubble);
   }
  

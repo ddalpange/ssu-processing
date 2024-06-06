@@ -30,7 +30,7 @@ public class DialogUi {
         this.imageWidth = uiImage.width;
         this.imageHeight = uiImage.height;
         this.x = width / 2 - imageWidth / 2;
-        this.y = 450;
+        this.y = 500;
         //this.x = width / 4;
         // this.y = height - DIALOG_HEIGHT - (DIALOG_MARGIN * 2); // 20 은 MARGIN
     }

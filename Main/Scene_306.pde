@@ -27,7 +27,7 @@ public class Scene_306 extends BaseScene {
 
     speechBubble = objectFactory.create("res/images/UI/speech-bubble.png");
     speechBubble.setPosition(originXPos, originYPos);
-    speechBubble.setScale(0.5, 0.5);
+    speechBubble.setScale(0.45, 0.45);
     drawManager.addDrawable(speechBubble);
 
     var tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.back);
@@ -64,8 +64,8 @@ public class Scene_306 extends BaseScene {
     curXPos = targetXPos;
     curYPos = targetYPos;
 
-    fontManager.drawText("Is there a way to climb the tree?",
-    (int)targetXPos - 230, (int)targetYPos - 40, 30);
+    fontManager.drawText("Is there a way \nto climb the tree?",
+    (int)targetXPos - 100, (int)targetYPos - 80, 30);
 
     curCount++;
   }

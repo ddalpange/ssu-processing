@@ -45,14 +45,14 @@ public class Scene_104 extends BaseScene {
 
     leftArrow = objectFactory.create("res/images/UI/Arrow_L.png");
     leftArrow.setPosition(970, 550);
-    leftArrow.setScale(1.7, 1.7);
+    leftArrow.setScale(0.8, 0.8);
 
     rightArrow = objectFactory.create("res/images/UI/Arrow_R.png");
     rightArrow.setPosition(1180, 550);
-    rightArrow.setScale(1.7, 1.7);
+    rightArrow.setScale(0.8, 0.8);
 
-    arrowDescButton = new Button2(loadImage("res/images/UI/subtitle_bar_2.png"), 1090, 670);
-    arrowDescButton.setScale(0.55, 0.55);
+    arrowDescButton = new Button2(loadImage("res/images/UI/subtitle_bar_2.png"), 1075, 670);
+    arrowDescButton.setScale(0.4, 0.4);
     arrowDescButton.textOffset = new PVector(-20, 0);
     arrowDescButton.text = "Press Left or Right Arrow Key";
 

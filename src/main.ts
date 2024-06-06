@@ -5,7 +5,7 @@ export const main = (p: p5) => {
   let image: any;
   p.setup = function setup() {
     p.createCanvas(1280, 720);
-    image = p.loadImage("res/images/ui/3button.png");
+    image = p.loadImage("res/images/ui/button_1.png");
   };
   p.draw = function draw() {
     p.background(0);

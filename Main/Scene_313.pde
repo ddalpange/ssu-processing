@@ -36,9 +36,9 @@ public class Scene_313 extends BaseScene {
     startAnimation(new MoveAnimation(oldRope, width - 350, 200, 2));
     drawManager.addDrawable(oldRope);
 
-    var questionMark = objectFactory.create("res/images/UI/question-mark.png");
+    var questionMark = objectFactory.create("res/images/UI/red question.png");
     questionMark.setPosition(900, 300);
-    questionMark.setScale(0.25, 0.25);
+    questionMark.setScale(1, 1);
     drawManager.addDrawable(questionMark);
 
     twinkle = objectFactory.create("res/images/object/Twinkle.png");
