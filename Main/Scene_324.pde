@@ -11,12 +11,20 @@ public class Scene_324 extends BaseScene {
 
     loadBackground("61", drawManager);
 
-    PVector ropeScale = new PVector(0.1, 0.1);
+    PVector ropeScale = new PVector(0.2, 0.2);
     var oldRope = objectFactory.create("res/images/object/rope_weak.png");
-    oldRope.setPosition(width / 2, 000);
+    oldRope.setPosition(width / 2, -200);
     oldRope.setScale(ropeScale.x, ropeScale.y);
     startAnimation(new MoveAnimation(oldRope, width / 2, 200, 2));
     drawManager.addDrawable(oldRope);
+
+    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb_rope);
+    tiger.setPosition(width / 2, 420);
+    tiger.setScale(0.6, 0.6);
+    drawManager.addDrawable(tiger);
+
+    startAnimation(new MoveAnimation(oldRope, width / 2, -200 - 400, 8, EaseType.InOutSine));
+    startAnimation(new MoveAnimation(tiger, width / 2, 420 - 400, 8, EaseType.InOutSine));
 
     // 호랑이 손 필요
 
@@ -29,7 +37,7 @@ public class Scene_324 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
-    
+    animationManager.update();
     popStyle();
   }
   
