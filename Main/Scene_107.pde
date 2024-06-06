@@ -4,6 +4,8 @@ public class Scene_107 extends BaseScene {
 
   @Override
   public int getNextScene() { return 108; }
+
+  Drawable tiger;
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
@@ -12,24 +14,25 @@ public class Scene_107 extends BaseScene {
 
     Scene_106_background_setup(drawManager);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.black);
+    tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.black);
     tiger.setPosition(450, 300);
     tiger.setScale(0.25, 0.25);
     drawManager.addDrawable(tiger);
 
     var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.back_ricecake);
-    mom.setPosition(850, 450);
+    mom.setPosition(850, 430);
     mom.setScale(0.5, 0.5);
     drawManager.addDrawable(mom);
   }
- 
+
   public void draw() {
     pushStyle();
     
-    
+    tiger.update();
     
     drawManager.drawing();
     uiManager.drawing();
+    animationManager.update();
     
     popStyle();
   }
@@ -38,6 +41,9 @@ public class Scene_107 extends BaseScene {
     if (uiManager.dialogUi.next()) {
       return;
     }
-    loadNextScene();
+
+    if (tiger.isMouseOver()) {
+      loadNextScene();
+    }
   }
 }
