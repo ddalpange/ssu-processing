@@ -13,18 +13,28 @@ public class Scene_330 extends BaseScene {
     var cloud1 = new Cloud_Normal(width / 2 - 600, 500);
     drawManager.addDrawable(cloud1);
 
-    var cloud2 = new Cloud_Normal(width / 2 + 200, 500);
+    var cloud2 = new Cloud_Normal(width / 2 + 100, 500);
     drawManager.addDrawable(cloud2);
-    
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.seat);
-    boy.setPosition(width / 2 - 300, 500);
-    boy.setScale(0.6, 0.6);
-    drawManager.addDrawable(boy);
+
+    var sun = objectFactory.create("res/images/object/sun.png");
+    sun.setPosition(width/4, 250);
+    sun.setScale(0.16f, 0.16f);
+    drawManager.addDrawable(sun);
+
+    var moon = objectFactory.create("res/images/object/moon.png");
+    moon.setPosition(width/4 * 3, 250);
+    moon.setScale(-0.16f, 0.16f);
+    drawManager.addDrawable(moon);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.seat);
-    girl.setPosition(width / 2 + 300, 500);
+    girl.setPosition(width / 2 - 300, 500);
     girl.setScale(-0.6, 0.6);
     drawManager.addDrawable(girl);
+    
+    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.seat);
+    boy.setPosition(width / 2 + 300, 500);
+    boy.setScale(0.6, 0.6);
+    drawManager.addDrawable(boy);
 
     soundManager.playOnce("res/sound/effect/330_빛내려오는효과음.mp3");
   }
