@@ -1,17 +1,17 @@
 void Scene_211_Family_Setup(DrawManager drawManager) {
-  var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.front);
-  mom.setPosition(150, 650);
-  mom.setScale(0.6f, 0.6f);
+  var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.smile);
+  mom.setPosition(130, 500);
+  mom.setScale(1.2f, 1.2f);
   drawManager.addDrawable(mom);
 
   var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.front);
-  boy.setPosition(300, 650);
-  boy.setScale(0.6f, 0.6f);
+  boy.setPosition(300, 550);
+  boy.setScale(0.7f, 0.7f);
   drawManager.addDrawable(boy);
 
   var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.front);
-  girl.setPosition(450, 700);
-  girl.setScale(0.6f, 0.6f);
+  girl.setPosition(450, 600);
+  girl.setScale(0.7f, 0.7f);
   drawManager.addDrawable(girl);
 }
 

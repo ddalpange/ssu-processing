@@ -16,8 +16,8 @@ public class Scene_210 extends BaseScene {
     drawManager.addDrawable(tiger);
 
     var stones = objectFactory.create("res/images/object/stones.png");
-    stones.setPosition(width / 2 + 212, 355);
-    stones.setScale(-0.24f, 0.24f);
+    stones.setPosition(width / 2 + 212, 360);
+    stones.setScale(-0.25f, 0.25f);
     drawManager.addDrawable(stones);
 
 

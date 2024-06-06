@@ -28,7 +28,7 @@ public class Scene_209 extends BaseScene {
 
     var stones = objectFactory.create("res/images/object/stones.png");
     stones.setPosition(350, 140);
-    stones.setScale(0.17f, 0.17f);
+    stones.setScale(0.16f, 0.16f);
     drawManager.addDrawable(stones);
 
     soundManager.playOnce("res/sound/effect/209_아이디어효과음.mp3");
