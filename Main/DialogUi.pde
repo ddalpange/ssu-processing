@@ -19,8 +19,8 @@ public class DialogUi {
     private PImage uiImage;
 
     int charIndex = 0;
-    int frameCounter = 0;
-    int frameInterval = 2; // 문자 하나당 표시될 프레임 수
+    float frameElapsed = 0;
+    float frameCounterTime = 0.25;
 
     public DialogUi() {
         this.visible = false;
@@ -63,8 +63,7 @@ public class DialogUi {
         fill(0, 0, 0);
         
         String msg = this.current.text.replace("\\n","\n");
-          // frameCounter가 frameInterval에 도달하면 다음 문자를 표시
-        if (frameCounter % frameInterval == 0 && charIndex < msg.length()) {
+        if (frameElapsed >= frameCounterTime && charIndex < msg.length()) {
             charIndex++;
         } else if (charIndex >= msg.length()) {
             charIndex = msg.length();
@@ -73,7 +72,7 @@ public class DialogUi {
         String showingText = msg.substring(0, charIndex);
 
         fontManager.drawText(showingText, x + 150, this.y + 100, imageWidth - 300, imageHeight - 100, MSG_TEXT_SIZE);
-        frameCounter++;
+        frameElapsed += deltaTime;
     }
 
     private void draw() {
@@ -129,7 +128,7 @@ public class DialogUi {
     }
 
     void resetTextAnimation () {
-        this.frameCounter = 0;
+        this.frameElapsed = 0;
         this.charIndex = 0;
     }
 
