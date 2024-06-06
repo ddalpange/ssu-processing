@@ -51,7 +51,7 @@ public class Scene_104 extends BaseScene {
     rightArrow.setPosition(1180, 550);
     rightArrow.setScale(0.8, 0.8);
 
-    arrowDescButton = new Button2(loadImage("res/images/UI/subtitle_bar_2.png"), 1075, 670);
+    arrowDescButton = new Button2(loadImage("res/images/UI/subtitle_bar_2.png"), 1065, 670);
     arrowDescButton.setScale(0.4, 0.4);
     arrowDescButton.textOffset = new PVector(-20, 0);
     arrowDescButton.text = "Press Left or Right Arrow Key";
