@@ -21,8 +21,8 @@ public class Scene_106 extends BaseScene {
     Scene_106_background_setup(drawManager);
 
     var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.back_ricecake);
-    mom.setPosition(700, 400);
-    mom.setScale(0.4, 0.4);
+    mom.setPosition(850, 450);
+    mom.setScale(0.5, 0.5);
     drawManager.addDrawable(mom);
 
     soundManager.playOnce("res/sound/effect/106_부엉이아니고올빼미소리.mp3");
