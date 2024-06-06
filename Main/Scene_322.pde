@@ -25,7 +25,7 @@ public class Scene_322 extends BaseScene {
     // TODO: localize
     fontManager.drawText(
       "하늘님,",
-      600, 250, 30);
+      565, 250, 30);
 
     fontManager.drawText(
     "나를 살리시려거든 새 동아줄을 내려주시고",
@@ -33,7 +33,7 @@ public class Scene_322 extends BaseScene {
 
     fontManager.drawText(
     "죽이시려거든 썩은 동아줄을 내려주세요!",
-    350, 350, 30);
+    365, 350, 30);
 
     popStyle();
   }

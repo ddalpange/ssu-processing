@@ -13,17 +13,17 @@ public class Scene_321 extends BaseScene {
     // 배경, 나무, 도끼 필요
     
     var rope = objectFactory.create("res/images/object/rope_strong.png");
-    rope.setPosition(255, -240);
-    rope.setScale(0.125, 0.125);
+    rope.setPosition(255, 120);
+    rope.setScale(0.04, 0.04);
     drawManager.addDrawable(rope);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    boy.setPosition(225, 100);
+    boy.setPosition(225, 70);
     boy.setScale(0.15, 0.15);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    girl.setPosition(285, 100);
+    girl.setPosition(275, 160);
     girl.setScale(-0.15, 0.15);
     drawManager.addDrawable(girl);
 

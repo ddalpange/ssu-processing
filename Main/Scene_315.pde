@@ -17,13 +17,13 @@ public class Scene_315 extends BaseScene {
     // drawManager.addDrawable(oldRope);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    boy.setPosition(width / 2 - 50, 500);
-    boy.setScale(0.3, 0.3);
+    boy.setPosition(480, -10);
+    boy.setScale(0.4, 0.4);
     drawManager.addDrawable(boy);
 
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    girl.setPosition(width / 2 + 50, 500);
-    girl.setScale(-0.3, 0.3);
+    girl.setPosition(580, 350);
+    girl.setScale(-0.4, 0.4);
     drawManager.addDrawable(girl);
 
 
