@@ -23,24 +23,24 @@ public class Scene_204 extends BaseScene {
 
     loadBackground("19", drawManager);
 
-    var bg = objectFactory.create("res/images/object/inside_house.png");
-    bg.setPosition(width / 2, height / 2);
-    bg.setScale(0.25, 0.25);
-    drawManager.addDrawable(bg);
+    // var bg = objectFactory.create("res/images/object/inside_house.png");
+    // bg.setPosition(width / 2, height / 2);
+    // bg.setScale(0.25, 0.25);
+    // drawManager.addDrawable(bg);
     
 
     팥떡 = objectFactory.create("res/images/object/ricecake_02_02.png");
-    팥떡.setPosition(400, 400);
-    팥떡.setScale(1.2, 1.2);
+    팥떡.setPosition(350, 250);
+    팥떡.setScale(1.4, 1.4);
     drawManager.addDrawable(팥떡);
 
     쑥떡 = objectFactory.create("res/images/object/ricecake_01_02.png");
-    쑥떡.setPosition(800, 410);
-    쑥떡.setScale(1.2, 1.2);
+    쑥떡.setPosition(950, 250);
+    쑥떡.setScale(1.4, 1.4);
     drawManager.addDrawable(쑥떡);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.point);
-    boy.setPosition(width / 2, 750);
+    boy.setPosition(width / 2 - 170, 710);
     boy.setScale(0.8f, 0.8f);
     drawManager.addDrawable(boy);
 
