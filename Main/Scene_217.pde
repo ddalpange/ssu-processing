@@ -14,20 +14,20 @@ public class Scene_217 extends BaseScene {
 
     loadBackground("32", drawManager);
 
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.front);
-    mom.setPosition(width / 2 - 230, 500);
-    mom.setScale(0.6f, 0.6f);
-    drawManager.addDrawable(mom);
-
     var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.smile);
-    girl.setPosition(width / 2 + 170, 590);
+    girl.setPosition(width / 2 + 80, 500);
     girl.setScale(0.6f, 0.6f);
     drawManager.addDrawable(girl);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.smile);
-    boy.setPosition(width / 2, 560);
-    boy.setScale(0.6f, 0.6f);
+    boy.setPosition(width / 2 + 450, 500);
+    boy.setScale(0.5f, 0.5f);
     drawManager.addDrawable(boy);
+
+    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.smile);
+    mom.setPosition(width / 2 + 270, 450);
+    mom.setScale(1f, 1f);
+    drawManager.addDrawable(mom);
 
     retryButton = new Button2(loadImage("res/images/UI/3button.png"), 1080, 100);
     retryButton.text = "Want to go back?";
