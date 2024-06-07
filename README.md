@@ -34,8 +34,22 @@ brew 같은거 없고 java랑 다르니 받아야함.
 
 ### How to Install?
 
+#### Mac
 ```
 brew install nvm
+nvm install 20  # install node 20
+npm i -g pnpm # install pnpm
+pnpm i # install node_modules
+pnpm dev # start dev server
+```
+
+#### Windows
+https://nodejs.org/en/download/prebuilt-installer
+
+https://pnpm.io/ko/installation
+
+PowerShell
+```
 nvm install 20  # install node 20
 npm i -g pnpm # install pnpm
 pnpm i # install node_modules
