@@ -5,17 +5,20 @@ public class Scene_303 extends BaseScene {
   @Override
   public int getNextScene() { return 304; }
 
-  int GOAL_IN_HEIGHT = -168;
+  int GOAL_IN_HEIGHT = -232;
   int GO_UP_SPEED = 8;
 
   int START_COUNTDOWN_TIME = 3000; // 3초
   int GAME_COUNTDOWN_TIME = 20000; // 20초
 
+  int boyX =  width / 2 - 140;
+  int girlX =  width / 2 + 110;
+
   int boyAndGirlHeight = height;
 
   int startTimeLeft = START_COUNTDOWN_TIME / 1000;
   int gameTimeLeft = GAME_COUNTDOWN_TIME / 1000;
-  int startTime;
+  int startTime = 0;
 
   boolean isGameStart = false;
   boolean isDialogVisible;
@@ -25,6 +28,16 @@ public class Scene_303 extends BaseScene {
 
   Button skipButton;
   Button retryButton;
+  
+  ShapeObject space;
+  ScaleAnimation spaceUpAnimation;
+  ScaleAnimation spaceDownAnimation;
+
+  float spaceScale = 0.6f;
+  float spaceScaleDuration = 0.4f;
+
+  int curCount = 0;
+  TimeTracker timeTracker = new TimeTracker();
 
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
@@ -32,17 +45,25 @@ public class Scene_303 extends BaseScene {
 
     loadBackground("40", drawManager);
 
-    boy = createCharacter(CharacterType.boy, width / 2 - 120);
-    girl = createCharacter(CharacterType.girl, width / 2 + 90);
+    boy = createCharacter(CharacterType.boy, boyX);
+    girl = createCharacter(CharacterType.girl, girlX);
 
-    retryButton = createButton("retry?", width / 2 - 150, height / 2 - 150);
-    skipButton = createButton("skip?", width / 2 - 150, height / 2 + 50);
+    retryButton = createButton(locale == "en" ? "retry?" : "다시 시도?", width / 2 - 150, height / 2 - 150);
+    skipButton = createButton(locale == "en" ? "skip?" : "건너뛰기?", width / 2 - 150, height / 2 + 50);
+
+    space = objectFactory.create("res/images/UI/space.png");
+    space.setPosition(width - 200, height - 80);
+    space.setScale(spaceScale, spaceScale);
+    drawManager.addDrawable(space);
+    
+    spaceUpAnimation = new ScaleAnimation(space, spaceScale + spaceScale * 0.05, spaceScale + spaceScale * 0.05, spaceScaleDuration);
+    spaceDownAnimation = new ScaleAnimation(space, spaceScale - spaceScale * 0.05, spaceScale - spaceScale * 0.05, spaceScaleDuration);
   }
  
   private ShapeObject createCharacter(CharacterType type, int xPosition) {
     ShapeObject character = objectFactory.create(type, CharacterPoseType.climb);
     character.setPosition(xPosition, boyAndGirlHeight);
-    character.setScale(0.4, 0.4);
+    character.setScale(0.55, 0.55);
     drawManager.addDrawable(character);
 
     return character;
@@ -57,6 +78,15 @@ public class Scene_303 extends BaseScene {
     return button;
   }
 
+  private void updateScale() {
+    if(timeTracker.IfTimeOver(curCount * spaceScaleDuration)) {
+      clearAnimation();
+      var isEven = curCount % 2 == 0;
+      startAnimation(isEven ? spaceUpAnimation.reset() : spaceDownAnimation.reset());
+      curCount++;
+    }
+  }
+
   public void draw() {
     pushStyle();
     smooth();
@@ -64,21 +94,26 @@ public class Scene_303 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
+    timeTracker.update();
+    animationManager.update();
     
     drawingCountdown();
     drawingGameOver();
+
+    updateScale();
 
     popStyle();
   }
 
   private void initGame() {
+    isGameStart = false;
     boyAndGirlHeight = height;
-    boy.setPosition(width / 2 - 120 , boyAndGirlHeight);
-    girl.setPosition(width / 2 + 90, boyAndGirlHeight);
+    boy.setPosition(boyX, boyAndGirlHeight);
+    girl.setPosition(girlX, boyAndGirlHeight);
     startTimeLeft = START_COUNTDOWN_TIME / 1000;
     gameTimeLeft = GAME_COUNTDOWN_TIME / 1000;
 
-    isGameStart = false;
+    startTime = millis();
   }
 
   private void drawingGameOver() {
@@ -105,6 +140,15 @@ public class Scene_303 extends BaseScene {
           height / 2 + 50, 
           100
         );
+      } else if (!isGameStart && startTimeLeft == 0) {
+        fontManager.drawText(
+          locale == "en" ? "START!" : "시작!", 
+          width / 2 - 200,
+          height / 2 - 50, 
+          width / 2 + 100, 
+          height / 2 + 50, 
+          100
+        );
       } else if (!isGameStart) {
         startTime = millis();
         isGameStart = true;
@@ -114,7 +158,14 @@ public class Scene_303 extends BaseScene {
         gameTimeLeft = setCountdown(GAME_COUNTDOWN_TIME);
       }
       textAlign(RIGHT);
-      fontManager.drawText(str(gameTimeLeft), width - 90, 10, 80, 60, 50);
+      fontManager.drawText(
+        str(gameTimeLeft), 
+        width / 2 - 130,
+        30, 
+        width / 2 + 100, 
+        200,
+        50
+      );
     }
   }
 
@@ -136,8 +187,8 @@ public class Scene_303 extends BaseScene {
   private void setGoUp() {
     boyAndGirlHeight -= GO_UP_SPEED;
 
-    boy.setPosition(width / 2 - 120 , boyAndGirlHeight);
-    girl.setPosition(width / 2 + 90, boyAndGirlHeight);
+    boy.setPosition(boyX , boyAndGirlHeight);
+    girl.setPosition(girlX, boyAndGirlHeight);
 
     if (boyAndGirlHeight == GOAL_IN_HEIGHT) {
       loadNextScene();
@@ -147,7 +198,7 @@ public class Scene_303 extends BaseScene {
   public void mousePressed() {
     isDialogVisible = uiManager.dialogUi.next();
 
-    if (!isDialogVisible) {
+    if (startTime == 0 && !isDialogVisible) {
       uiManager.dialogUi.hide();
       startTime = millis();
     }
