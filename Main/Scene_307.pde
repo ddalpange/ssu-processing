@@ -12,7 +12,7 @@ public class Scene_307 extends BaseScene {
     loadBackground("44", drawManager);
 
     // 회전시키면 마우스 호버랑 위치가 이상해짐;; 일단 패스
-    var axe = objectFactory.create("res/images/object/axe.png");
+    var axe = objectFactory.create("res/images/object/ex.png");
     axe.setPosition(900, 200);
     //axe.d_rotate(30);
     drawManager.addDrawable(axe);

@@ -21,7 +21,7 @@ public class Scene_308 extends BaseScene {
 
     // 회전시키면 마우스 호버랑 위치가 이상해짐;; 일단 패스
     oil = objectFactory.create("res/images/object/oil.png");
-    oil.setPosition(250, 200);
+    oil.setPosition(250, 220);
     //oil.d_rotate(30);
     drawManager.addDrawable(oil);
 
@@ -29,9 +29,10 @@ public class Scene_308 extends BaseScene {
     questionMark.setPosition(800, 270);
     questionMark.setScale(1, 1);
     drawManager.addDrawable(questionMark);
-
-    axe = objectFactory.create("res/images/object/axe.png");
-    axe.setPosition(1050, 200);
+// 마우스 호버 시 ex_2.png로 변경되어야 함
+    axe = objectFactory.create("res/images/object/ex.png");
+    axe.setScale(0.4, 0.4);
+    axe.setPosition(1000, 200);
     //axe.d_rotate(30);
     drawManager.addDrawable(axe);
 

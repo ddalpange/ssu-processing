@@ -14,17 +14,17 @@ public class Scene_102 extends BaseScene {
 
     loadBackground("3", drawManager);
 
-    cloud1 = objectFactory.create("res/images/object/cloud_1.png");
+    cloud1 = objectFactory.create("res/images/object/cloud.png");
     cloud1.setPosition(200, 100);
-    cloud1.setScale(0.6, 0.6);
+    cloud1.setScale(0.55, 0.55);
     drawManager.addDrawable(cloud1);
     var anim = new MoveAnimation(cloud1, cloud1.x, cloud1.y - 10, 1.5, EaseType.InOutBack);
     anim.repeatCount = -1;
     startAnimation(anim);
 
-    cloud2 = objectFactory.create("res/images/object/cloud_2.png");
+    cloud2 = objectFactory.create("res/images/object/cloud2.png");
     cloud2.setPosition(1000, 80);
-    cloud2.setScale(0.6, 0.6);
+    cloud2.setScale(0.4, 0.4);
     drawManager.addDrawable(cloud2);
     anim = new MoveAnimation(cloud2, cloud2.x, cloud2.y + 15, 1.8, EaseType.InOutBack);
     anim.repeatCount = -1;
