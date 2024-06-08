@@ -2,10 +2,10 @@ id	comment	character	voice
 102001	Once upon a time, mother and sibling who are poor, were living happily in the deep mountain.	NARR	102001
 103001	Their father passed away early, but the mother was taking responsibility of their family’s wealth by selling handmade rice cakes at the market which located on over several hills.	NARR	103001
 103002	Shall i start to make some rice cake?	MOM	103002
-103003	[Rice cake making mini game]	OHNUI	103003
+103003	[Rice cake making mini game]		103003
 104001			
 105001	Mother the rice cake is so well made!	BOY	105001
-105002	I think it'll be so delicious!	GIRL	105002
+105002	Wow! I think it'll be so delicious!	GIRL	105002
 105003	Mother had a hard time to sell her rice cake at the market but she got strength from seeing her daughter and son who get along well.	NARR	105003
 106001	It was late at night as usual when the mother finished working at the market and returning to home with the leftover rice cake.	NARR	106001
 106002	I think the forest is darker today.	MOM	106002
@@ -29,14 +29,14 @@ id	comment	character	voice
 201006	Guys, Mom. open the door.	TIGER	201006
 201007	The brother who thought the voice is strange asked to tiger.	NARR	201007
 201008	Then show me your hand through the doorstep.	BOY	201008
-202001	below the doorstep, there was fluffy fur and thick jelly-like hands. It was obviously tiger's hands but he thought her hands had "swelled up from the hard work" that belief came from the strong anticipation to be reunited with his beloved mother in hurry, so he opened the door with belief of it.	NARR	202001
+202001	What they could see below the doorstep was fluffy fur and thick jelly-like hands. It was obviously tiger's hands but he thought her hands had "swelled up from the hard work" and that belief came from the strong anticipation and desire to be reunited with his beloved mother as soon as possible, so he let go and opened the door with confidence.	NARR	202001
 202002	Mom, you did a great job. I missed you!	BOY	202002
 203001	Then, there was a huge tiger in his mother's clothes standing in front of his eyes. 	NARR	203001
 203002	Roar!!	TIGER	203002
 203003	When they saw a tiger drooling and trying to devour them and they began to tremble and looking around.	NARR	203003
 204001	Brother, I think that tiger wants us because he's hungry... Oh! I see the rice cake basket that mom prepared, Mom said there is a rice cake that the tiger especially likes... What was that?	GIRL	204001
-204002	[Picking rice cake for the tiger mini game]\n You have to decide on the rice cake for the tiger. The outcome of the game depends on the rice cake you choose, and you can experience various endings.	NARR	204002
-204003	Option 1. Red bean rice cake: Rice cake full of traditional sweet red beans.\nOption 2. Mugwort rice cake: Rice cake with a bitter scent of mugwort.	NARR	
+204002	[Picking rice cake for the tiger mini game]\nYou have to decide on the rice cake for the tiger. The outcome of the game depends on the rice cake you choose, and you can experience various endings.		204002
+204003	Option 1. Red bean rice cake: Rice cake full of traditional sweet red beans.\nOption 2. Mugwort rice cake: Rice cake with a bitter scent of mugwort.		
 205001	Here...this is the rice cake that you like the most !!!	OHNUI	205001
 205002	The sister carefully placed delicious rice cakes made by her mother in front of the tiger.	NARR	205002
 206001	The tiger was hungry, so as soon as he saw the rice cakes, he began to eat in hurry with joy.	NARR	206001
@@ -67,15 +67,15 @@ id	comment	character	voice
 220001	Ewww!!! What’s this awful taste?!	TIGER	220001
 220002	He was a tiger who hated mugwort rice cake with a bitter scent of mugwort.	NARR	220002
 221001	(Roaring from furious tiger)	TIGER	221001
-221002	The brother who saw tiger that rather be mad 	NARR	221002
+221002	The brother who saw tiger that rather be mad.	NARR	221002
 222001	Grabbed his sister's hand and ran out of the back door in a hurry.	NARR	222001
 222002	Ahhhhhhhh!!!	OHNUI	222002
 301001	After sibling fled through the back door, find a towering tree after looking around to see where to run.	NARR	301001
 302001	Sister, let's climb up the tree over there! The tiger's thick feet will not make it up there. 	BOY	302001
 302002	So the sibling started running toward the tree.	NARR	302002
 303001	When they arrived at the tree, they started climbing it to avoid being caught by the tiger. 	NARR	303001
-303002	Sister, I don't think the tiger noticed yet,\n don't worry and go up safely.	BOY	303002
-303003	[A mini game that hits a certain number of space bars in a row within a limited time]	NARR	
+303002	Sister, I don't think the tiger noticed yet, don't worry and go up safely.	BOY	303002
+303003	[A mini game that hits a certain number of space bars in a row within a limited time]		
 304001	Later when the tiger realized that sibling had disappeared in the quiet room, the tiger came out from back door and found them on the tree.	NARR	304001
 305001	Fortunately sibling had already climbed to the top of the tree. The tiger ran to the tree desperately although it seemed never to be able to climb with his feet.	NARR	305001
 305002	See sister, I was right? A tiger can't climb a tree with his own feet.	BOY	305002
@@ -104,8 +104,8 @@ id	comment	character	voice
 320003	What's that rope?	TIGER	320003
 321001	The tiger quickly climbed up the tree and said the same thing after seeing the sibling climb up to the sky in front of his eyes.	NARR	321001
 321002	If I shout the same thing, the heaven will drop me a new rope?	TIGER	321002
-322001	God, if you want me to be saved give me the new rope, but if you want me to be killed give me the rotten rope!	TIGER	322001
-323001	Then, thunderstorms came down from the sky with the rumbling sound. \nThe Heaven who was very angry at the tiger for try to devour the sibling, gave only the rotten rope with the strong thunderstorms.	NARR	323001
+322001	God, if you want me to be saved give me the new rope, \nbut if you want me to be killed give me the rotten rope!	TIGER	322001
+323001	Then, thunderstorms came down from the sky with the rumbling sound. \nThe Heaven who was very angry at the tiger for try to devour the sibling, \ngave only the rotten rope with the strong thunderstorms.	NARR	323001
 324001	The tiger didn't know that and grabbed the rotten rope.	NARR	324001
 324002	Haha! See! The heaven knows me. Shall we go get the sibling?	TIGER	324002
 325001	When the tiger was holding the rope and came up to them, they were surprised.	NARR	325001
@@ -120,6 +120,6 @@ id	comment	character	voice
 329001	When the tiger fell, the sibling were relieved, and they continued to climb up the rope to the sky.	NARR	329001
 329002	Brother, we survived. I'm really glad!	GIRL	329002
 329003	I'm so glad too. But where are we going?	BOY	329003
-330001	After reaching heaven, the rope finally stopped, and the sibling asked god how to return the favor. Then, god began to talk.	NARR	330001
+330001	After reaching heaven, the rope finally stopped, and the sibling asked god how to return the favor.\nThen, god began to talk.	NARR	330001
 330002	Welcome, sibling. I have some mission to leave it up to you guys. Why don't you become the sun and moon of the sky and protect the sky? You, the younger become the sun and you, the older become the moon.	GOD	330002
-330003	In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness, so can make the world more brighter. \nand they lived happily together for a long time.	NARR	330003
+330003	In this way, sibling became the sun and the moon, shining bright lights all over the world during the day, and also giving the sole light to those who pass by the night road at the darkness, so can make the world more brighter. And they lived happily together for a long time.	NARR	330003
