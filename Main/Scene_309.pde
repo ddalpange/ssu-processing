@@ -11,7 +11,7 @@ public class Scene_309 extends BaseScene {
     loadBackground("46", drawManager);
 
     var axe = objectFactory.create("res/images/object/ex.png");
-    axe.setPosition(720, 150);
+    axe.setPosition(800, 150);
     axe.setScale(0.3, 0.3);
     //axe.d_rotate(30);
     drawManager.addDrawable(axe);

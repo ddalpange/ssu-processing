@@ -20,7 +20,7 @@ public class Scene_312 extends BaseScene {
     var oldRope = objectFactory.create("res/images/object/rope_weak.png");
     oldRope.setPosition(width - 350, -100);
     oldRope.setScale(ropeScale.x, ropeScale.y);
-    startAnimation(new MoveAnimation(oldRope, width - 350, 250, 2));
+    startAnimation(new MoveAnimation(oldRope, width - 350, 170, 2));
     drawManager.addDrawable(oldRope);
 
     // 구름, 동앗줄 내려오는 효과
