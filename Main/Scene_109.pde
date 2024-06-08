@@ -16,11 +16,18 @@ public class Scene_109 extends BaseScene {
 
   private Random random;
   private ShapeObject tiger;
-  private Drawable basket;
+  private ShapeObject target;
+  private Drawable basket1;
+  private Drawable basket2;
   private List<Item> items;
   private Item selected;
   private List<ShapeObject> redbeanRicecakeCount;
   private float elapsedTime = 0;
+
+  private int BASTKET_X;
+  private int BASTKET_Y;
+  private int BASTKET_WIDTH;
+  private int BASTKET_HEIGTH;
 
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
@@ -37,6 +44,11 @@ public class Scene_109 extends BaseScene {
     TIGER_MOUSE_Y = 240;
     TIGER_MOUSE_SIZE = 80;
 
+    BASTKET_X = 30;
+    BASTKET_Y = height - 340;
+    BASTKET_WIDTH = 500;
+    BASTKET_HEIGTH = 230;
+
     tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.front);
     tiger.setPosition(width/2, height-250);
     tiger.setScale(0.7, 0.7);
@@ -45,17 +57,29 @@ public class Scene_109 extends BaseScene {
     loadBackground("10-2", drawManager);
     Scene_108_background_setup2(drawManager);
 
-    // basket = objectFactory.create(BackgroundType.소쿠리);
-    basket = objectFactory.create("res/images/object/basket_01_01.png");
-    basket.setPosition(250, height - 100);
-    basket.setScale(0.85, 2);
-    drawManager.addDrawable(basket);
-    
+    target = objectFactory.create("res/images/ui/target.png");
+    target.setPosition(TIGER_MOUSE_X, TIGER_MOUSE_Y);
+    target.setScale(0.5, 0.5);
+    drawManager.addDrawable(target);
+
     redbeanRicecakeCount = new ArrayList<>();
     items = new ArrayList<>();
     
     initializeRedbeanRicecakeCount();
     initializeItems();
+    // basket = objectFactory.create(BackgroundType.소쿠리);
+
+    basket2 = objectFactory.create("res/images/object/basket_01_03.png");
+    basket2.setPosition(250, height - 180);
+    basket2.setScale(1, 2.7);
+    basket2.setZIndex(1);
+    // drawManager.addDrawable(basket2);
+    
+    basket1 = objectFactory.create("res/images/object/basket_01_02.png");
+    basket1.setPosition(250, height - 100);
+    basket1.setScale(1, 1);
+    basket1.setZIndex(3);
+    // drawManager.addDrawable(basket1);
   }
 
   private void initializeRedbeanRicecakeCount() {
@@ -82,30 +106,55 @@ public class Scene_109 extends BaseScene {
     }
     Item item = new Item(type, position);
     items.add(item);
+    // drawManager.addDrawable(item.getItemObject());
   }
 
   private Point randomPosition(List<Item> existingItems, Item currentItem) {
-    int basketX = 50;
-    int basketY = height - 240;
-    int basketWidth = 420;
-    int basketHeight = 150;
+
     Point position;
+    float itemWidth = currentItem != null ? currentItem.getW() : 50; 
+    float itemHeight = currentItem != null ? currentItem.getH() : 50;
+    int maxAttempts = 100;
+    int attempts = 0;
+    boolean validPositionFound = false;
+
     do {
-        int randomX = random.nextInt(basketWidth) + basketX;
-        int randomY = random.nextInt(basketHeight) + basketY;
+        int randomX = random.nextInt(BASTKET_WIDTH - (int)itemWidth) + BASTKET_X + (int)itemWidth / 2;
+        int randomY = random.nextInt(BASTKET_HEIGTH - (int)itemHeight) + BASTKET_Y + (int)itemHeight / 2;
         position = new Point(randomX, randomY);
-    } while (isOverlappingWithOtherItems(existingItems, position, currentItem));
+        attempts++;
+        if (attempts >= maxAttempts) {
+            break;
+        }
+        validPositionFound = !isOverlappingWithOtherItems(existingItems, position, currentItem) &&
+                             !isOutsideBasketBounds(position, itemWidth, itemHeight);
+        
+    } while (!validPositionFound);
+    
+    if (!validPositionFound) {
+        position = new Point(BASTKET_X + BASTKET_WIDTH / 2, BASTKET_Y + BASTKET_HEIGTH / 2);
+    }
+
     return position;
   }
 
+
   private boolean isOverlappingWithOtherItems(List<Item> existingItems, Point position, Item currentItem) {
     for (Item item : existingItems) {
-      if (item != currentItem && dist(position.x, position.y, item.getX(), item.getY()) < 50) {
+      if (item != currentItem && dist(position.x, position.y, item.getX(), item.getY()) < Math.max(item.getW(), item.getH())) {
           return true;
       }
     }
     return false;
   }
+  
+private boolean isOutsideBasketBounds(Point position, float itemWidth, float itemHeight) {
+    return (position.x - itemWidth / 2 + 6 < BASTKET_X || 
+            position.x + itemWidth / 2 + 6 > BASTKET_X + BASTKET_WIDTH || 
+            position.y - itemHeight / 2 + 6< BASTKET_Y || 
+            position.y + itemHeight / 2 + 6 > BASTKET_Y + BASTKET_HEIGTH);
+}
+
 
   private boolean isGameComplete() {
     for (Item item : items) {
@@ -130,26 +179,26 @@ public class Scene_109 extends BaseScene {
     background(255);
 
     drawManager.drawing();
-    ellipse(TIGER_MOUSE_X, TIGER_MOUSE_Y, TIGER_MOUSE_SIZE, TIGER_MOUSE_SIZE);
 
+    basket2.draw();
     for (Item item : items) {
       item.draw();
       if (!item.isMoving && !item.isDragging)
       item.updateHover();
     }
+    basket1.draw();
 
     for (ShapeObject redbeanRicecake : redbeanRicecakeCount) {
       redbeanRicecake.draw();
     }
 
     // noFill();
-    // rect(50, height - 240, 420, 150);
+    // rect(BASTKET_X, BASTKET_Y, BASTKET_WIDTH, BASTKET_HEIGTH);
     // rect(width / 2 - 220, 130, 370, 120);
 
     Iterator<Item> iterator = items.iterator();
     while (iterator.hasNext()) {
       Item item = iterator.next();
-      //println("item.getItemObjectType()", item.getItemObjectType());
       if (item.isAtTarget() && item.getItemObjectType() == "ricecake_02_01") {
         iterator.remove();
         redbeanRicecakeCount.remove(0);
@@ -251,6 +300,11 @@ public class Item {
         itemObject = null;
         break;
     }
+    itemObject.setZIndex(2);
+  }
+
+  public Drawable getItemObject() {
+    return itemObject;
   }
 
   public String getItemObjectType() {
