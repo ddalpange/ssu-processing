@@ -41,7 +41,7 @@ public class BGMManager {
     sequences.add(new BGMSequence(new String[]{ "Scene_104" }, "res/sound/bgm/미니게임용3.mp3"));
     sequences.add(new BGMSequence(new String[]{ "Scene_105" }, "res/sound/bgm/튜토리얼.mp3"));
     sequences.add(new BGMSequence(new String[]{ "Scene_106", "Scene_107", "Scene_108" }, "res/sound/bgm/저녁숲속게임.mp3"));
-    sequences.add(new BGMSequence(new String[]{ "Scene_109" }, "res/sound/bgm/긴급한분위기_숏.mp3"));
+    sequences.add(new BGMSequence(new String[]{ "Scene_109" }, "res/sound/bgm/게임.mp3"));
     sequences.add(new BGMSequence(new String[]{ "Scene_110", "Scene_111", "Scene_112", "Scene_113", "Scene_114" }, "res/sound/bgm/무시무시.mp3"));
     sequences.add(new BGMSequence(new String[]{ "Scene_201" }, "res/sound/bgm/기본.mp3"));
     sequences.add(new BGMSequence(new String[]{ "Scene_202" }, "res/sound/bgm/긴급한분위기.mp3"));
