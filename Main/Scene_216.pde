@@ -1,44 +1,50 @@
 public class Scene_216 extends BaseScene {
   @Override
   public int getPreviousScene() { return 215; }
+
   @Override
   public int getNextScene() { return 217; }
 
-  private final float tigerScaleDuration = 0.4f;
   private final float tigerDefaultScale = 0.62f;
+  private final float tigerScaleDuration = 1.0f;
+
+  private SpriteAnimation tiger_anim;
+  private ShapeObject tiger;
   private ScaleAnimation tigerScaleUpAnimation;
   private ScaleAnimation tigerScaleDownAnimation;
   private int curCount = 0;
 
-  private SpriteAnimation tiger_anim;
-  private ShapeObject tiger;
   private TimeTracker timeTracker = new TimeTracker();
 
   private float elapsed = 0;
   private int step = 0;
+
   public void setup() {
     uiManager.dialogUi.enqueueAll(uiManager.getDialogForScene(this));
     uiManager.dialogUi.next();
 
     loadBackground("30", drawManager);
+
     tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.well_anim_1);
     tiger.setPosition(width / 2 - 130, 345);
     tiger.setScale(tigerDefaultScale * -1, tigerDefaultScale);
     drawManager.addDrawable(tiger);
 
-    var upScale = tigerDefaultScale + 0.015f;
-    tigerScaleUpAnimation = new ScaleAnimation(tiger, upScale,upScale,tigerScaleDuration);
-    tigerScaleDownAnimation = new ScaleAnimation(tiger, tigerDefaultScale,tigerDefaultScale,tigerScaleDuration);
+    var upScale = tigerDefaultScale + 0.009f;
+    tigerScaleUpAnimation = new ScaleAnimation(tiger, upScale *-1, upScale, tigerScaleDuration);
+    tigerScaleDownAnimation = new ScaleAnimation(tiger, tigerDefaultScale*-1, tigerDefaultScale, tigerScaleDuration);
 
   }
  
   public void draw() {
     pushStyle();
     
-  
-
     drawManager.drawing();
     uiManager.drawing();
+
+    animationManager.update();
+    UpdateScale();
+    timeTracker.update();
 
     if (step >= 1) {
       elapsed += deltaTime;
@@ -57,7 +63,7 @@ public class Scene_216 extends BaseScene {
         
         tiger_anim.playNTimes(spriteAnimCycle, (int)(animDuration / spriteAnimCycle));
         tiger_anim.setPosition(width / 2 + 180, 560);
-        tiger_anim.setScale(-0.62, 0.62);
+        tiger_anim.setScale(tigerDefaultScale * -1, tigerDefaultScale);
         drawManager.addDrawable(tiger_anim);
         soundManager.playOnce("res/sound/effect/216_풍덩소리.mp3");
         step = 3;
