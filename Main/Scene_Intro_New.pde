@@ -39,21 +39,24 @@ public class Scene_Intro_New extends BaseScene {
     title.setScale(0.7, 0.7);
     //drawManager.addDrawable(title);
 
-    startButton = new Button2(loadImage("res/images/UI/intro_button1.png"), width / 2, 400);
+    PVector textOffset = new PVector(0, -5);
+    startButton = new Button2(loadImage("res/images/UI/intro_button1.png"), "Start", 30, width / 2, 400);
     startButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
-    startButton.text = "Start";
+    startButton.textOffset = textOffset;
 
-    sceneListButton = new Button2(loadImage("res/images/UI/intro_button1.png"), width / 2, 500);
+    sceneListButton = new Button2(loadImage("res/images/UI/intro_button1.png"), "Shortcuts", 30, width / 2, 500);
     sceneListButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
-    sceneListButton.text = "Shortcuts";
+    sceneListButton.textOffset = textOffset;
 
-    creditButton = new Button2(loadImage("res/images/UI/intro_button1.png"), width / 2, 600);
+    creditButton = new Button2(loadImage("res/images/UI/intro_button1.png"), "Credits", 30, width / 2, 600);
     creditButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
-    creditButton.text = "Credits";
+    creditButton.textOffset = textOffset;
 
-    localeButton = new Button2(loadImage("res/images/UI/koreng.png"), width - 150, 200);
+    localeButton = new Button2(loadImage("res/images/UI/koreng.png"), locale, 20, width - 150, 200);
     localeButton.setScale(0.6, 0.6);
-    localeButton.text = locale;
+    localeButton.textOffset = new PVector(0, -2);
+
+    
     
     
     // 1
@@ -73,7 +76,7 @@ public class Scene_Intro_New extends BaseScene {
     //결말버튼.setScale(0.7, 0.7);
     //drawManager.addDrawable(결말버튼);
 
-    backButton = new Button2(loadImage("res/images/UI/button_play.png"), 30, 30);
+    backButton = new Button2(loadImage("res/images/UI/button_back.png"), 50, 50);
 
     var sceneNumbers = scenes.sceneNumbers;
     var sceneNumberStrs = Util.ToStringArray(sceneNumbers);
