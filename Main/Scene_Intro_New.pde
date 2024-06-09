@@ -60,8 +60,7 @@ public class Scene_Intro_New extends BaseScene {
     localeButton.textOffset = new PVector(0, -2);
     localeButton.fontColor = textColor;
 
-    
-    
+    refreshButtonText();
     
     // 1
     도입버튼 = objectFactory.create("res/images/UI/Opening_UI_03_01.png");
@@ -120,7 +119,8 @@ public class Scene_Intro_New extends BaseScene {
 
       if (drawButtonAndGetClicked(localeButton)) {
         locale = locale == "en" ? "ko" : "en";
-        localeButton.text = locale;
+        localeButton.text = locale == "en" ? "English" : "한국어";
+        refreshButtonText();
       }
 
     }
@@ -157,6 +157,18 @@ public class Scene_Intro_New extends BaseScene {
     }
 
     popStyle();
+  }
+
+  private void refreshButtonText() {
+    if (locale == "en") {
+      startButton.text = "Start";
+      sceneListButton.text = "Shortcuts";
+      creditButton.text = "Credits";
+    } else {
+      startButton.text = "시작";
+      sceneListButton.text = "바로가기";
+      creditButton.text = "제작진";
+    }
   }
   
   public void mousePressed() {
