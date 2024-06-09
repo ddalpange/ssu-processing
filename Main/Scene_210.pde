@@ -12,12 +12,12 @@ public class Scene_210 extends BaseScene {
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
     tiger.setPosition(width / 2 + 208, 460);
-    tiger.setScale(-0.5f, 0.5f);
+    tiger.setScale(-0.7f, 0.7f);
     drawManager.addDrawable(tiger);
 
     var stones = objectFactory.create("res/images/object/stones.png");
     stones.setPosition(width / 2 + 212, 360);
-    stones.setScale(-0.25f, 0.25f);
+    stones.setScale(0.3f, 0.3f);
     drawManager.addDrawable(stones);
 
 

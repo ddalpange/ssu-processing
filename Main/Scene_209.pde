@@ -23,7 +23,7 @@ public class Scene_209 extends BaseScene {
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
     tiger.setPosition(350, 200);
-    tiger.setScale(-0.28f, 0.28f);
+    tiger.setScale(-0.6f, 0.6f);
     drawManager.addDrawable(tiger);
 
     var stones = objectFactory.create("res/images/object/stones.png");
