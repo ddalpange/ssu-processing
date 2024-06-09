@@ -57,7 +57,7 @@ public class DialogUi {
             fill(0, 0, 255);
             pushStyle();
             textAlign(CENTER, CENTER);
-            fontManager.drawText(this.current.teller, x + imageWidth / 2, y + 35, TELLER_TEXT_SIZE);
+            fontManager.drawText(this.current.teller, x + imageWidth / 2, y + 50, TELLER_TEXT_SIZE);
             popStyle();
             //fontManager.drawText(this.current.teller, x + DIALOG_PADDING, y + DIALOG_PADDING * 2, TELLER_TEXT_SIZE);
             //text(this.current.teller, x + DIALOG_PADDING, y + DIALOG_PADDING * 2);
