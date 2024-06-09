@@ -27,9 +27,10 @@ public class Scene_203 extends BaseScene {
     girl.setScale(0.6f, 0.6f);
     drawManager.addDrawable(girl);
 
-    var tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.big);
+    var tiger = objectFactory.createAnimation(CharacterType.tiger_mom, "big", 2);
     tiger.setPosition(800, 400);
-    tiger.setScale(0.5f, 0.5f);
+    tiger.playInfinite(2);
+    //tiger.setScale(0.5f, 0.5f);
     drawManager.addDrawable(tiger);
 
     // 배경 이미지 위에 문 열린 것처럼 보이도록 네모 그려야 함.

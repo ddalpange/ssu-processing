@@ -75,6 +75,23 @@ public class ObjectFactory {
     throw new UnsupportedOperationException("Not implemented : " + path);
   }
 
+  public SpriteAnimation createAnimation(CharacterType type, String pose, int count) {
+    // type_pose_anim_1~count.png
+    String path = "res/images/character/" + type.name + "_" + pose + "_anim_";
+    ArrayList<PImage> images = new ArrayList<PImage>();
+    for (int i = 1; i <= count; i++) {
+      String fullPath = path + i + ".png";
+      PImage image = loadImage(fullPath);
+      if (image == null) {
+        println("Failed to load image : " + fullPath);
+        return null;
+      }
+      images.add(image);
+    }
+
+    return new SpriteAnimation(images.toArray(new PImage[0]));
+  }
+
   public ShapeObject create(String path) {
     var image = loadImage(path);
     if (image == null) {

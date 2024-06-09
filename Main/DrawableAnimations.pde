@@ -129,8 +129,8 @@ public class ScaleAnimation extends BaseAnimation {
 
   public ScaleAnimation(Drawable target, float destX, float destY, float duration, EaseType ease) {
       super(target);
-      startX = target.getX();
-      startY = target.getY();
+      startX = target.getScaleX();
+      startY = target.getScaleY();
       this.destX = destX;
       this.destY = destY;
       this.duration = duration;

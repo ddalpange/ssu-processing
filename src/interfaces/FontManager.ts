@@ -1,14 +1,13 @@
 import p5 from "p5";
 
 export class FontManager {
-  private font: p5.Font;
+  private font!: p5.Font;
   private defaultColor: string = "#000000";
 
-  constructor() {
-    this.font = p.loadFont("res/Font/NanumBarunGothic.otf");
-  }
+  constructor() {}
 
   public setup() {
+    this.font = p.loadFont("res/Font/NanumBarunGothic.otf");
     //this.font = loadFont("res/Font/NanumBarunGothic.otf");
   }
 
