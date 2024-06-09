@@ -1,12 +1,18 @@
 public class Scene_216 extends BaseScene {
   @Override
   public int getPreviousScene() { return 215; }
-
   @Override
   public int getNextScene() { return 217; }
 
-    private SpriteAnimation tiger_anim;
-    private ShapeObject tiger;
+  private final float tigerScaleDuration = 0.4f;
+  private final float tigerDefaultScale = 0.62f;
+  private ScaleAnimation tigerScaleUpAnimation;
+  private ScaleAnimation tigerScaleDownAnimation;
+  private int curCount = 0;
+
+  private SpriteAnimation tiger_anim;
+  private ShapeObject tiger;
+  private TimeTracker timeTracker = new TimeTracker();
 
   private float elapsed = 0;
   private int step = 0;
@@ -15,11 +21,15 @@ public class Scene_216 extends BaseScene {
     uiManager.dialogUi.next();
 
     loadBackground("30", drawManager);
-
     tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.well_anim_1);
     tiger.setPosition(width / 2 - 130, 345);
-    tiger.setScale(-0.62, 0.62);
+    tiger.setScale(tigerDefaultScale * -1, tigerDefaultScale);
     drawManager.addDrawable(tiger);
+
+    var upScale = tigerDefaultScale + 0.015f;
+    tigerScaleUpAnimation = new ScaleAnimation(tiger, upScale,upScale,tigerScaleDuration);
+    tigerScaleDownAnimation = new ScaleAnimation(tiger, tigerDefaultScale,tigerDefaultScale,tigerScaleDuration);
+
   }
  
   public void draw() {
@@ -70,4 +80,17 @@ public class Scene_216 extends BaseScene {
     }
     loadNextScene();
   }
+
+  public void UpdateScale()
+  {
+
+   if(timeTracker.IfTimeOver(curCount * tigerScaleDuration))
+   {
+    animationManager.clearAnimation();
+    var isEven = curCount % 2 == 0;
+      animationManager.startAnimation(isEven ? tigerScaleUpAnimation.reset() : tigerScaleDownAnimation.reset());
+      curCount++;
+   }
+  }
+
 }
