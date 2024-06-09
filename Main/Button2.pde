@@ -2,6 +2,7 @@ public class Button2 extends ShapeObject {
   public String text;
   public PVector textOffset;
   public int fontSize = 24;
+  public PImage mouseOverImage;
   public Button2(PImage image, float x, float y) {
     super(image);
     setPosition(x, y);
@@ -20,7 +21,15 @@ public class Button2 extends ShapeObject {
 
   @Override
   public void draw() {
-    super.draw();
+    if (mouseOverImage != null && isMouseOver()) {
+      PImage temp = super.image;
+      super.image = mouseOverImage;
+      super.draw();
+      super.image = temp;
+    } else {
+      super.draw();
+    }
+      
     pushStyle();
 
     if (text != null) {

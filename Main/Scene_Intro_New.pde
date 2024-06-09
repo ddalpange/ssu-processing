@@ -39,11 +39,17 @@ public class Scene_Intro_New extends BaseScene {
     title.setScale(0.7, 0.7);
     //drawManager.addDrawable(title);
 
-    startButton = new Button2(loadImage("res/images/UI/Opening_UI_01_01.png"), width / 2, 400);
+    startButton = new Button2(loadImage("res/images/UI/intro_button1.png"), width / 2, 400);
+    startButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
+    startButton.text = "Start";
 
-    sceneListButton = new Button2(loadImage("res/images/UI/Opening_UI_01_02.png"), width / 2, 500);
+    sceneListButton = new Button2(loadImage("res/images/UI/intro_button1.png"), width / 2, 500);
+    sceneListButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
+    sceneListButton.text = "Shortcuts";
 
-    creditButton = new Button2(loadImage("res/images/UI/Opening_UI_01_03.png"), width / 2, 600);
+    creditButton = new Button2(loadImage("res/images/UI/intro_button1.png"), width / 2, 600);
+    creditButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
+    creditButton.text = "Credits";
 
     localeButton = new Button2(loadImage("res/images/UI/koreng.png"), width - 150, 200);
     localeButton.setScale(0.6, 0.6);
@@ -81,7 +87,7 @@ public class Scene_Intro_New extends BaseScene {
 
   boolean drawButtonAndGetClicked(Button2 button) {
     button.draw();
-    button.update();
+    //button.update();
     return button.isClicked();
   }
  
