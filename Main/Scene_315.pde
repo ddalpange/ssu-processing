@@ -14,21 +14,22 @@ public class Scene_315 extends BaseScene {
     bronzeRope.setPosition(width/2, 300);
     bronzeRope.setScale(0.3, 0.3);
     drawManager.addDrawable(bronzeRope);
-    // var oldRope = objectFactory.create("res/images/object/rope_weak.png");
-    // oldRope.setPosition(width / 2, 200);
-    // oldRope.setScale(0.1, 0.1);
-    // drawManager.addDrawable(oldRope);
 
-    // var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    // boy.setPosition(480, -10);
-    // boy.setScale(0.4, 0.4);
-    // drawManager.addDrawable(boy);
+    var cloud1 = objectFactory.create("res/images/object/cloud.png");
+    cloud1.setPosition(200, 150);
+    cloud1.setScale(0.55, 0.55);
+    drawManager.addDrawable(cloud1);
+    var anim = new MoveAnimation(cloud1, cloud1.x, cloud1.y - 6, 1.5, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
-    // var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    // girl.setPosition(580, 350);
-    // girl.setScale(-0.4, 0.4);
-    // drawManager.addDrawable(girl);
-
+    var cloud2 = objectFactory.create("res/images/object/cloud2.png");
+    cloud2.setPosition(1000, 80);
+    cloud2.setScale(0.4, 0.4);
+    drawManager.addDrawable(cloud2);
+    anim = new MoveAnimation(cloud2, cloud2.x, cloud2.y + 9, 1.8, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
     // 구름, 별, 마을 배경(초가집, 밭) 필요
 
@@ -41,6 +42,7 @@ public class Scene_315 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
+    animationManager.update();
     
     popStyle();
   }
