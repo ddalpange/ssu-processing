@@ -19,6 +19,7 @@ public class Scene_Intro_New extends BaseScene {
   private ShapeObject 도입버튼;
   private ShapeObject 전개버튼;
   private ShapeObject 결말버튼;
+  private color textColor =  #7c633e;
 
   private Button[] sceneButtons;
   private Button2 backButton;
@@ -43,18 +44,22 @@ public class Scene_Intro_New extends BaseScene {
     startButton = new Button2(loadImage("res/images/UI/intro_button1.png"), "Start", 30, width / 2, 400);
     startButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
     startButton.textOffset = textOffset;
+    startButton.fontColor = textColor;
 
     sceneListButton = new Button2(loadImage("res/images/UI/intro_button1.png"), "Shortcuts", 30, width / 2, 500);
     sceneListButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
     sceneListButton.textOffset = textOffset;
+    sceneListButton.fontColor = textColor;
 
     creditButton = new Button2(loadImage("res/images/UI/intro_button1.png"), "Credits", 30, width / 2, 600);
     creditButton.mouseOverImage = loadImage("res/images/UI/intro_button2.png");
     creditButton.textOffset = textOffset;
+    creditButton.fontColor = textColor;
 
     localeButton = new Button2(loadImage("res/images/UI/koreng.png"), locale, 20, width - 150, 200);
     localeButton.setScale(0.6, 0.6);
     localeButton.textOffset = new PVector(0, -2);
+    localeButton.fontColor = textColor;
 
     
     

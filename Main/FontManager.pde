@@ -26,6 +26,16 @@ public class FontManager {
     popStyle();
   }
 
+    public void drawText(String text, int x, int y, int size, color textColor) {
+    pushStyle();
+
+    fill(textColor);
+    textFont(font, size);
+    text(text, x, y);
+
+    popStyle();
+  }
+
   public void drawText(String text, float x, float y, float width, float height, int size) {
     pushStyle();
 

@@ -2,6 +2,8 @@ public class Button2 extends ShapeObject {
   public String text;
   public PVector textOffset;
   public int fontSize = 24;
+  public color fontColor = #000000;
+
   public PImage mouseOverImage;
   public Button2(PImage image, float x, float y) {
     super(image);
@@ -40,7 +42,7 @@ public class Button2 extends ShapeObject {
       if (textOffset != null)
         textY += textOffset.y;
       textAlign(CENTER, CENTER);
-      fontManager.drawText(text, (int)textX, (int)textY, fontSize);
+      fontManager.drawText(text, (int)textX, (int)textY, fontSize, fontColor);
     }
 
     popStyle();
