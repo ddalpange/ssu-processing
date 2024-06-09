@@ -167,7 +167,7 @@ public class Scene_Intro_New extends BaseScene {
     } else {
       startButton.text = "시작";
       sceneListButton.text = "바로가기";
-      creditButton.text = "제작진";
+      creditButton.text = "만든 사람들";
     }
   }
   
