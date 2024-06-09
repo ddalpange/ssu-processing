@@ -4,6 +4,7 @@ import { Scene_101 } from "./scenes/Scene_101";
 
 export const main = (p: p5) => {
   p.AUDIO;
+
   p.setup = function setup() {
     p.createCanvas(1280, 720);
     sceneManager.loadScene(new Scene_101());

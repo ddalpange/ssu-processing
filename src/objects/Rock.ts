@@ -9,7 +9,5 @@ export class Rock extends Drawable {
     p.rect(this.x, this.y, this.w, this.h);
   }
 
-  onClick(): void {
-    console.log(`Clicked Rock ${this.zIndex}`);
-  }
+  onClick(): void {}
 }

@@ -2,19 +2,26 @@ import p5 from "p5";
 import { Drawable } from "./Drawable";
 
 export class ShapeObject extends Drawable {
-  protected image: p5.Image;
+  protected image: p5.Image | undefined;
 
-  constructor(image: p5.Image) {
-    super(0, 0, image.width, image.height);
-    this.image = image;
+  constructor(imageSrc: string) {
+    super();
     this.scale = new p5.Vector();
+    p.loadImage(imageSrc, (image) => {
+      this.image = image;
+      this.initialW = image.width;
+      this.w = image.width;
+      this.initialH = image.height;
+      this.h = image.height;
+    });
   }
 
   draw(): void {
-    if (this.image != null) this.drawImage();
+    this.drawImage();
   }
 
   private drawImage(): void {
+    if (this.image == null) return;
     p.push();
 
     p.imageMode(p.CENTER);

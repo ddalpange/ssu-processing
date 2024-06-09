@@ -32,7 +32,7 @@ export class Scene_101 extends BaseScene {
 
     this.hand = objectFactory.create("res/images/character/knock_hand.png");
     this.hand.setPosition(p.width / 2 + 200, 450);
-    this.hand.setScale(this.handScale, this.handScale);
+    // this.hand.setScale(this.handScale, this.handScale);
     this.drawManager.addDrawable(this.hand);
 
     this.handScaleUpAnimation = new ScaleAnimation(
@@ -59,7 +59,7 @@ export class Scene_101 extends BaseScene {
     this.uiManager.drawing();
     this.animationManager.update();
     this.timeTracker.update(window.deltaTime);
-    this.updateScale();
+    // this.updateScale();
 
     p.pop();
   }

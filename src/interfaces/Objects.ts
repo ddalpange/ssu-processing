@@ -51,10 +51,10 @@ export class ObjectFactory {
     return prefix + type + "_" + pose + extension;
   }
   public createCombination(type: CharacterType, pose: CharacterPoseType) {
-    return new ShapeObject(p.loadImage(this.getShapePath(type, pose)));
+    return new ShapeObject(this.getShapePath(type, pose));
   }
   public create(path: string) {
-    return new ShapeObject(p.loadImage(path));
+    return new ShapeObject(path);
   }
 }
 

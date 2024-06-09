@@ -14,7 +14,7 @@ export class Drawable {
   public center!: PVector;
   public scale!: PVector;
 
-  public constructor(x = 1, y = 1, w = 1, h = 1, zIndex = 1) {
+  public constructor(x = 0, y = 0, w = 0, h = 0, zIndex = 1) {
     this.setup(x, y, w, h, zIndex);
   }
 

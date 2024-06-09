@@ -8,8 +8,6 @@ export class Hammer extends Drawable {
   public draw() {
     const abstractX = this.x;
     const abstractY = this.y;
-    console.log("debug", { p });
-
     // 손잡이
     p.push();
     p.fill("#DD9A5E");
