@@ -1,4 +1,4 @@
-Button[] createGridButtons(String[] buttonTexts, int fontSize, int columnCount, int x, int y, int w, int h) {
+Button[] createGridButtons(String[] buttonTexts, int fontSize, int columnCount, int x, int y, int w, int h, color buttonColor) {
   Button[] buttons = new Button[buttonTexts.length];
   int buttonIndex = 0;
   int eachButtonWidth = w / columnCount;
@@ -13,6 +13,7 @@ Button[] createGridButtons(String[] buttonTexts, int fontSize, int columnCount, 
         button.position = new PVector(currentX, y);
         button.size = new PVector(eachButtonWidth, eachButtonHeight);
         button.fontSize = fontSize;
+        button.buttonColor = buttonColor;
         buttons[buttonIndex] = button;
         buttonIndex++;
       }

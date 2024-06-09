@@ -21,7 +21,6 @@ public class Scene_Intro_New extends BaseScene {
   private ShapeObject 결말버튼;
   private color textColor =  #7c633e;
 
-  private Button[] sceneButtons;
   private Button2 backButton;
   private int sceneButtonWidth = 100;
 
@@ -86,11 +85,12 @@ public class Scene_Intro_New extends BaseScene {
     var sceneNumbers = scenes.sceneNumbers;
     var sceneNumberStrs = Util.ToStringArray(sceneNumbers);
     var sceneButtonsWidth = sceneButtonWidth * sceneNumbers.length;
-    sceneButtons = createGridButtons(sceneNumberStrs, 20, sceneNumbers.length, 200, 200, sceneButtonsWidth, 50);
+    //var transparentColor = color(#000000, 0);
+    var transparentColor = 0x00ffffff;
 
-    introductionSceneButtons = createGridButtons(Util.ToStringArray(scenes.introductionSceneNumbers), 20, 1, width / 3 - 350,     200, 250, height - 250);
-    deploymentSceneButtons = createGridButtons(Util.ToStringArray(scenes.deploymentSceneNumbers),     20, 1, width / 2 - 150,      200, 250, height - 250);
-    endingSceneButtons = createGridButtons(Util.ToStringArray(scenes.endingSceneNumbers),             20, 1, width / 3 * 2 + 50, 200, 250, height - 250);
+    introductionSceneButtons = createGridButtons(Util.ToStringArray(scenes.introductionSceneNumbers), 20, 1, width / 3 - 300,     150, 200, height - 170, transparentColor);
+    deploymentSceneButtons = createGridButtons(Util.ToStringArray(scenes.deploymentSceneNumbers),     20, 1, width / 2 - 100,     150, 200, height - 170, transparentColor);
+    endingSceneButtons = createGridButtons(Util.ToStringArray(scenes.endingSceneNumbers),             20, 1, width / 3 * 2 + 100,  150, 200, height - 170, transparentColor);
   }
 
   boolean drawButtonAndGetClicked(Button2 button) {
@@ -150,30 +150,7 @@ public class Scene_Intro_New extends BaseScene {
           sceneManager.loadScene(scenes.createScene(scenes.endingSceneNumbers[i]));
         }
       }
-      if (keyPressed) {
 
-        
-        // boolean left = keyCode == 37;
-        // boolean right = keyCode == 39;
-        // if (left && listMoved < scenes.sceneNumbers.length - 8) {
-        //   for (Button button : sceneButtons) {
-        //     button.position.x += sceneButtonWidth;
-        //   }
-        //   ++listMoved;
-        // }
-        // if (right && listMoved > 0) {
-        //   for (Button button : sceneButtons) {
-        //     button.position.x -= sceneButtonWidth;
-        //   }
-        //   --listMoved;
-        // }
-      }
-
-      // for (int i = 0; i < sceneButtons.length; i++) {
-      //   if (sceneButtons[i].drawAndCheckClick()) {
-      //     sceneManager.loadScene(scenes.createScene(scenes.sceneNumbers[i]));
-      //   }
-      // }
       if (drawButtonAndGetClicked(backButton)) {
         mode = 0;
       }
