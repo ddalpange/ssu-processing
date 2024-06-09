@@ -20,6 +20,7 @@ export class DialogUi {
     this.current = new DialogContent("0", "");
     this.x = p.width / 4;
     this.y = p.height - DIALOG_HEIGHT - DIALOG_MARGIN * 2; // 20 is MARGIN
+    fontManager.setup();
   }
 
   private drawDialogBox(): void {
