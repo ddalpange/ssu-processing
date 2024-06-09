@@ -5,9 +5,10 @@ const paths = (await globby("./src/scenes/*.ts")).map((v) =>
 );
 
 const result = `
+import { BaseScene } from "../interfaces/BaseScene";
 ${paths.map((v) => `import { ${v} } from "../scenes/${v}";`).join("\n")}
 
-export const allScenes = {
+export const allScenes: Record<number, () => BaseScene>  = {
   ${paths
     .map(
       (v) => `
