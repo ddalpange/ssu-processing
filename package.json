@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "compress": "pnpm zx scripts/compressImage.mjs",
-    "dev": "vite --port=4000",
+    "makeScenes": "pnpm zx scripts/makeScenes.mjs",
+    "dev": "pnpm makeScenes && vite --port=4000",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "tsc": "tsc"

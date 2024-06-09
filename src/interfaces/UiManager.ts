@@ -36,18 +36,11 @@ export class UiManager {
 
   public getDialogForScene(scene: BaseScene): DialogContent[] {
     const className = scene.constructor.name;
-    // Check if the class name starts with "Scene_"
-    if (className.startsWith("Scene_")) {
-      const sceneNumberStr = className.replace("Scene_", "");
-      // There won't be more than 100 dialogs..
-      const contents = ScenarioScript.filter((item, i) => {
-        const id = sceneNumberStr + i.toString().padStart(3, "0");
-        return id === item.id;
-      }) as DialogContent[];
+    const sceneNumberStr = className.replace("Scene_", "");
+    const contents = ScenarioScript.filter((item) => {
+      return item.id.startsWith(sceneNumberStr);
+    }) as DialogContent[];
 
-      return contents;
-    } else {
-      return [];
-    }
+    return contents;
   }
 }

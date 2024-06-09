@@ -1,13 +1,13 @@
 import p5 from "p5";
+import { allScenes } from "./constants/allScenes";
 import { sceneManager } from "./interfaces/SceneManager";
-import { Scene_101 } from "./scenes/Scene_101";
 
 export const main = (p: p5) => {
   p.AUDIO;
 
   p.setup = function setup() {
     p.createCanvas(1280, 720);
-    sceneManager.loadScene(new Scene_101());
+    sceneManager.loadScene(allScenes[101]());
   };
   p.draw = function draw() {
     updateDeltaTime();
@@ -16,11 +16,8 @@ export const main = (p: p5) => {
     window.mouseClickedThisFrame = false;
   };
   p.mousePressed = function mousePressed() {
-    window.mouseClickedThisFrame = true;
     const scene = sceneManager.getCurrentScene();
-    if (sceneManager?.getNextScene()) {
-      scene?.mousePressed();
-    }
+    scene?.mousePressed();
   };
   p.mouseReleased = function mouseReleased() {
     window.mouseClickedThisFrame = true;
@@ -30,7 +27,6 @@ export const main = (p: p5) => {
     }
   };
   p.keyPressed = function keyPressed() {
-    window.mouseClickedThisFrame = true;
     const scene = sceneManager.getCurrentScene();
     scene?.keyPressed();
   };
