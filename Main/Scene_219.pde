@@ -10,10 +10,11 @@ public class Scene_219 extends BaseScene {
 
     loadBackground("20", drawManager);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.ricecake_01);
+    var tiger = objectFactory.createAnimation(CharacterType.tiger, "ricecake01eat", 3);
+    tiger.playNTimes(4, 1);
     // 호랑이 위치 조정
-    tiger.setPosition(width / 2, height - 160);
-    tiger.setScale(0.8, 0.8);
+    tiger.setPosition(width / 2, height - 60);
+    tiger.setScale(2, 2);
     drawManager.addDrawable(tiger);
 
     var riceCake = objectFactory.create("res/images/object/ricecake_01_02.png");
