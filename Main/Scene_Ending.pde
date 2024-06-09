@@ -8,7 +8,7 @@ public class Scene_Ending extends BaseScene {
 
     private final int defaultImageHeight = 1055; // 이미지의 실제 사이즈
     private final float scaleMultiple = 3; // 이미지를 몇배 사이즈로 띄울지
-    private final int heightBuffer = 300; // 스크롤에 사용할 이미지의 기본 height buffer. 그냥 만져보고 감대로..?
+    private final int heightBuffer = 650; // 스크롤에 사용할 이미지의 기본 height buffer. 그냥 만져보고 감대로..?
 
     private final float moveSpeed = 2; // 기본 스크롤 속도
     private final float moveSpeedMultiple = 3; // 마우스 꾹 누르면 n배속으로 재생
