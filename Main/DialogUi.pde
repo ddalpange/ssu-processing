@@ -66,15 +66,27 @@ public class DialogUi {
         fill(0, 0, 0);
         
         String msg = this.current.text.replace("\\n","\n");
-        if (frameElapsed >= frameCounterTime && charIndex < msg.length()) {
-            charIndex++;
-        } else if (charIndex >= msg.length()) {
-            charIndex = msg.length();
+
+        int squareBracketsStart = msg.indexOf("[");
+        int squareBracketsEnd = msg.indexOf("]");
+        String staticText = "";
+        String animatedText = msg;
+
+        if (squareBracketsStart != -1 && squareBracketsEnd != -1) {
+            staticText = msg.substring(squareBracketsStart, squareBracketsEnd + 1);
+            animatedText = msg.replace(staticText, "");
+            fontManager.drawText(staticText, x + 130, this.y + 80, imageWidth - 250, imageHeight - 80, MSG_TEXT_SIZE);
         }
 
-        String showingText = msg.substring(0, charIndex);
+        if (frameElapsed >= frameCounterTime && charIndex < animatedText.length()) {
+            charIndex++;
+        } else if (charIndex >= animatedText.length()) {
+            charIndex = animatedText.length();
+        }
 
-        fontManager.drawText(showingText, x + 130, this.y + 75, imageWidth - 250, imageHeight - 80, MSG_TEXT_SIZE);
+        String showingText = animatedText.substring(0, charIndex);
+
+        fontManager.drawText(showingText, x + 130, this.y + 80, imageWidth - 250, imageHeight - 80, MSG_TEXT_SIZE);
         frameElapsed += deltaTime;
     }
 

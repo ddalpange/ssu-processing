@@ -22,13 +22,13 @@ public class Scene_209 extends BaseScene {
     drawManager.addDrawable(speechBubble);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
-    tiger.setPosition(350, 200);
-    tiger.setScale(-0.28f, 0.28f);
+    tiger.setPosition(350, 210);
+    tiger.setScale(-0.58f, 0.58f);
     drawManager.addDrawable(tiger);
 
     var stones = objectFactory.create("res/images/object/stones.png");
-    stones.setPosition(350, 140);
-    stones.setScale(0.16f, 0.16f);
+    stones.setPosition(330, 130);
+    stones.setScale(0.23f, 0.23f);
     drawManager.addDrawable(stones);
 
     soundManager.playOnce("res/sound/effect/209_아이디어효과음.mp3");

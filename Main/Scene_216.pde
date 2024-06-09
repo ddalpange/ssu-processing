@@ -16,8 +16,8 @@ public class Scene_216 extends BaseScene {
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.well_1);
     // tiger.setPosition(470, 550);
     // tiger.setScale(0.6f, 0.6f);
-    tiger.setPosition(width / 2 + 30, 340);
-    tiger.setScale(-0.4f, 0.4f);
+    tiger.setPosition(width / 2 + 100, 360);
+    tiger.setScale(-0.71f, 0.71f);
     drawManager.addDrawable(tiger);
   }
  
