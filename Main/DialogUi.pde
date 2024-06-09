@@ -55,7 +55,10 @@ public class DialogUi {
         if (this.current.teller != null) {
             //textSize(TELLER_TEXT_SIZE);
             fill(0, 0, 255);
-            fontManager.drawText(this.current.teller, x + 40, y + 85, TELLER_TEXT_SIZE);
+            pushStyle();
+            textAlign(CENTER, CENTER);
+            fontManager.drawText(this.current.teller, x + imageWidth / 2, y + 35, TELLER_TEXT_SIZE);
+            popStyle();
             //fontManager.drawText(this.current.teller, x + DIALOG_PADDING, y + DIALOG_PADDING * 2, TELLER_TEXT_SIZE);
             //text(this.current.teller, x + DIALOG_PADDING, y + DIALOG_PADDING * 2);
             //textAnchor = this.y + DIALOG_PADDING * 2 + TELLER_TEXT_SIZE + 10;
@@ -71,7 +74,7 @@ public class DialogUi {
 
         String showingText = msg.substring(0, charIndex);
 
-        fontManager.drawText(showingText, x + 130, this.y + 80, imageWidth - 250, imageHeight - 80, MSG_TEXT_SIZE);
+        fontManager.drawText(showingText, x + 130, this.y + 75, imageWidth - 250, imageHeight - 80, MSG_TEXT_SIZE);
         frameElapsed += deltaTime;
     }
 
