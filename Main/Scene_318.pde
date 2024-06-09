@@ -15,7 +15,7 @@ public class Scene_318 extends BaseScene {
     loadBackground("55", drawManager);
 
     retryButton = new Button2(loadImage("res/images/UI/button_1.png"), 1050, 400);
-    retryButton.text = "Retry?";
+    retryButton.text = locale == "en" ? "Retry?" : "되돌아가기";
     retryButton.setScale(1, 1);
     drawManager.addDrawable(retryButton);
 
