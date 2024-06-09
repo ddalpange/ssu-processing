@@ -1,6 +1,6 @@
 import { TimeTracker } from "../interfaces/TimeTracker";
 import { BaseScene } from "../interfaces/BaseScene";
-import { objectFactory } from "../interfaces/Objects";
+import { loadBackground, objectFactory } from "../interfaces/Objects";
 import { ScaleAnimation } from "../interfaces/ScaleAnimation";
 import { ShapeObject } from "../interfaces/ShapeObject";
 
@@ -27,12 +27,10 @@ export class Scene_101 extends BaseScene {
   setup(): void {
     this.uiManager.dialogUi.enqueueAll(this.uiManager.getDialogForScene(this));
     this.uiManager.dialogUi.next();
-
-    // loadBackground("2", drawManager);
-
+    loadBackground("2", this.drawManager);
     this.hand = objectFactory.create("res/images/character/knock_hand.png");
     this.hand.setPosition(p.width / 2 + 200, 450);
-    // this.hand.setScale(this.handScale, this.handScale);
+    this.hand.setScale(this.handScale, this.handScale);
     this.drawManager.addDrawable(this.hand);
 
     this.handScaleUpAnimation = new ScaleAnimation(
@@ -59,7 +57,7 @@ export class Scene_101 extends BaseScene {
     this.uiManager.drawing();
     this.animationManager.update();
     this.timeTracker.update(window.deltaTime);
-    // this.updateScale();
+    this.updateScale();
 
     p.pop();
   }

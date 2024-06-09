@@ -1,6 +1,6 @@
 import { BaseScene } from "../interfaces/BaseScene";
 import { MoveAnimation } from "../interfaces/MoveAnimation";
-import { objectFactory } from "../interfaces/Objects";
+import { loadBackground, objectFactory } from "../interfaces/Objects";
 import { ShapeObject } from "../interfaces/ShapeObject";
 
 export class Scene_102 extends BaseScene {
@@ -21,7 +21,7 @@ export class Scene_102 extends BaseScene {
     this.uiManager.dialogUi.enqueueAll(dialogForScene);
     this.uiManager.dialogUi.next();
 
-    // this.loadBackground("3", this.drawManager);
+    loadBackground("3", this.drawManager);
 
     this.cloud1 = objectFactory.create("res/images/object/cloud.png");
     this.cloud1.setPosition(200, 100);

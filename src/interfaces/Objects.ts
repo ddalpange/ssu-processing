@@ -1,3 +1,4 @@
+import { DrawManager } from "./DrawManager";
 import { ShapeObject } from "./ShapeObject";
 export enum CharacterType {
   tiger = "tiger",
@@ -59,3 +60,10 @@ export class ObjectFactory {
 }
 
 export const objectFactory = new ObjectFactory();
+
+export function loadBackground(id: string, drawManager: DrawManager): void {
+  const path = `res/images/bg/background_${id}.png`;
+  const obj = objectFactory.create(path);
+  obj.setPosition(p.width / 2, p.height / 2);
+  drawManager.addDrawable(obj);
+}
