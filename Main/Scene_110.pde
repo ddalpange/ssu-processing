@@ -1,6 +1,6 @@
 public class Scene_110 extends BaseScene {
-  private ShapeObject tiger;
-  private final float tigerScale = 2.3f;
+  private SpriteAnimation tiger;
+  private final float tigerScale = 1f;
   private ScaleAnimation tigerScaleUpAnimation;
   private ScaleAnimation tigerScaleDownAnimation;
   private int tigerScaleDuration = 1;
@@ -19,8 +19,9 @@ public class Scene_110 extends BaseScene {
 
     loadBackground("11", drawManager);
 
-    tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.scream);
-    tiger.setPosition(width/2, height / 2);
+    tiger = objectFactory.createAnimation(CharacterType.tiger, "scream", 2);
+    tiger.playInfinite(1f);
+    tiger.setPosition(width/2, height / 2 - 70);
     tiger.setScale(tigerScale, tigerScale);
     drawManager.addDrawable(tiger);
     tigerScaleUpAnimation = new ScaleAnimation(tiger, tigerScale + tigerScale * 0.03, tigerScale + tigerScale * 0.03, tigerScaleDuration);
