@@ -28,12 +28,14 @@ public class Scene_Ending extends BaseScene {
 
         endingBox = objectFactory.create("res/images/ui/ending_box2.png");
         endingBox.setPosition(width/2, curHeight);
-        endingBox.setScale(scaleMultiple, scaleMultiple);
+        // endingBox.setScale(scaleMultiple, scaleMultiple);
+        endingBox.setScale(0.8, 0.8);
         drawManager.addDrawable(endingBox);
 
         var endingHead = objectFactory.create("res/images/ui/ending_box.png");
         endingHead.setPosition(width/2, 60);
-        endingHead.setScale(scaleMultiple, scaleMultiple);
+        // endingHead.setScale(scaleMultiple, scaleMultiple);
+        endingHead.setScale(0.8, 0.8);
         drawManager.addDrawable(endingHead);
 
         isEnd = false;
