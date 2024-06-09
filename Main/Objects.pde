@@ -48,7 +48,11 @@ public enum CharacterPoseType {
   thirsty("thirsty"),
   threat("threat"),
   well("well"),
+  well_("well_"),
   well_1("well_1"),
+  well_anim_1("well_anim_1"),
+  well_anim_2("well_anim_2"),
+  well_anim_3("well_anim_3"),
   well_2_1("well_2_1"),
   well_2_2("well_2_2");
 

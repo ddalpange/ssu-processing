@@ -15,22 +15,28 @@ public class Scene_323 extends BaseScene {
 
     loadBackground("60", drawManager);
 
-    PVector ropeScale = new PVector(0.4, 0.4);
+    PVector ropeScale = new PVector(0.3, 0.3);
     var oldRope = objectFactory.create("res/images/object/rope_weak.png");
-    oldRope.setPosition(width / 2, -300);
+    oldRope.setPosition(width / 2, -400);
     oldRope.setScale(ropeScale.x, ropeScale.y);
-    startAnimation(new MoveAnimation(oldRope, width / 2, 200, 2));
+    startAnimation(new MoveAnimation(oldRope, width / 2, -100, 2));
     drawManager.addDrawable(oldRope);
 
     thunder1 = objectFactory.create("res/images/object/thunder_1.png");
-    thunder1.setPosition(260, -200);
+    thunder1.setPosition(260, 130);
     thunder1.setScale(0.6f, 0.6f);
     drawManager.addDrawable(thunder1);
+    var anim = new ScaleAnimation(thunder1, 0.7f, 0.7f, 1, EaseType.InOutCubic);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
     thunder2 = objectFactory.create("res/images/object/thunder_2.png");
-    thunder2.setPosition(1000, -200);
+    thunder2.setPosition(1000, 150);
     thunder2.setScale(0.6f, 0.6f);
     drawManager.addDrawable(thunder2);
+    anim = new ScaleAnimation(thunder2, 0.7f, 0.7f, 1.3, EaseType.InOutCubic);
+    anim.repeatCount = -1;
+    startAnimation(anim);
     
     // 동앗줄 내려오는 효과
     soundManager.playOnce("res/sound/effect/323_천둥소리.mp3");
@@ -44,7 +50,7 @@ public class Scene_323 extends BaseScene {
     uiManager.drawing();
     timeTracker.update();
     animationManager.update();
-    ThunderUpdate();
+    //ThunderUpdate();
     popStyle();
   }
 

@@ -35,7 +35,7 @@ public class Scene_Intro_New extends BaseScene {
 
     // 0
     title = objectFactory.create("res/images/UI/Opening_TItle.png");
-    title.setPosition(width / 2, 100);
+    title.setPosition(width / 2, 150);
     title.setScale(0.7, 0.7);
     //drawManager.addDrawable(title);
 

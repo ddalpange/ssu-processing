@@ -3,27 +3,45 @@ import { Drawable } from "./Drawable";
 
 export class ShapeObject extends Drawable {
   protected image: p5.Image | undefined;
+  protected imageSrc: string | undefined;
 
   constructor(imageSrc: string) {
     super();
+    this.imageSrc = imageSrc;
     this.scale = new p5.Vector();
-    p.loadImage(imageSrc, (image) => {
+    let retryCount = 0;
+    const maxRetries = 10;
+
+    const onSuccess = (image: p5.Image) => {
+      console.log("debug 성공", { imageSrc });
+
       this.image = image;
       this.initialW = image.width;
       this.w = image.width;
       this.initialH = image.height;
       this.h = image.height;
-    });
+    };
+
+    const onFail = () => {
+      if (retryCount < maxRetries) {
+        retryCount++;
+        p.loadImage(imageSrc, onSuccess, onFail);
+      } else {
+        console.error(`Failed to load image after ${maxRetries} attempts.`);
+      }
+    };
+
+    p.loadImage(imageSrc, onSuccess, onFail);
   }
 
   draw(): void {
-    this.drawImage();
-  }
+    console.log("debug", { image: this.image });
 
-  private drawImage(): void {
-    if (this.image == null) return;
+    if (this.image == null) {
+      console.error(`이미지가 초기화되지 않았어요. ${this.imageSrc}`);
+      return;
+    }
     p.push();
-
     p.imageMode(p.CENTER);
     p.rotate(this.zAngle);
 

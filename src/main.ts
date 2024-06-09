@@ -1,10 +1,13 @@
 import p5 from "p5";
 import { allScenes } from "./constants/allScenes";
 import { sceneManager } from "./interfaces/SceneManager";
+// import { imagePaths } from "./constants/imagePaths";
 
 export const main = (p: p5) => {
   p.AUDIO;
-
+  p.preload = function preload() {
+    // Object.values(imagePaths).map((v) => p.loadImage(v));
+  };
   p.setup = function setup() {
     p.createCanvas(1280, 720);
     sceneManager.loadScene(allScenes[101]());
