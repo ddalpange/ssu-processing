@@ -10,21 +10,29 @@ public class Scene_320 extends BaseScene {
     uiManager.dialogUi.next();
     loadBackground("57", drawManager);
 
-    // 리소스 교체 필요
-    // var rope = objectFactory.create("res/images/object/rope_strong.png");
-    // rope.setPosition(260, 410);
-    // rope.setScale(0.1, 0.1);
-    // drawManager.addDrawable(rope);
+    var cloud1 = objectFactory.create("res/images/object/cloud.png");
+    cloud1.setPosition(150, 100);
+    cloud1.setScale(0.25, 0.25);
+    drawManager.addDrawable(cloud1);
+    var anim = new MoveAnimation(cloud1, cloud1.x, cloud1.y - 2, 1.5, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
-    // var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    // boy.setPosition(210, 430);
-    // boy.setScale(0.3, 0.3);
-    // drawManager.addDrawable(boy);
+    var cloud2 = objectFactory.create("res/images/object/cloud2.png");
+    cloud2.setPosition(500, 80);
+    cloud2.setScale(0.2, 0.2);
+    drawManager.addDrawable(cloud2);
+    anim = new MoveAnimation(cloud2, cloud2.x, cloud2.y + 3, 1.8, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
-    // var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    // girl.setPosition(300, 780);
-    // girl.setScale(-0.3, 0.3);
-    // drawManager.addDrawable(girl);
+    cloud1 = objectFactory.create("res/images/object/cloud.png");
+    cloud1.setPosition(750, 130);
+    cloud1.setScale(0.25, 0.25);
+    drawManager.addDrawable(cloud1);
+    anim = new MoveAnimation(cloud1, cloud1.x, cloud1.y - 2, 1.5, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
     var goldRope = objectFactory.create("res/images/character/gold rope handing.png");
     goldRope.setPosition(260, 200);
@@ -37,9 +45,6 @@ public class Scene_320 extends BaseScene {
     drawManager.addDrawable(tiger);
 
     startAnimation(new MoveAnimation(goldRope, 260, 110 - 300, 16, EaseType.OutCirc));
-    // startAnimation(new MoveAnimation(rope, 260, 110 - 300, 16, EaseType.OutCirc));
-    // startAnimation(new MoveAnimation(boy, 210, 130 - 300, 16, EaseType.OutCirc));
-    // startAnimation(new MoveAnimation(girl,300, 380 - 300, 16, EaseType.OutCirc));
   }
  
   public void draw() {

@@ -11,11 +11,29 @@ public class Scene_317 extends BaseScene {
 
     loadBackground("54", drawManager);
   
-    // 리소스 교체 필요
-    // var oldRope = objectFactory.create("res/images/object/rope_weak.png");
-    // oldRope.setPosition(400, 200);
-    // oldRope.setScale(0.03, 0.03);
-    // drawManager.addDrawable(oldRope);
+    var cloud1 = objectFactory.create("res/images/object/cloud.png");
+    cloud1.setPosition(150, 100);
+    cloud1.setScale(0.25, 0.25);
+    drawManager.addDrawable(cloud1);
+    var anim = new MoveAnimation(cloud1, cloud1.x, cloud1.y - 2, 1.5, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
+
+    var cloud2 = objectFactory.create("res/images/object/cloud2.png");
+    cloud2.setPosition(500, 80);
+    cloud2.setScale(0.2, 0.2);
+    drawManager.addDrawable(cloud2);
+    anim = new MoveAnimation(cloud2, cloud2.x, cloud2.y + 3, 1.8, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
+
+    cloud1 = objectFactory.create("res/images/object/cloud.png");
+    cloud1.setPosition(750, 130);
+    cloud1.setScale(0.25, 0.25);
+    drawManager.addDrawable(cloud1);
+    anim = new MoveAnimation(cloud1, cloud1.x, cloud1.y - 2, 1.5, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.fall_purple);
     boy.setPosition(120, -400);

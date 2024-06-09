@@ -26,9 +26,9 @@ public class Scene_212 extends BaseScene {
 
     // Scene_211_Family_Setup(drawManager);
 
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.smile);
+    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.front);
     mom.setPosition(width/2 + 130, 500);
-    mom.setScale(1.2f, 1.2f);
+    mom.setScale(0.7f, 0.7f);
     drawManager.addDrawable(mom);
 
     var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.front);

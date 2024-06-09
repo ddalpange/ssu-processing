@@ -5,8 +5,8 @@ public class Scene_303 extends BaseScene {
   @Override
   public int getNextScene() { return 304; }
 
-  int GOAL_IN_HEIGHT = -232;
-  int GO_UP_SPEED = 8;
+  int GOAL_IN_HEIGHT = -192;
+  int GO_UP_SPEED = 24;
 
   int START_COUNTDOWN_TIME = 3000; // 3초
   int GAME_COUNTDOWN_TIME = 20000; // 20초

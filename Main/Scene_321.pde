@@ -17,20 +17,21 @@ public class Scene_321 extends BaseScene {
     goldRope.setScale(0.09, 0.09);
     drawManager.addDrawable(goldRope);
     
-    // var rope = objectFactory.create("res/images/object/rope_strong.png");
-    // rope.setPosition(255, 120);
-    // rope.setScale(0.04, 0.04);
-    // drawManager.addDrawable(rope);
+    var cloud1 = objectFactory.create("res/images/object/cloud.png");
+    cloud1.setPosition(200, 150);
+    cloud1.setScale(0.45, 0.45);
+    drawManager.addDrawable(cloud1);
+    var anim = new MoveAnimation(cloud1, cloud1.x, cloud1.y - 6, 1.5, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
-    // var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
-    // boy.setPosition(225, 70);
-    // boy.setScale(0.15, 0.15);
-    // drawManager.addDrawable(boy);
-
-    // var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
-    // girl.setPosition(275, 160);
-    // girl.setScale(-0.15, 0.15);
-    // drawManager.addDrawable(girl);
+    var cloud2 = objectFactory.create("res/images/object/cloud2.png");
+    cloud2.setPosition(900, 70);
+    cloud2.setScale(0.3, 0.3);
+    drawManager.addDrawable(cloud2);
+    anim = new MoveAnimation(cloud2, cloud2.x, cloud2.y + 9, 1.8, EaseType.InOutBack);
+    anim.repeatCount = -1;
+    startAnimation(anim);
 
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.pray);
     tiger.setPosition(580, 390);
@@ -44,6 +45,7 @@ public class Scene_321 extends BaseScene {
     drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
+    animationManager.update();
     
     popStyle();
   }

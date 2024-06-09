@@ -7,7 +7,7 @@ export class MoveAnimation extends BaseAnimation {
   destY: number;
   private startX: number;
   private startY: number;
-  private duration: number;
+  public duration: number;
   private elapsedTime = 0;
 
   constructor(target: Drawable);
@@ -18,12 +18,15 @@ export class MoveAnimation extends BaseAnimation {
     destY?: number,
     duration?: number
   ) {
+    console.log("debug1", {});
+
     super(target);
     this.startX = target.getX();
     this.startY = target.getY();
     this.destX = destX || target.getX();
     this.destY = destY || target.getY();
     this.duration = duration || 0;
+    console.log("debug2", {});
   }
 
   update(): void {

@@ -53,7 +53,8 @@ public class Button {
   public void draw() {
     pushStyle();
     
-    setMouseOverStyle(isMouseOver());
+    noStroke();
+    int fontSize = getMouseOverFontSize(isMouseOver());
     fill(buttonColor);
     float sizeX = size != null ? size.x : image.width;
     float sizeY = size != null ? size.y : image.height;
@@ -86,6 +87,15 @@ public class Button {
     }
     else {
       strokeWeight(1);
+    }
+  }
+
+  int getMouseOverFontSize(boolean isOver) {
+    if (isOver) {
+      return (int)(fontSize * 1.2);
+    }
+    else {
+      return fontSize;
     }
   }
 }
