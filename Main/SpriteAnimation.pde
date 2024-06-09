@@ -48,7 +48,12 @@ public class SpriteAnimation extends Drawable {
     if (image == null) {
       println("image is null");
     } else {
-      image(image, x, y, image.width * scale.x, image.height * scale.y);
+      //float w = abs(image.width * scale.x);
+      //float h = abs(image.height * scale.y);
+      this.setup(x, y, image.width, image.height, this.zIndex);
+      this.setScale(scale.x, scale.y);
+      println("scale: " + scale.x + ", " + scale.y);
+      image(image, x, y, w, h);
     }
 
     popMatrix();

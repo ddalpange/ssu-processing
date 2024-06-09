@@ -39,7 +39,9 @@ public class Drawable {
     this.startPos = new PVector(x, y);
     this.endPos = new PVector(x + w, y + h);
     this.center = new PVector(x + w/2, y + h/2);
-    this.scale = new PVector(1, 1);
+    if (scale == null) {
+      this.scale = new PVector(1, 1);
+    }
   }
 
   public float getX() { return x; }
