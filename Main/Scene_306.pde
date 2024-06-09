@@ -64,8 +64,8 @@ public class Scene_306 extends BaseScene {
     curXPos = targetXPos;
     curYPos = targetYPos;
 
-    fontManager.drawText("Is there a way \nto climb the tree?",
-    (int)targetXPos - 100, (int)targetYPos - 80, 30);
+    var text = locale == "en" ? "Is there a way\nto climb the tree?" : "어떻게 하면 나무에\n올라갈 수 있을까?";
+    fontManager.drawText(text, (int)targetXPos - 120, (int)targetYPos - 80, 30);
 
     curCount++;
   }
