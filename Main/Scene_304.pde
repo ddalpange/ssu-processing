@@ -5,7 +5,7 @@ public class Scene_304 extends BaseScene {
   @Override
   public int getNextScene() { return 305; }
 
-    private ShapeObject tiger;
+    private SpriteAnimation tiger;
     private MoveAnimation outMoveAnimation;
     private ScaleAnimation outScaleUpAnimation;
     private final float outDuration = 0.7f;
@@ -30,13 +30,14 @@ public class Scene_304 extends BaseScene {
 
     loadBackground("41", drawManager);
 
-    tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.front);
+    tiger = objectFactory.createAnimation(CharacterType.tiger_mom, "front", 5);
+    tiger.playInfinite(1.5);
     tiger.setPosition(300, 200);
-    tiger.setScale(0.15f, 0.15f);
+    tiger.setScale(0.3f, 0.3f);
     drawManager.addDrawable(tiger);
 
     outMoveAnimation = new MoveAnimation(tiger, 720, 560, outDuration, EaseType.InOutCirc);
-    outScaleUpAnimation = new ScaleAnimation(tiger, 0.4f, 0.4f, outDuration);
+    outScaleUpAnimation = new ScaleAnimation(tiger, 0.8f, 0.8f, outDuration);
     soundManager.playOnce("res/sound/effect/301.302.304_뛰는발걸음소리.mp3");
 
     textBubble = objectFactory.create("res/images/ui/red question.png");
