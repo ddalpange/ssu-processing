@@ -23,8 +23,8 @@ public class Scene_303 extends BaseScene {
   boolean isGameStart = false;
   boolean isDialogVisible;
 
-  ShapeObject boy;
-  ShapeObject girl;
+  SpriteAnimation boy;
+  SpriteAnimation girl;
 
   Button skipButton;
   Button retryButton;
@@ -60,8 +60,9 @@ public class Scene_303 extends BaseScene {
     spaceDownAnimation = new ScaleAnimation(space, spaceScale - spaceScale * 0.05, spaceScale - spaceScale * 0.05, spaceScaleDuration);
   }
  
-  private ShapeObject createCharacter(CharacterType type, int xPosition) {
-    ShapeObject character = objectFactory.create(type, CharacterPoseType.climb);
+  private SpriteAnimation createCharacter(CharacterType type, int xPosition) {
+    SpriteAnimation character = objectFactory.createAnimation(type, "climb", 2);
+    character.manualMode = true;
     character.setPosition(xPosition, boyAndGirlHeight);
     character.setScale(0.55, 0.55);
     drawManager.addDrawable(character);
@@ -188,6 +189,8 @@ public class Scene_303 extends BaseScene {
 
     boy.setPosition(boyX , boyAndGirlHeight);
     girl.setPosition(girlX, boyAndGirlHeight);
+    boy.nextFrame();
+    girl.nextFrame();
 
     if (boyAndGirlHeight == GOAL_IN_HEIGHT) {
       loadNextScene();

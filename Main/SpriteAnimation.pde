@@ -6,6 +6,8 @@ public class SpriteAnimation extends Drawable {
   private int currentFrame;
   private int nTimes;
   private int nTimesPlayed;
+  private boolean manualMode;
+
   public SpriteAnimation(PImage[] images) {
     this.images = images;
     this.scale = new PVector(1, 1);
@@ -23,24 +25,13 @@ public class SpriteAnimation extends Drawable {
   @Override
   public void draw() {
     pushStyle();
+    pushMatrix();
 
     PImage image = null;
-    if (nTimesPlayed < nTimes) {
-      image = images[currentFrame];
-
-      timeElapsed += deltaTime;
-      if (timeElapsed > frameSeconds) {
-        timeElapsed = 0;
-        currentFrame++;
-        if (currentFrame >= images.length) {
-          currentFrame = 0;
-          nTimesPlayed++;
-        }
-      }
-    }
-    else {
-      // draw last frame
-      image = images[images.length - 1];
+    if (manualMode) {
+      image = getManualMode();
+    } else {
+      image = updateAutomaticMode();
     }
 
     imageMode(CENTER);
@@ -51,6 +42,38 @@ public class SpriteAnimation extends Drawable {
       image(image, x, y, image.width * scale.x, image.height * scale.y);
     }
 
+    popMatrix();
     popStyle();
+  }
+
+  private PImage updateAutomaticMode() {
+    PImage image = null;
+    if (nTimesPlayed < nTimes) {
+      image = images[currentFrame];
+
+      timeElapsed += deltaTime;
+      if (timeElapsed > frameSeconds) {
+        timeElapsed = 0;
+        nextFrame();
+      }
+    }
+    else {
+      // draw last frame
+      image = images[images.length - 1];
+    }
+
+    return image;
+  }
+
+  private PImage getManualMode() {
+    return images[currentFrame];
+  }
+
+  public void nextFrame() {
+    currentFrame++;
+    if (currentFrame >= images.length) {
+      currentFrame = 0;
+      nTimesPlayed++;
+    }
   }
 }
