@@ -53,8 +53,8 @@ public class Scene_104 extends BaseScene {
 
     arrowDescButton = new Button2(loadImage("res/images/UI/subtitle_bar_2.png"), 1065, 670);
     arrowDescButton.setScale(0.4, 0.4);
-    arrowDescButton.textOffset = new PVector(-20, 0);
-    arrowDescButton.text = "Press Left or Right Arrow Key";
+    arrowDescButton.textOffset = locale == "en" ? new PVector(-10, 0) : new PVector(-5, 0);
+    arrowDescButton.text = locale == "en" ? "Press Left or Right Arrow Key" : "좌우 방향키를 누르세요!";
 
 
     // TODO: 뭔가 다른식으로 재생해야 할듯??

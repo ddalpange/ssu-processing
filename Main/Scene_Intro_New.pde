@@ -119,7 +119,6 @@ public class Scene_Intro_New extends BaseScene {
 
       if (drawButtonAndGetClicked(localeButton)) {
         locale = locale == "en" ? "ko" : "en";
-        localeButton.text = locale == "en" ? "English" : "한국어";
         refreshButtonText();
       }
 
@@ -160,6 +159,7 @@ public class Scene_Intro_New extends BaseScene {
   }
 
   private void refreshButtonText() {
+    localeButton.text = locale == "en" ? "English" : "한국어";
     if (locale == "en") {
       startButton.text = "Start";
       sceneListButton.text = "Shortcuts";
