@@ -39,7 +39,7 @@ export class DialogUi {
   private drawText(): void {
     let textAnchor: number = this.y + DIALOG_PADDING * 2;
     if (this.current.teller != null) {
-      //textSize(TELLER_TEXT_SIZE);
+      p.textSize(TELLER_TEXT_SIZE);
       p.fill(0, 0, 255);
       fontManager.drawText2(
         this.current.teller,
@@ -47,11 +47,15 @@ export class DialogUi {
         this.y + DIALOG_PADDING * 2,
         TELLER_TEXT_SIZE
       );
-      //text(this.current.teller, x + DIALOG_PADDING, y + DIALOG_PADDING * 2);
+      p.text(
+        this.current.teller,
+        this.x + DIALOG_PADDING,
+        this.y + DIALOG_PADDING * 2
+      );
       textAnchor = this.y + DIALOG_PADDING * 2 + TELLER_TEXT_SIZE + 10;
     }
-    //textSize(MSG_TEXT_SIZE);
-    p.fill(0, 0, 0);
+    p.textSize(MSG_TEXT_SIZE);
+    // p.fill(0, 0, 0);
     const msg: string = this.current.text.replace("\\n", "\n");
     fontManager.drawText(
       msg,
@@ -61,11 +65,6 @@ export class DialogUi {
       1000,
       MSG_TEXT_SIZE
     );
-    //text(this.current.text,
-    //x + DIALOG_PADDING,
-    //textAnchor,
-    //width/2 - DIALOG_PADDING * 2,
-    //1000);
   }
 
   public draw(): void {

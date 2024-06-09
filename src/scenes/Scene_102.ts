@@ -17,7 +17,7 @@ export class Scene_102 extends BaseScene {
 
   setup(): void {
     const dialogForScene = this.uiManager.getDialogForScene(this);
-    console.log("debug", { dialogForScene });
+
     this.uiManager.dialogUi.enqueueAll(dialogForScene);
     this.uiManager.dialogUi.next();
 
