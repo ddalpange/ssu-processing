@@ -9,7 +9,7 @@ const MSG_TEXT_SIZE: number = 16;
 
 export class DialogUi {
   private visible: boolean;
-  private current: DialogContent;
+  private current?: DialogContent;
   private queue: DialogContent[] = [];
 
   private x: number;
@@ -17,13 +17,14 @@ export class DialogUi {
 
   constructor() {
     this.visible = false;
-    this.current = new DialogContent("0", "");
     this.x = p.width / 4;
     this.y = p.height - DIALOG_HEIGHT - DIALOG_MARGIN * 2; // 20 is MARGIN
     fontManager.setup();
   }
 
   private drawDialogBox(): void {
+    if (!this.current) return undefined;
+
     const msg: string = this.current.text;
     if (msg == null || msg === "") {
       return;
@@ -37,6 +38,9 @@ export class DialogUi {
   }
 
   private drawText(): void {
+    if (!this.current) return undefined;
+    console.log("debug", { current: this.current });
+
     let textAnchor: number = this.y + DIALOG_PADDING * 2;
     if (this.current.teller != null) {
       p.textSize(TELLER_TEXT_SIZE);
@@ -116,7 +120,7 @@ export class DialogUi {
   }
 
   public getCurrentId(): string {
-    return this.current.id;
+    return this.current?.id ?? "";
   }
 }
 
