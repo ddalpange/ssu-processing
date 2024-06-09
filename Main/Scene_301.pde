@@ -6,8 +6,8 @@ public class Scene_301 extends BaseScene {
   public int getNextScene() { return 302; }
 
   private ShapeObject tiger;
-  private ShapeObject boy;
-  private ShapeObject girl;
+  private SpriteAnimation boy;
+  private SpriteAnimation girl;
 
   private float animationDuration = 1f;
   private  float animationDelay = 1.05f;
@@ -27,11 +27,13 @@ public class Scene_301 extends BaseScene {
     tiger.setScale(0.15f, 0.15f);
     drawManager.addDrawable(tiger);
 
-    boy = objectFactory.create(CharacterType.boy, CharacterPoseType.front);
+    boy = objectFactory.createAnimation(CharacterType.boy, "run", 3);
+    boy.playInfinite(1);
     boy.setPosition(700, 500);
     boy.setScale(0.5, 0.5);
 
-    girl = objectFactory.create(CharacterType.girl, CharacterPoseType.front);
+    girl = objectFactory.createAnimation(CharacterType.girl, "run", 3);
+    girl.playInfinite(1);
     girl.setPosition(800, 500);
     girl.setScale(0.5, 0.5);
   }
@@ -47,13 +49,13 @@ public class Scene_301 extends BaseScene {
     var isGirlUpperBoy = girl.getY() > boy.getY();
     if(isGirlUpperBoy)
     {
-      boy.drawImage();
-      girl.drawImage();
+      boy.draw();
+      girl.draw();
     }
     else
     {
-      girl.drawImage();
-      boy.drawImage();
+      girl.draw();
+      boy.draw();
     }
 
     uiManager.drawing();

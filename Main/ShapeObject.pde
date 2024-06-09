@@ -47,7 +47,7 @@ public class ShapeObject extends Drawable {
     if (scale.x < 0) {
       pushMatrix();
       translate(x, y); 
-      scale(-1, 1);
+      scale(scale.x, scale.y);
       image(image, 0, 0, w, h);
       popMatrix();
     } else {

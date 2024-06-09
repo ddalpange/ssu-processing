@@ -14,17 +14,20 @@ public class Scene_217 extends BaseScene {
 
     loadBackground("32", drawManager);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.smile);
+    var girl = objectFactory.createAnimation(CharacterType.girl, "smile", 2);
+    girl.playInfinite(1);
     girl.setPosition(width / 2 + 80, 500);
     girl.setScale(0.6f, 0.6f);
     drawManager.addDrawable(girl);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.smile);
+    var boy = objectFactory.createAnimation(CharacterType.boy, "smile", 2);
+    boy.playInfinite(1);
     boy.setPosition(width / 2 + 450, 500);
     boy.setScale(0.5f, 0.5f);
     drawManager.addDrawable(boy);
 
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.smile);
+    var mom = objectFactory.createAnimation(CharacterType.mom, "smile", 2);
+    mom.playInfinite(1);
     mom.setPosition(width / 2 + 270, 450);
     mom.setScale(1f, 1f);
     drawManager.addDrawable(mom);
