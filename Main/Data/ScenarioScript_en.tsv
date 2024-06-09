@@ -2,7 +2,7 @@ id	comment	character	voice
 102001	Once upon a time, mother and sibling who are poor, were living happily in the deep mountain.	NARR	102001
 103001	Their father passed away early, but the mother was taking responsibility of their family’s wealth by selling handmade rice cakes at the market which located on over several hills.	NARR	103001
 103002	Shall i start to make some rice cake?	MOM	103002
-103003	[Rice cake making mini game]		103003
+103003	[Rice cake making game]\nHelp the mom to make delicious rice cakes!		103003
 104001			
 105001	Mother the rice cake is so well made!	BOY	105001
 105002	Wow! I think it'll be so delicious!	GIRL	105002
@@ -14,7 +14,7 @@ id	comment	character	voice
 107003	It's a tiger!	MOM	107003
 108001	The tiger was drooling and looked at the mother who smells like delicious rice cake and said.	NARR	108001
 108002	I won't eat you if you give me a piece of rice cake!	TIGER	108002
-109001	[A mini game that gives you rice cake] \nThe tiger is threatening dreadfully! Please throw rice cake at the tiger!		
+109001	[Feeding the tiger rice cake game]\nIf you don't give rice cake to the tiger, you might get eaten! Throw the rice cake to the tiger!		
 110001	(Mom screaming)	MOM	110001
 110002	Mother gave all the rice cakes to the tiger but he was still hungry, and eventually he ate the mother.	NARR	110002
 111001	Well, I'm still hungry.	TIGER	111001
@@ -35,7 +35,7 @@ id	comment	character	voice
 203002	Roar!!	TIGER	203002
 203003	When they saw a tiger drooling and trying to devour them and they began to tremble and looking around.	NARR	203003
 204001	Brother, I think that tiger wants us because he's hungry... Oh! I see the rice cake basket that mom prepared, Mom said there is a rice cake that the tiger especially likes... What was that?	GIRL	204001
-204002	[Picking rice cake for the tiger mini game]\nYou have to decide on the rice cake for the tiger. The outcome of the game depends on the rice cake you choose, and you can experience various endings.		204002
+204002	[Tiger's favorite rice cake game]\nWhat kind of rice cake would a tiger like? Guess!		204002
 204003	Option 1. Red bean rice cake: Rice cake full of traditional sweet red beans.\nOption 2. Mugwort rice cake: Rice cake with a bitter scent of mugwort.		
 205001	Here...this is the rice cake that you like the most !!!	OHNUI	205001
 205002	The sister carefully placed delicious rice cakes made by her mother in front of the tiger.	NARR	205002
@@ -75,7 +75,7 @@ id	comment	character	voice
 302002	So the sibling started running toward the tree.	NARR	302002
 303001	When they arrived at the tree, they started climbing it to avoid being caught by the tiger. 	NARR	303001
 303002	Sister, I don't think the tiger noticed yet, don't worry and go up safely.	BOY	303002
-303003	[A mini game that hits a certain number of space bars in a row within a limited time]		
+303003	[Tree climbing game]\nYou have to climb up the tree quickly before being caught by a tiger!		
 304001	Later when the tiger realized that sibling had disappeared in the quiet room, the tiger came out from back door and found them on the tree.	NARR	304001
 305001	Fortunately sibling had already climbed to the top of the tree. The tiger ran to the tree desperately although it seemed never to be able to climb with his feet.	NARR	305001
 305002	See sister, I was right? A tiger can't climb a tree with his own feet.	BOY	305002
