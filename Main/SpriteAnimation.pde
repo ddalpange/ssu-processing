@@ -22,6 +22,15 @@ public class SpriteAnimation extends Drawable {
     this.nTimesPlayed = 0;
   }
 
+  public void playInfinite(float cycleSeconds) {
+    this.cycleSeconds = cycleSeconds;
+    this.frameSeconds = cycleSeconds / images.length;
+    this.nTimes = -1;
+    this.timeElapsed = 0;
+    this.currentFrame = 0;
+    this.nTimesPlayed = 0;
+  }
+
   @Override
   public void draw() {
     pushStyle();
@@ -48,7 +57,7 @@ public class SpriteAnimation extends Drawable {
 
   private PImage updateAutomaticMode() {
     PImage image = null;
-    if (nTimesPlayed < nTimes) {
+    if (nTimes < 0 || nTimesPlayed < nTimes) {
       image = images[currentFrame];
 
       timeElapsed += deltaTime;
