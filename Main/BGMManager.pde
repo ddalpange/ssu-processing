@@ -18,7 +18,7 @@ public class BGMSequence {
     bgm = new SoundFile(Main.this, bgmPath);
     // 볼륨 설정 50%
     bgm.loop();
-    bgm.amp(0.2);
+    bgm.amp(0.1);
   }
 
   public void stop() {
