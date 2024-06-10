@@ -13,7 +13,7 @@ public class Scene_208 extends BaseScene {
     Scene_202_bg_setup(drawManager);
     var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
     tiger.setPosition(width / 2 + 212, 460);
-    tiger.setScale(-0.5f, 0.5f);
+    tiger.setScale(-0.71f, 0.71f);
     drawManager.addDrawable(tiger);
 
     var candle = new Candle(width / 2 + 5, 142);
