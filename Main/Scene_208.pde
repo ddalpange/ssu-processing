@@ -22,7 +22,7 @@ public class Scene_208 extends BaseScene {
     var knife = objectFactory.create("res/images/object/knife.png");
     knife.setPosition(800, 350);
     // 칼 돌려야 할듯.. 근데 돌리면 안보임
-    knife.setScale(-0.6f, 0.6f);
+    knife.setScale(-0.85f, 0.85f);
     drawManager.addDrawable(knife);
 
     //effectManager.addParticles(width / 2, 600, EffectType.BLOOD);
@@ -57,7 +57,7 @@ public class Scene_208 extends BaseScene {
       translate(width/2, height/2);
       rotateZ(PI/3.0);
       
-      mom.setPosition(width / 2 + 212, 280);
+      mom.setPosition(width / 2 + 212, 290);
       mom.setScale(0.5f, 0.5f);
       drawManager.addDrawable(mom);
       
