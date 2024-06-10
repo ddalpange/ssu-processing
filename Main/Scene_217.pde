@@ -38,7 +38,7 @@ public class Scene_217 extends BaseScene {
     drawManager.addDrawable(retryButton);
 
     creditButton = new Button2(loadImage("res/images/UI/button_1.png"), 1080, 200);
-    creditButton.text = locale == "en" ? "Credits" : "만든 사람들";
+    creditButton.text = locale == "en" ? "Credits" : "제작진";
     creditButton.setScale(1, 1);
     drawManager.addDrawable(creditButton);
   }
