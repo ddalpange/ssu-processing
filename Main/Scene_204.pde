@@ -23,12 +23,6 @@ public class Scene_204 extends BaseScene {
 
     loadBackground("19", drawManager);
 
-    // var bg = objectFactory.create("res/images/object/inside_house.png");
-    // bg.setPosition(width / 2, height / 2);
-    // bg.setScale(0.25, 0.25);
-    // drawManager.addDrawable(bg);
-    
-
     팥떡 = objectFactory.create("res/images/object/ricecake_02_02.png");
     팥떡.setPosition(350, 250);
     팥떡.setScale(1.4, 1.4);

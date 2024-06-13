@@ -13,6 +13,13 @@ import { Scene_111 } from "../scenes/Scene_111";
 import { Scene_112 } from "../scenes/Scene_112";
 import { Scene_113 } from "../scenes/Scene_113";
 import { Scene_114 } from "../scenes/Scene_114";
+import { Scene_201 } from "../scenes/Scene_201";
+import { Scene_202 } from "../scenes/Scene_202";
+import { Scene_203 } from "../scenes/Scene_203";
+import { Scene_204 } from "../scenes/Scene_204";
+import { Scene_205 } from "../scenes/Scene_205";
+import { Scene_206 } from "../scenes/Scene_206";
+import { Scene_207 } from "../scenes/Scene_207";
 
 export const allScenes: Record<number, () => BaseScene> = {
   101: () => new Scene_101(),
@@ -42,4 +49,18 @@ export const allScenes: Record<number, () => BaseScene> = {
   113: () => new Scene_113(),
 
   114: () => new Scene_114(),
+
+  201: () => new Scene_201(),
+
+  202: () => new Scene_202(),
+
+  203: () => new Scene_203(),
+
+  204: () => new Scene_204(),
+
+  205: () => new Scene_205(),
+
+  206: () => new Scene_206(),
+
+  207: () => new Scene_207(),
 };

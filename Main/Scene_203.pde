@@ -11,9 +11,6 @@ public class Scene_203 extends BaseScene {
     
     loadBackground("18", drawManager);
 
-
-    Scene_202_bg_setup(drawManager);
-
     var candle = new Candle(width / 2 + 5, 142);
     drawManager.addDrawable(candle);
 
