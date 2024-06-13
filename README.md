@@ -38,7 +38,7 @@ brew 같은거 없고 java랑 다르니 받아야함.
 ```
 brew install nvm
 nvm install 20  # install node 20
-npm i -g pnpm # install pnpm
+npm install -g pnpm # install pnpm
 pnpm i # install node_modules
 pnpm dev # start dev server
 ```
