@@ -41,6 +41,7 @@ export abstract class BaseScene {
     public loadNextScene(doFade: boolean = true): void {
         const sceneNumber: number = this.getNextScene();
         if (sceneNumber !== -1) {
+            console.log("load next scene : " + sceneNumber);
             sceneManager.loadScene(allScenes[sceneNumber](), doFade);
         } else {
             console.log("다음 씬이 없거나 매핑이 안되어있습니다.");

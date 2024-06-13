@@ -9,8 +9,6 @@ public class Scene_113 extends BaseScene {
     uiManager.dialogUi.next();
 
     loadBackground("14", drawManager);
-    Scene_108_background_setup(drawManager);
-    Scene_108_background_setup2(drawManager);
 
     var tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.front);
     tiger.setPosition(width/2, height / 2 + 250);

@@ -8,7 +8,7 @@ const TELLER_TEXT_SIZE: number = 24;
 const MSG_TEXT_SIZE: number = 16;
 
 export class DialogUi {
-    private visible: boolean;
+    public visible: boolean;
     private current?: DialogContent;
     private queue: DialogContent[] = [];
 
