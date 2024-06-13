@@ -1,4 +1,66 @@
 export const imagePaths = {
+  ["res/images/test/SpriteAnim_1.png"]: "res/images/test/SpriteAnim_1.png",
+  ["res/images/test/SpriteAnim_2.png"]: "res/images/test/SpriteAnim_2.png",
+  ["res/images/test/SpriteAnim_3.png"]: "res/images/test/SpriteAnim_3.png",
+  ["res/images/test/SpriteAnim_4.png"]: "res/images/test/SpriteAnim_4.png",
+  ["res/images/object/Jar_1.png"]: "res/images/object/Jar_1.png",
+  ["res/images/object/Jar_2.png"]: "res/images/object/Jar_2.png",
+  ["res/images/object/Twinkle.png"]: "res/images/object/Twinkle.png",
+  ["res/images/object/basket_01_01.png"]: "res/images/object/basket_01_01.png",
+  ["res/images/object/basket_01_02.png"]: "res/images/object/basket_01_02.png",
+  ["res/images/object/basket_01_03.png"]: "res/images/object/basket_01_03.png",
+  ["res/images/object/cloth_blood.png"]: "res/images/object/cloth_blood.png",
+  ["res/images/object/cloud.png"]: "res/images/object/cloud.png",
+  ["res/images/object/cloud2.png"]: "res/images/object/cloud2.png",
+  ["res/images/object/door.png"]: "res/images/object/door.png",
+  ["res/images/object/door_2.png"]: "res/images/object/door_2.png",
+  ["res/images/object/egg.png"]: "res/images/object/egg.png",
+  ["res/images/object/ex.png"]: "res/images/object/ex.png",
+  ["res/images/object/ex_2.png"]: "res/images/object/ex_2.png",
+  ["res/images/object/fabric_01.png"]: "res/images/object/fabric_01.png",
+  ["res/images/object/fluff.png"]: "res/images/object/fluff.png",
+  ["res/images/object/hut_back.png"]: "res/images/object/hut_back.png",
+  ["res/images/object/hut_front.png"]: "res/images/object/hut_front.png",
+  ["res/images/object/knife.png"]: "res/images/object/knife.png",
+  ["res/images/object/moon.png"]: "res/images/object/moon.png",
+  ["res/images/object/mortar-04.png"]: "res/images/object/mortar-04.png",
+  ["res/images/object/mortar-05.png"]: "res/images/object/mortar-05.png",
+  ["res/images/object/oil.png"]: "res/images/object/oil.png",
+  ["res/images/object/ricecake_01_01.png"]:
+    "res/images/object/ricecake_01_01.png",
+  ["res/images/object/ricecake_01_02.png"]:
+    "res/images/object/ricecake_01_02.png",
+  ["res/images/object/ricecake_02_01.png"]:
+    "res/images/object/ricecake_02_01.png",
+  ["res/images/object/ricecake_02_02.png"]:
+    "res/images/object/ricecake_02_02.png",
+  ["res/images/object/rope_strong.png"]: "res/images/object/rope_strong.png",
+  ["res/images/object/rope_weak.png"]: "res/images/object/rope_weak.png",
+  ["res/images/object/shoes.png"]: "res/images/object/shoes.png",
+  ["res/images/object/stones.png"]: "res/images/object/stones.png",
+  ["res/images/object/stones_weeds.png"]: "res/images/object/stones_weeds.png",
+  ["res/images/object/sun.png"]: "res/images/object/sun.png",
+  ["res/images/object/thunder_1.png"]: "res/images/object/thunder_1.png",
+  ["res/images/object/thunder_1_.png"]: "res/images/object/thunder_1_.png",
+  ["res/images/object/thunder_2.png"]: "res/images/object/thunder_2.png",
+  ["res/images/object/thunder_2_.png"]: "res/images/object/thunder_2_.png",
+  ["res/images/object/tiger_in_the_dark_bg_1.png"]:
+    "res/images/object/tiger_in_the_dark_bg_1.png",
+  ["res/images/object/tiger_in_the_dark_bg_2.png"]:
+    "res/images/object/tiger_in_the_dark_bg_2.png",
+  ["res/images/object/tiger_in_the_dark_bg_3.png"]:
+    "res/images/object/tiger_in_the_dark_bg_3.png",
+  ["res/images/object/tiger_in_the_dark_bg_4.png"]:
+    "res/images/object/tiger_in_the_dark_bg_4.png",
+  ["res/images/object/tiger_in_the_dark_bg_5.png"]:
+    "res/images/object/tiger_in_the_dark_bg_5.png",
+  ["res/images/object/tiger_in_the_dark_bg_6.png"]:
+    "res/images/object/tiger_in_the_dark_bg_6.png",
+  ["res/images/object/tiger_in_the_dark_bg_7.png"]:
+    "res/images/object/tiger_in_the_dark_bg_7.png",
+  ["res/images/object/tree_to_climb.png"]:
+    "res/images/object/tree_to_climb.png",
+  ["res/images/object/well.png"]: "res/images/object/well.png",
   ["res/images/bg/background_10 .png"]: "res/images/bg/background_10 .png",
   ["res/images/bg/background_10-1.png"]: "res/images/bg/background_10-1.png",
   ["res/images/bg/background_10-2.png"]: "res/images/bg/background_10-2.png",
@@ -77,129 +139,6 @@ export const imagePaths = {
   ["res/images/bg/background_9-2.png"]: "res/images/bg/background_9-2.png",
   ["res/images/bg/background_9.png"]: "res/images/bg/background_9.png",
   ["res/images/bg/background_intro.png"]: "res/images/bg/background_intro.png",
-  ["res/images/test/SpriteAnim_1.png"]: "res/images/test/SpriteAnim_1.png",
-  ["res/images/test/SpriteAnim_2.png"]: "res/images/test/SpriteAnim_2.png",
-  ["res/images/test/SpriteAnim_3.png"]: "res/images/test/SpriteAnim_3.png",
-  ["res/images/test/SpriteAnim_4.png"]: "res/images/test/SpriteAnim_4.png",
-  ["res/images/object/Jar_1.png"]: "res/images/object/Jar_1.png",
-  ["res/images/object/Jar_2.png"]: "res/images/object/Jar_2.png",
-  ["res/images/object/Twinkle.png"]: "res/images/object/Twinkle.png",
-  ["res/images/object/basket_01_01.png"]: "res/images/object/basket_01_01.png",
-  ["res/images/object/basket_01_02.png"]: "res/images/object/basket_01_02.png",
-  ["res/images/object/basket_01_03.png"]: "res/images/object/basket_01_03.png",
-  ["res/images/object/cloth_blood.png"]: "res/images/object/cloth_blood.png",
-  ["res/images/object/cloud.png"]: "res/images/object/cloud.png",
-  ["res/images/object/cloud2.png"]: "res/images/object/cloud2.png",
-  ["res/images/object/door.png"]: "res/images/object/door.png",
-  ["res/images/object/door_2.png"]: "res/images/object/door_2.png",
-  ["res/images/object/egg.png"]: "res/images/object/egg.png",
-  ["res/images/object/ex.png"]: "res/images/object/ex.png",
-  ["res/images/object/ex_2.png"]: "res/images/object/ex_2.png",
-  ["res/images/object/fabric_01.png"]: "res/images/object/fabric_01.png",
-  ["res/images/object/fluff.png"]: "res/images/object/fluff.png",
-  ["res/images/object/hut_back.png"]: "res/images/object/hut_back.png",
-  ["res/images/object/hut_front.png"]: "res/images/object/hut_front.png",
-  ["res/images/object/knife.png"]: "res/images/object/knife.png",
-  ["res/images/object/moon.png"]: "res/images/object/moon.png",
-  ["res/images/object/mortar-04.png"]: "res/images/object/mortar-04.png",
-  ["res/images/object/mortar-05.png"]: "res/images/object/mortar-05.png",
-  ["res/images/object/oil.png"]: "res/images/object/oil.png",
-  ["res/images/object/ricecake_01_01.png"]:
-    "res/images/object/ricecake_01_01.png",
-  ["res/images/object/ricecake_01_02.png"]:
-    "res/images/object/ricecake_01_02.png",
-  ["res/images/object/ricecake_02_01.png"]:
-    "res/images/object/ricecake_02_01.png",
-  ["res/images/object/ricecake_02_02.png"]:
-    "res/images/object/ricecake_02_02.png",
-  ["res/images/object/rope_strong.png"]: "res/images/object/rope_strong.png",
-  ["res/images/object/rope_weak.png"]: "res/images/object/rope_weak.png",
-  ["res/images/object/shoes.png"]: "res/images/object/shoes.png",
-  ["res/images/object/stones.png"]: "res/images/object/stones.png",
-  ["res/images/object/stones_weeds.png"]: "res/images/object/stones_weeds.png",
-  ["res/images/object/sun.png"]: "res/images/object/sun.png",
-  ["res/images/object/thunder_1.png"]: "res/images/object/thunder_1.png",
-  ["res/images/object/thunder_1_.png"]: "res/images/object/thunder_1_.png",
-  ["res/images/object/thunder_2.png"]: "res/images/object/thunder_2.png",
-  ["res/images/object/thunder_2_.png"]: "res/images/object/thunder_2_.png",
-  ["res/images/object/tiger_in_the_dark_bg_1.png"]:
-    "res/images/object/tiger_in_the_dark_bg_1.png",
-  ["res/images/object/tiger_in_the_dark_bg_2.png"]:
-    "res/images/object/tiger_in_the_dark_bg_2.png",
-  ["res/images/object/tiger_in_the_dark_bg_3.png"]:
-    "res/images/object/tiger_in_the_dark_bg_3.png",
-  ["res/images/object/tiger_in_the_dark_bg_4.png"]:
-    "res/images/object/tiger_in_the_dark_bg_4.png",
-  ["res/images/object/tiger_in_the_dark_bg_5.png"]:
-    "res/images/object/tiger_in_the_dark_bg_5.png",
-  ["res/images/object/tiger_in_the_dark_bg_6.png"]:
-    "res/images/object/tiger_in_the_dark_bg_6.png",
-  ["res/images/object/tiger_in_the_dark_bg_7.png"]:
-    "res/images/object/tiger_in_the_dark_bg_7.png",
-  ["res/images/object/tree_to_climb.png"]:
-    "res/images/object/tree_to_climb.png",
-  ["res/images/object/well.png"]: "res/images/object/well.png",
-  ["res/images/ui/3button.png"]: "res/images/ui/3button.png",
-  ["res/images/ui/Arrow_L.png"]: "res/images/ui/Arrow_L.png",
-  ["res/images/ui/Arrow_R.png"]: "res/images/ui/Arrow_R.png",
-  ["res/images/ui/Opening_TItle.png"]: "res/images/ui/Opening_TItle.png",
-  ["res/images/ui/Opening_UI_01_01.png"]: "res/images/ui/Opening_UI_01_01.png",
-  ["res/images/ui/Opening_UI_01_02.png"]: "res/images/ui/Opening_UI_01_02.png",
-  ["res/images/ui/Opening_UI_01_03.png"]: "res/images/ui/Opening_UI_01_03.png",
-  ["res/images/ui/Opening_UI_02_01.png"]: "res/images/ui/Opening_UI_02_01.png",
-  ["res/images/ui/Opening_UI_02_02.png"]: "res/images/ui/Opening_UI_02_02.png",
-  ["res/images/ui/Opening_UI_02_02_gradient.png"]:
-    "res/images/ui/Opening_UI_02_02_gradient.png",
-  ["res/images/ui/Opening_UI_03_01.png"]: "res/images/ui/Opening_UI_03_01.png",
-  ["res/images/ui/Opening_UI_03_02.png"]: "res/images/ui/Opening_UI_03_02.png",
-  ["res/images/ui/Opening_UI_03_03.png"]: "res/images/ui/Opening_UI_03_03.png",
-  ["res/images/ui/button_1.png"]: "res/images/ui/button_1.png",
-  ["res/images/ui/button_2.png"]: "res/images/ui/button_2.png",
-  ["res/images/ui/button_back.png"]: "res/images/ui/button_back.png",
-  ["res/images/ui/button_forward.png"]: "res/images/ui/button_forward.png",
-  ["res/images/ui/button_pause.png"]: "res/images/ui/button_pause.png",
-  ["res/images/ui/button_play.png"]: "res/images/ui/button_play.png",
-  ["res/images/ui/ending_box.png"]: "res/images/ui/ending_box.png",
-  ["res/images/ui/ending_box2.png"]: "res/images/ui/ending_box2.png",
-  ["res/images/ui/frame.png"]: "res/images/ui/frame.png",
-  ["res/images/ui/gauge_f.png"]: "res/images/ui/gauge_f.png",
-  ["res/images/ui/gauge_s.png"]: "res/images/ui/gauge_s.png",
-  ["res/images/ui/green exclamation.png"]:
-    "res/images/ui/green exclamation.png",
-  ["res/images/ui/green_question.png"]: "res/images/ui/green_question.png",
-  ["res/images/ui/intro_button1.png"]: "res/images/ui/intro_button1.png",
-  ["res/images/ui/intro_button2.png"]: "res/images/ui/intro_button2.png",
-  ["res/images/ui/koreng.png"]: "res/images/ui/koreng.png",
-  ["res/images/ui/question-mark.png"]: "res/images/ui/question-mark.png",
-  ["res/images/ui/red exclamation.png"]: "res/images/ui/red exclamation.png",
-  ["res/images/ui/red question.png"]: "res/images/ui/red question.png",
-  ["res/images/ui/rice cake gauge 2.png"]:
-    "res/images/ui/rice cake gauge 2.png",
-  ["res/images/ui/space.png"]: "res/images/ui/space.png",
-  ["res/images/ui/speech-bubble.png"]: "res/images/ui/speech-bubble.png",
-  ["res/images/ui/speech_bubble_2.png"]: "res/images/ui/speech_bubble_2.png",
-  ["res/images/ui/speech_bubble_circle_1.png"]:
-    "res/images/ui/speech_bubble_circle_1.png",
-  ["res/images/ui/speech_bubble_small_1.png"]:
-    "res/images/ui/speech_bubble_small_1.png",
-  ["res/images/ui/speech_bubble_small_2.png"]:
-    "res/images/ui/speech_bubble_small_2.png",
-  ["res/images/ui/speech_bubble_small_3.png"]:
-    "res/images/ui/speech_bubble_small_3.png",
-  ["res/images/ui/speech_bubble_surprise_1.png"]:
-    "res/images/ui/speech_bubble_surprise_1.png",
-  ["res/images/ui/speech_bubble_think_1.png"]:
-    "res/images/ui/speech_bubble_think_1.png",
-  ["res/images/ui/speech_bubble_think_２.png"]:
-    "res/images/ui/speech_bubble_think_２.png",
-  ["res/images/ui/speech_bubble_３.png"]: "res/images/ui/speech_bubble_３.png",
-  ["res/images/ui/speech_bubble_４.png"]: "res/images/ui/speech_bubble_４.png",
-  ["res/images/ui/subtitle_bar.png"]: "res/images/ui/subtitle_bar.png",
-  ["res/images/ui/subtitle_bar_1.png"]: "res/images/ui/subtitle_bar_1.png",
-  ["res/images/ui/subtitle_bar_2.png"]: "res/images/ui/subtitle_bar_2.png",
-  ["res/images/ui/subtitle_bar_new.png"]: "res/images/ui/subtitle_bar_new.png",
-  ["res/images/ui/target.png"]: "res/images/ui/target.png",
-  ["res/images/ui/tx box.png"]: "res/images/ui/tx box.png",
   ["res/images/character/boy_b.png"]: "res/images/character/boy_b.png",
   ["res/images/character/boy_black.png"]: "res/images/character/boy_black.png",
   ["res/images/character/boy_climb.png"]: "res/images/character/boy_climb.png",
@@ -387,12 +326,73 @@ export const imagePaths = {
     "res/images/character/tiger_threat.png",
   ["res/images/character/tiger_well.png"]:
     "res/images/character/tiger_well.png",
-  ["res/images/character/tiger_well_1.png"]:
-    "res/images/character/tiger_well_1.png",
-  ["res/images/character/tiger_well_2_1.png"]:
-    "res/images/character/tiger_well_2_1.png",
-  ["res/images/character/tiger_well_2_2.png"]:
-    "res/images/character/tiger_well_2_2.png",
+  ["res/images/character/tiger_well_anim_1.png"]:
+    "res/images/character/tiger_well_anim_1.png",
+  ["res/images/character/tiger_well_anim_2.png"]:
+    "res/images/character/tiger_well_anim_2.png",
+  ["res/images/character/tiger_well_anim_3.png"]:
+    "res/images/character/tiger_well_anim_3.png",
+  ["res/images/ui/3button.png"]: "res/images/ui/3button.png",
+  ["res/images/ui/Arrow_L.png"]: "res/images/ui/Arrow_L.png",
+  ["res/images/ui/Arrow_R.png"]: "res/images/ui/Arrow_R.png",
+  ["res/images/ui/Opening_TItle.png"]: "res/images/ui/Opening_TItle.png",
+  ["res/images/ui/Opening_UI_01_01.png"]: "res/images/ui/Opening_UI_01_01.png",
+  ["res/images/ui/Opening_UI_01_02.png"]: "res/images/ui/Opening_UI_01_02.png",
+  ["res/images/ui/Opening_UI_01_03.png"]: "res/images/ui/Opening_UI_01_03.png",
+  ["res/images/ui/Opening_UI_02_01.png"]: "res/images/ui/Opening_UI_02_01.png",
+  ["res/images/ui/Opening_UI_02_02.png"]: "res/images/ui/Opening_UI_02_02.png",
+  ["res/images/ui/Opening_UI_02_02_gradient.png"]:
+    "res/images/ui/Opening_UI_02_02_gradient.png",
+  ["res/images/ui/Opening_UI_03_01.png"]: "res/images/ui/Opening_UI_03_01.png",
+  ["res/images/ui/Opening_UI_03_02.png"]: "res/images/ui/Opening_UI_03_02.png",
+  ["res/images/ui/Opening_UI_03_03.png"]: "res/images/ui/Opening_UI_03_03.png",
+  ["res/images/ui/button_1.png"]: "res/images/ui/button_1.png",
+  ["res/images/ui/button_2.png"]: "res/images/ui/button_2.png",
+  ["res/images/ui/button_back.png"]: "res/images/ui/button_back.png",
+  ["res/images/ui/button_forward.png"]: "res/images/ui/button_forward.png",
+  ["res/images/ui/button_pause.png"]: "res/images/ui/button_pause.png",
+  ["res/images/ui/button_play.png"]: "res/images/ui/button_play.png",
+  ["res/images/ui/ending_box.png"]: "res/images/ui/ending_box.png",
+  ["res/images/ui/ending_box2.png"]: "res/images/ui/ending_box2.png",
+  ["res/images/ui/frame.png"]: "res/images/ui/frame.png",
+  ["res/images/ui/gauge_f.png"]: "res/images/ui/gauge_f.png",
+  ["res/images/ui/gauge_s.png"]: "res/images/ui/gauge_s.png",
+  ["res/images/ui/green exclamation.png"]:
+    "res/images/ui/green exclamation.png",
+  ["res/images/ui/green_question.png"]: "res/images/ui/green_question.png",
+  ["res/images/ui/intro_button1.png"]: "res/images/ui/intro_button1.png",
+  ["res/images/ui/intro_button2.png"]: "res/images/ui/intro_button2.png",
+  ["res/images/ui/koreng.png"]: "res/images/ui/koreng.png",
+  ["res/images/ui/question-mark.png"]: "res/images/ui/question-mark.png",
+  ["res/images/ui/red exclamation.png"]: "res/images/ui/red exclamation.png",
+  ["res/images/ui/red question.png"]: "res/images/ui/red question.png",
+  ["res/images/ui/rice cake gauge 2.png"]:
+    "res/images/ui/rice cake gauge 2.png",
+  ["res/images/ui/space.png"]: "res/images/ui/space.png",
+  ["res/images/ui/speech-bubble.png"]: "res/images/ui/speech-bubble.png",
+  ["res/images/ui/speech_bubble_2.png"]: "res/images/ui/speech_bubble_2.png",
+  ["res/images/ui/speech_bubble_circle_1.png"]:
+    "res/images/ui/speech_bubble_circle_1.png",
+  ["res/images/ui/speech_bubble_small_1.png"]:
+    "res/images/ui/speech_bubble_small_1.png",
+  ["res/images/ui/speech_bubble_small_2.png"]:
+    "res/images/ui/speech_bubble_small_2.png",
+  ["res/images/ui/speech_bubble_small_3.png"]:
+    "res/images/ui/speech_bubble_small_3.png",
+  ["res/images/ui/speech_bubble_surprise_1.png"]:
+    "res/images/ui/speech_bubble_surprise_1.png",
+  ["res/images/ui/speech_bubble_think_1.png"]:
+    "res/images/ui/speech_bubble_think_1.png",
+  ["res/images/ui/speech_bubble_think_２.png"]:
+    "res/images/ui/speech_bubble_think_２.png",
+  ["res/images/ui/speech_bubble_３.png"]: "res/images/ui/speech_bubble_３.png",
+  ["res/images/ui/speech_bubble_４.png"]: "res/images/ui/speech_bubble_４.png",
+  ["res/images/ui/subtitle_bar.png"]: "res/images/ui/subtitle_bar.png",
+  ["res/images/ui/subtitle_bar_1.png"]: "res/images/ui/subtitle_bar_1.png",
+  ["res/images/ui/subtitle_bar_2.png"]: "res/images/ui/subtitle_bar_2.png",
+  ["res/images/ui/subtitle_bar_new.png"]: "res/images/ui/subtitle_bar_new.png",
+  ["res/images/ui/target.png"]: "res/images/ui/target.png",
+  ["res/images/ui/tx box.png"]: "res/images/ui/tx box.png",
   ["res/images/ui/x/gauge_f.png"]: "res/images/ui/x/gauge_f.png",
   ["res/images/ui/x/gauge_s.png"]: "res/images/ui/x/gauge_s.png",
   ["res/images/ui/x/speech-bubble_1.png"]:

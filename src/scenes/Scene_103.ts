@@ -39,7 +39,7 @@ export class Scene_103 extends BaseScene {
   }
  
   draw(): void {
-    p.pushg();
+    p.push();
     p.background(colors.day_sky);
     
     this.drawManager.drawing();
