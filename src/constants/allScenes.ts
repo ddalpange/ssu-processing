@@ -4,6 +4,7 @@ import { Scene_102 } from "../scenes/Scene_102";
 import { Scene_103 } from "../scenes/Scene_103";
 import { Scene_104 } from "../scenes/Scene_104";
 import { Scene_105 } from "../scenes/Scene_105";
+import { Scene_106 } from "../scenes/Scene_106";
 
 export const allScenes: Record<number, () => BaseScene> = {
   101: () => new Scene_101(),
@@ -15,4 +16,6 @@ export const allScenes: Record<number, () => BaseScene> = {
   104: () => new Scene_104(),
 
   105: () => new Scene_105(),
+
+  106: () => new Scene_106(),
 };

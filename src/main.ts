@@ -31,6 +31,19 @@ export const main = (p: p5) => {
         }
     };
     p.keyPressed = function keyPressed() {
+        console.log("pressed key : " + p.key);
+        if (p.key === "Backspace") {
+            //sceneManager.loadScene(new Scene_Intro_New());
+        }
+        if (p.key === "-") {
+            sceneManager.getCurrentScene()?.loadNextScene();
+            return;
+        }
+        if (p.key === "=") {
+            sceneManager.getCurrentScene()?.loadPreviousScene();
+            return;
+        }
+
         const scene = sceneManager.getCurrentScene();
         scene?.keyPressed();
     };

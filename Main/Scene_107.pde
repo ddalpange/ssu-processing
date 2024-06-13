@@ -12,7 +12,6 @@ public class Scene_107 extends BaseScene {
 
     loadBackground("8", drawManager);
 
-    Scene_106_background_setup(drawManager);
 
     tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.black);
     tiger.setPosition(450, 300);
