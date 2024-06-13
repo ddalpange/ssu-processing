@@ -88,4 +88,18 @@ export class Drawable {
     }
     return false;
   }
+
+  public isMouseOver() {
+    var modX = this.x - this.w / 2;
+    var modY = this.y - this.h / 2;
+    if(
+      p.mouseX > modX 
+      && p.mouseX < modX + this.w
+      && p.mouseY > modY 
+      && p.mouseY < modY + this.h
+    ){
+      return true;
+    } 
+    return false;
+  }
 }

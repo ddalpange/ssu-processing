@@ -19,6 +19,14 @@ export class FontManager {
     p.pop();
   }
 
+  public drawText3(text: string, x: number, y: number, size: number, color: string) {
+    p.push();
+    p.fill(color);
+    p.textFont(this.font, size);
+    p.text(text, x, y);
+    p.pop();
+  }
+
   public drawText(
     text: string,
     x: number,

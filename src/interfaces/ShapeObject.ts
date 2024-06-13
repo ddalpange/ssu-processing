@@ -2,8 +2,8 @@ import p5 from "p5";
 import { Drawable } from "./Drawable";
 
 export class ShapeObject extends Drawable {
-  protected image: p5.Image | undefined;
-  protected imageSrc: string | undefined;
+  public image: p5.Image | undefined;
+  public imageSrc: string | undefined;
 
   constructor(imageSrc: string) {
     super();
