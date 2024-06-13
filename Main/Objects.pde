@@ -68,7 +68,7 @@ public enum CharacterPoseType {
 final ObjectFactory objectFactory = new ObjectFactory();
 
 public class ObjectFactory {
-  public ShapeObject create(CharacterType type, CharacterPoseType pose) {
+  public ShapeObject createCombination(CharacterType type, CharacterPoseType pose) {
     String path = getShapePath(type, pose);
 
     if (path.endsWith(".svg"))

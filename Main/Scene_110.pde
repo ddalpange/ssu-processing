@@ -27,7 +27,7 @@ public class Scene_110 extends BaseScene {
     tigerScaleUpAnimation = new ScaleAnimation(tiger, tigerScale + tigerScale * 0.03, tigerScale + tigerScale * 0.03, tigerScaleDuration);
     tigerScaleDownAnimation = new ScaleAnimation(tiger, tigerScale - tigerScale * 0.03, tigerScale - tigerScale * 0.03, tigerScaleDuration);
 
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.back);
+    var mom = objectFactory.createCombination(CharacterType.mom, CharacterPoseType.back);
     mom.setPosition(width / 2, 650);
     mom.setScale(0.35, 0.35);
     drawManager.addDrawable(mom);

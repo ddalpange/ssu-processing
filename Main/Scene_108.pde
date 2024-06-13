@@ -26,7 +26,7 @@ public class Scene_108 extends BaseScene {
     
     Scene_108_background_setup(drawManager);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.threat);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.threat);
     tiger.setPosition(250, 500);
     tiger.setScale(0.5, 0.5);
     drawManager.addDrawable(tiger);
@@ -35,7 +35,7 @@ public class Scene_108 extends BaseScene {
 
     Scene_108_background_setup2(drawManager);
 
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.back_ricecake);
+    var mom = objectFactory.createCombination(CharacterType.mom, CharacterPoseType.back_ricecake);
     mom.setPosition(950, 650);
     mom.setScale(0.7, 0.7);
     drawManager.addDrawable(mom);

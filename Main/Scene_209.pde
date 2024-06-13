@@ -11,7 +11,7 @@ public class Scene_209 extends BaseScene {
     loadBackground("24", drawManager);
 
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.front);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.front);
     boy.setPosition(800, 750);
     boy.setScale(1.2f, 1.2f);
     drawManager.addDrawable(boy);
@@ -21,7 +21,7 @@ public class Scene_209 extends BaseScene {
     speechBubble.setScale(0.55f, 0.55f);
     drawManager.addDrawable(speechBubble);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.lay_02);
     tiger.setPosition(350, 200);
     tiger.setScale(-0.6f, 0.6f);
     drawManager.addDrawable(tiger);

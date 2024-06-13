@@ -39,7 +39,7 @@ public class Scene_308 extends BaseScene {
 
     gameManager = new GhostLegGameManager(2, new int[] {308, 309}, new Drawable[]{oil, axe});
 
-    var tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.back);
+    var tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.back);
     tiger.setPosition(600, 600);
     tiger.setScale(0.6, 0.6);
     drawManager.addDrawable(tiger);

@@ -34,7 +34,7 @@ public class Scene_222 extends BaseScene {
 
   private void SetUpObject()
   {
-  //  tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.angry);
+  //  tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.angry);
   //  tiger.setPosition(tigerPos.x,tigerPos.y);
   //  tiger.setScale(0.5f,0.5f);
   //   tigerMoveAnimation = new MoveAnimation(tiger, width + imageBuffer, 400, tigerMoveDuration, EaseType.InBack);
@@ -42,13 +42,13 @@ public class Scene_222 extends BaseScene {
   //   tigerScaleDownAnimation = new ScaleAnimation(tiger, 0.5f,0.5f,tigerScaleDuration);
   //       drawManager.addDrawable(tiger);
 
-    boy = objectFactory.create(CharacterType.boy, CharacterPoseType.left);
+    boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.left);
    boy.setPosition(boyPos.x,boyPos.y);
    boy.setScale(0.5f,0.5f);
     boyMoveAnimation = new MoveAnimation(boy, width + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
         drawManager.addDrawable(boy);
    
-    girl = objectFactory.create(CharacterType.girl, CharacterPoseType.left); 
+    girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.left); 
    girl.setPosition(girlPos.x,girlPos.y);
    girl.setScale(0.5f,0.5f);
     girlMoveAnimation = new MoveAnimation(girl, width + 150 + imageBuffer, 400, moveDuration,EaseType.InOutCubic);

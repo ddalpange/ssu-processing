@@ -1,15 +1,15 @@
 void Scene_211_Family_Setup(DrawManager drawManager) {
-  var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.front);
+  var mom = objectFactory.createCombination(CharacterType.mom, CharacterPoseType.front);
   mom.setPosition(130, 500);
   mom.setScale(0.7f, 0.7f);
   drawManager.addDrawable(mom);
 
-  var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.front);
+  var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.front);
   boy.setPosition(300, 550);
   boy.setScale(0.7f, 0.7f);
   drawManager.addDrawable(boy);
 
-  var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.front);
+  var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.front);
   girl.setPosition(450, 600);
   girl.setScale(0.7f, 0.7f);
   drawManager.addDrawable(girl);
@@ -27,7 +27,7 @@ public class Scene_211 extends BaseScene {
 
     loadBackground("25", drawManager);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_03);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.lay_03);
     tiger.setPosition(width / 2 + 200, 450);
     tiger.setScale(-1, 1);
     drawManager.addDrawable(tiger);

@@ -51,12 +51,12 @@ public class Scene_313 extends BaseScene {
     twinkle2.setScale(0.2, 0.2);
     drawManager.addDrawable(twinkle2);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.back);
     boy.setPosition(570, 600);
     boy.setScale(0.8, 0.8);
     drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
+    var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.back);
     girl.setPosition(760, 600);
     girl.setScale(0.8, 0.8);
     drawManager.addDrawable(girl);

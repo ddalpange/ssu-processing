@@ -22,7 +22,7 @@ public class Scene_301 extends BaseScene {
 
     loadBackground("38", drawManager);
   
-    tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.angry);
+    tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.angry);
     tiger.setPosition(300, 200);
     tiger.setScale(0.15f, 0.15f);
     drawManager.addDrawable(tiger);

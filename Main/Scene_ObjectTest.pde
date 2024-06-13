@@ -7,7 +7,7 @@ public class Scene_ObjectTest extends BaseScene {
   ShapeObject tiger;
   public void setup() {
     println("Scene_ObjectTest : setup");
-    tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.front);
+    tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.front);
     tiger.setPosition(200, 200);
     tiger.scale.x = 0.2;
     tiger.scale.y = 0.2;

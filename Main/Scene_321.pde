@@ -33,7 +33,7 @@ public class Scene_321 extends BaseScene {
     anim.repeatCount = -1;
     startAnimation(anim);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.pray);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.pray);
     tiger.setPosition(580, 390);
     tiger.setScale(0.3, 0.3);
     drawManager.addDrawable(tiger);

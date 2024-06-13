@@ -33,12 +33,12 @@ public class Scene_302 extends BaseScene {
     tree.setScale(treeDefaultScale, treeDefaultScale);
     drawManager.addDrawable(tree);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.point);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.point);
     boy.setPosition(300, 600);
     boy.setScale(0.6, 0.6);
     drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
+    var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.back);
     girl.setPosition(160, 620);
     girl.setScale(0.6, 0.6);
     drawManager.addDrawable(girl);

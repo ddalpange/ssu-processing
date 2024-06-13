@@ -7,7 +7,7 @@ public class Scene_CameraManagerTest extends BaseScene {
   ShapeObject tiger;
   public void setup() {
     println("Scene_CameraManagerTest : setup");
-    tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.back);
+    tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.back);
     tiger.setPosition(700, 500);
     tiger.scale.x = 0.4;
     tiger.scale.y = 0.4;

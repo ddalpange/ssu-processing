@@ -17,7 +17,7 @@ public class Scene_327 extends BaseScene {
     drawManager.addDrawable(goldRope);
 
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.fall);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.fall);
     tiger.setPosition(500, 200);
     tiger.setScale(0.2, 0.2);
     drawManager.addDrawable(tiger);

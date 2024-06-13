@@ -15,7 +15,7 @@ public class Scene_214 extends BaseScene {
     // house.setScale(0.13, 0.13);
     // drawManager.addDrawable(house);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.thirsty);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.thirsty);
     tiger.setPosition(width / 2 - 180, 350);
     tiger.setScale(0.4f, 0.4f);
     drawManager.addDrawable(tiger);

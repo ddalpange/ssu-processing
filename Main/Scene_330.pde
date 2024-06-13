@@ -26,12 +26,12 @@ public class Scene_330 extends BaseScene {
     moon.setScale(-0.5f, 0.5f);
     drawManager.addDrawable(moon);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.seat);
+    var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.seat);
     girl.setPosition(width / 2 - 300, 500);
     girl.setScale(-0.6, 0.6);
     drawManager.addDrawable(girl);
     
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.seat);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.seat);
     boy.setPosition(width / 2 + 300, 500);
     boy.setScale(0.6, 0.6);
     drawManager.addDrawable(boy);

@@ -49,7 +49,7 @@ public class Scene_109 extends BaseScene {
     BASTKET_WIDTH = 500;
     BASTKET_HEIGTH = 230;
 
-    tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.front);
+    tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.front);
     tiger.setPosition(width/2, height-250);
     tiger.setScale(0.7, 0.7);
     drawManager.addDrawable(tiger);

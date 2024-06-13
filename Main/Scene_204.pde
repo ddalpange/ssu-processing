@@ -39,7 +39,7 @@ public class Scene_204 extends BaseScene {
     쑥떡.setScale(1.4, 1.4);
     drawManager.addDrawable(쑥떡);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.point);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.point);
     boy.setPosition(width / 2 - 170, 710);
     boy.setScale(0.8f, 0.8f);
     drawManager.addDrawable(boy);

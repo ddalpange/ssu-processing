@@ -11,7 +11,7 @@ public class Scene_208 extends BaseScene {
     loadBackground("23", drawManager);
 
     Scene_202_bg_setup(drawManager);
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_02);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.lay_02);
     tiger.setPosition(width / 2 + 212, 460);
     tiger.setScale(-0.71f, 0.71f);
     drawManager.addDrawable(tiger);
@@ -53,7 +53,7 @@ public class Scene_208 extends BaseScene {
       effectManager.addParticles(width / 2+20,  height /2, EffectType.BLOOD);
       clickCount++;
     
-      var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.left_half);
+      var mom = objectFactory.createCombination(CharacterType.mom, CharacterPoseType.left_half);
       translate(width/2, height/2);
       rotateZ(PI/3.0);
       
@@ -61,12 +61,12 @@ public class Scene_208 extends BaseScene {
       mom.setScale(0.5f, 0.5f);
       drawManager.addDrawable(mom);
       
-      var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb);
+      var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.climb);
       boy.setPosition(300, 700);
       boy.setScale(0.7f, 0.7f)  ;
       drawManager.addDrawable(boy);
 
-      var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb);
+      var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.climb);
       girl.setPosition(width/2 + 300, 700);
       girl.setScale(0.7f, 0.7f);
       drawManager.addDrawable(girl);

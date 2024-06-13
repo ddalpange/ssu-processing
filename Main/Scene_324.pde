@@ -19,7 +19,7 @@ public class Scene_324 extends BaseScene {
     startAnimation(new MoveAnimation(oldRope, width / 2, 200, 2));
     drawManager.addDrawable(oldRope);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb_rope);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.climb_rope);
     tiger.setPosition(width / 2 + 10, 435);
     tiger.setScale(0.6, 0.6);
     drawManager.addDrawable(tiger);

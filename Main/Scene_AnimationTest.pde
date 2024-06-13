@@ -6,7 +6,7 @@ public class Scene_AnimationTest extends BaseScene {
   public int getNextScene() { return -1; }
   private SpriteAnimation testAnim;
   public void setup() {
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.front);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.front);
     boy.setPosition(350, 600);
     boy.setScale(1f, 1f);
     drawManager.addDrawable(boy);
@@ -19,7 +19,7 @@ public class Scene_AnimationTest extends BaseScene {
     moveAnim.repeatCount = 2;
     startAnimation(moveAnim);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.front);
+    var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.front);
     girl.setPosition(350, 600);
     girl.setScale(0.5f, 0.5f);
     drawManager.addDrawable(girl);

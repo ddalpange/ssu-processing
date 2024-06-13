@@ -35,17 +35,17 @@ public class Scene_317 extends BaseScene {
     anim.repeatCount = -1;
     startAnimation(anim);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.fall_purple);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.fall_purple);
     boy.setPosition(120, -400);
     boy.setScale(0.3, 0.3);
     drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.fall_purple);
+    var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.fall_purple);
     girl.setPosition(400, -400);
     girl.setScale(0.3, 0.3);
     drawManager.addDrawable(girl);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.climb);
     tiger.setPosition(1000, 300);
     tiger.setScale(0.3, 0.3);
     drawManager.addDrawable(tiger);

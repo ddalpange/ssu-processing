@@ -12,7 +12,7 @@ public class Scene_106 extends BaseScene {
     loadBackground("7", drawManager);
 
 
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.back_ricecake);
+    var mom = objectFactory.createCombination(CharacterType.mom, CharacterPoseType.back_ricecake);
     mom.setPosition(850, 430);
     mom.setScale(0.5, 0.5);
     drawManager.addDrawable(mom);

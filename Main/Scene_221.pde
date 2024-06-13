@@ -10,7 +10,7 @@ public class Scene_221 extends BaseScene {
     
     loadBackground("20", drawManager);
 
-    var tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.angry);
+    var tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.angry);
     // 호랑이 위치 조정
     tiger.setPosition(width / 2, height - 160);
     tiger.setScale(0.8, 0.8);

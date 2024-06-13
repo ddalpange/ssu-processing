@@ -25,7 +25,7 @@ public class Scene_216 extends BaseScene {
 
     loadBackground("30", drawManager);
 
-    tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.well_anim_1);
+    tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.well_anim_1);
     tiger.setPosition(width / 2 - 130, 345);
     tiger.setScale(tigerDefaultScale * -1, tigerDefaultScale);
     drawManager.addDrawable(tiger);

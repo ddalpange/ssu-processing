@@ -13,12 +13,12 @@ public class Scene_107 extends BaseScene {
     loadBackground("8", drawManager);
 
 
-    tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.black);
+    tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.black);
     tiger.setPosition(450, 300);
     tiger.setScale(0.25, 0.25);
     drawManager.addDrawable(tiger);
 
-    var mom = objectFactory.create(CharacterType.mom, CharacterPoseType.back_ricecake);
+    var mom = objectFactory.createCombination(CharacterType.mom, CharacterPoseType.back_ricecake);
     mom.setPosition(850, 430);
     mom.setScale(0.5, 0.5);
     drawManager.addDrawable(mom);

@@ -24,17 +24,17 @@ public class Scene_305 extends BaseScene {
     // drawManager.addDrawable(mountain);
     
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.seat);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.seat);
     boy.setPosition(500, 140);
     boy.setScale(0.3, 0.3);
     drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.seat);
+    var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.seat);
     girl.setPosition(615, 160);
     girl.setScale(0.3, 0.3);
     drawManager.addDrawable(girl);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.climb);
     tiger.setPosition(300, 600);
     tiger.setScale(0.5, 0.5);
     drawManager.addDrawable(tiger);

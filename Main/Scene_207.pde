@@ -12,7 +12,7 @@ public class Scene_207 extends BaseScene {
 
 
     Scene_202_bg_setup(drawManager);
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.lay_01);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.lay_01);
     tiger.setPosition(width / 2 + 200, 450);
     tiger.setScale(-1, 1);
     drawManager.addDrawable(tiger);

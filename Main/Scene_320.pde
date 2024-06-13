@@ -39,7 +39,7 @@ public class Scene_320 extends BaseScene {
     goldRope.setScale(0.12, 0.12);
     drawManager.addDrawable(goldRope);
 
-    var tiger = objectFactory.create(CharacterType.tiger, CharacterPoseType.climb);
+    var tiger = objectFactory.createCombination(CharacterType.tiger, CharacterPoseType.climb);
     tiger.setPosition(1200, 400);
     tiger.setScale(0.3, 0.3);
     drawManager.addDrawable(tiger);

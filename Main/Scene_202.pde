@@ -37,12 +37,12 @@ public class Scene_202 extends BaseScene {
     var candle = new Candle(width / 2 + 185, 202);
     drawManager.addDrawable(candle);
 
-    var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.back);
+    var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.back);
     boy.setPosition(800, 550);
     boy.setScale(0.7f, 0.7f);
     drawManager.addDrawable(boy);
 
-    var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.back);
+    var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.back);
     girl.setPosition(1000, 600);
     girl.setScale(0.7f, 0.7f);
     drawManager.addDrawable(girl);

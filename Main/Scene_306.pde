@@ -30,7 +30,7 @@ public class Scene_306 extends BaseScene {
     speechBubble.setScale(0.45, 0.45);
     drawManager.addDrawable(speechBubble);
 
-    var tiger = objectFactory.create(CharacterType.tiger_mom, CharacterPoseType.back);
+    var tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.back);
     tiger.setPosition(800, 600);
     tiger.setScale(0.7, 0.7);
     drawManager.addDrawable(tiger);

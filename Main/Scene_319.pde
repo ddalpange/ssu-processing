@@ -21,12 +21,12 @@ public class Scene_319 extends BaseScene {
     // oldRope.setScale(0.15, 0.15);
     // drawManager.addDrawable(oldRope);
 
-    // var boy = objectFactory.create(CharacterType.boy, CharacterPoseType.climb_rope);
+    // var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.climb_rope);
     // boy.setPosition(550, 210);
     // boy.setScale(0.5, 0.5);
     // drawManager.addDrawable(boy);
 
-    // var girl = objectFactory.create(CharacterType.girl, CharacterPoseType.climb_rope);
+    // var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.climb_rope);
     // girl.setPosition(730, 500);
     // girl.setScale(-0.5, 0.5);
     // drawManager.addDrawable(girl);
