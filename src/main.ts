@@ -36,11 +36,11 @@ export const main = (p: p5) => {
             //sceneManager.loadScene(new Scene_Intro_New());
         }
         if (p.key === "-") {
-            sceneManager.getCurrentScene()?.loadNextScene();
+            sceneManager.getCurrentScene()?.loadPreviousScene();
             return;
         }
         if (p.key === "=") {
-            sceneManager.getCurrentScene()?.loadPreviousScene();
+            sceneManager.getCurrentScene()?.loadNextScene();
             return;
         }
 
