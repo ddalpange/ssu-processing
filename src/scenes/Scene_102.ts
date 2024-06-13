@@ -1,3 +1,4 @@
+import { colors } from "../constants/colors";
 import { BaseScene } from "../interfaces/BaseScene";
 import { MoveAnimation } from "../interfaces/MoveAnimation";
 import { loadBackground, objectFactory } from "../interfaces/Objects";
@@ -72,7 +73,7 @@ export class Scene_102 extends BaseScene {
   draw(): void {
     p.push();
 
-    // this.background(this.colors.day_sky);
+    p.background(colors.day_sky);
     this.drawManager.drawing();
     this.animationManager.update();
 
