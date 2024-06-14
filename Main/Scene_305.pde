@@ -20,10 +20,6 @@ public class Scene_305 extends BaseScene {
     loadBackground("42", drawManager);
 
 
-    // var mountain = new Mountain(600, 300);
-    // drawManager.addDrawable(mountain);
-    
-
     var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.seat);
     boy.setPosition(500, 140);
     boy.setScale(0.3, 0.3);
@@ -41,18 +37,11 @@ public class Scene_305 extends BaseScene {
 
     runMoveAnimation = new MoveAnimation(tiger,960,560,moveDuration, EaseType.InOutQuad);
     runScaleAnimation = new ScaleAnimation(tiger, 0.25f, 0.25f, moveDuration);
-    
-    // // 나무 리소스 교체 필요
-    // var bigTree = objectFactory.create(BackgroundType.무서운나무);
-    // bigTree.setPosition(1000, 300);
-    // bigTree.setScale(0.1, 0.1);
-    // drawManager.addDrawable(bigTree);
   }
  
   public void draw() {
     pushStyle();
     
-    drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
     animationManager.update();

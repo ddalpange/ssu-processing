@@ -13,6 +13,7 @@ export enum CharacterType {
 export enum CharacterPoseType {
     front = "f",
     left = "left",
+    left_half = "left_half",
     climb = "climb",
     climb_rope = "climb_rope",
     black = "black",
@@ -44,6 +45,13 @@ export enum CharacterPoseType {
     thirsty = "thirsty",
     threat = "threat",
     well = "well",
+    well_ = "well_",
+    well_1 = "well_1",
+    well_anim_1 = "well_anim_1",
+    well_anim_2 = "well_anim_2",
+    well_anim_3 = "well_anim_3",
+    well_2_1 = "well_2_1",
+    well_2_2 = "well_2_2"
 }
 
 export class ObjectFactory {
@@ -64,18 +72,13 @@ export class ObjectFactory {
     public createAnimation(type: CharacterType, pose: string, count: number): SpriteAnimation | null {
         // type_pose_anim_1~count.png
         let path = "res/images/character/" + type + "_" + pose + "_anim_";
-        let images: p5.Image[] = [];
+        let paths: string[] = [];
         for (let i = 1; i <= count; i++) {
             let fullPath = path + i + ".png";
-            let image = p.loadImage(fullPath);
-            if (image === null) {
-                console.log("Failed to load image : " + fullPath);
-                return null;
-            }
-            images.push(image);
+            paths.push(fullPath);
         }
 
-        return new SpriteAnimation(images);
+        return new SpriteAnimation(paths);
     }
 }
 

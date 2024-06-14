@@ -3,6 +3,7 @@ import { Drawable } from './Drawable';
 import { PVector } from './PVector';
 
 export class SpriteAnimation extends Drawable {
+    private imagePaths: string[];
     private images: p5.Image[];
     private cycleSeconds!: number;
     private frameSeconds!: number;
@@ -10,12 +11,33 @@ export class SpriteAnimation extends Drawable {
     private currentFrame!: number;
     private nTimes!: number;
     private nTimesPlayed!: number;
-    private manualMode!: boolean;
+    public manualMode!: boolean;
 
-    constructor(images: p5.Image[]) {
+    constructor(imagePaths: string[]) {
         super();
-        this.images = images;
+        this.imagePaths = imagePaths;
+        this.images = [];
         this.scale = new PVector(1, 1);
+
+        this.loadImages();
+    }
+
+    public async loadImages() {
+        const promises = this.imagePaths.map((path) => {
+            return new Promise<p5.Image>((resolve, reject) => {
+                p.loadImage(path, (image) => {
+                    resolve(image);
+                }, (error) => {
+                    reject(error);
+                });
+            });
+        });
+
+        try {
+            this.images = await Promise.all(promises);
+        } catch (error) {
+            console.error('Failed to load images:', error);
+        }
     }
 
     public playNTimes(cycleSeconds: number, n: number) {
@@ -49,7 +71,7 @@ export class SpriteAnimation extends Drawable {
             image = this.updateAutomaticMode();
         }
 
-        if (image === null) {
+        if (image === null || image === undefined) {
             console.log("image is null");
         } else {
             this.setup(this.x, this.y, image.width, image.height, this.zIndex);
@@ -76,6 +98,7 @@ export class SpriteAnimation extends Drawable {
             image = this.images[this.currentFrame];
 
             this.timeElapsed += deltaTime;
+            console.log('deltatime: ' + deltaTime)
             if (this.timeElapsed > this.frameSeconds) {
                 this.timeElapsed = 0;
                 this.nextFrame();

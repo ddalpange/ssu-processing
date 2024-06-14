@@ -9,13 +9,9 @@ public class Scene_222 extends BaseScene {
   private PVector boyPos = new PVector(400,400);
   private PVector girlPos = new PVector(550,400);
 
-  //private ShapeObject tiger;
   private ShapeObject boy;
   private ShapeObject girl;
 
-  // private MoveAnimation tigerMoveAnimation;
-  // private ScaleAnimation tigerScaleUpAnimation;
-  // private ScaleAnimation tigerScaleDownAnimation;
   private MoveAnimation boyMoveAnimation;
   private MoveAnimation girlMoveAnimation;
 
@@ -34,25 +30,17 @@ public class Scene_222 extends BaseScene {
 
   private void SetUpObject()
   {
-  //  tiger = objectFactory.createCombination(CharacterType.tiger_mom, CharacterPoseType.angry);
-  //  tiger.setPosition(tigerPos.x,tigerPos.y);
-  //  tiger.setScale(0.5f,0.5f);
-  //   tigerMoveAnimation = new MoveAnimation(tiger, width + imageBuffer, 400, tigerMoveDuration, EaseType.InBack);
-  //   tigerScaleUpAnimation = new ScaleAnimation(tiger, 0.52f,0.52f,tigerScaleDuration);
-  //   tigerScaleDownAnimation = new ScaleAnimation(tiger, 0.5f,0.5f,tigerScaleDuration);
-  //       drawManager.addDrawable(tiger);
-
     boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.left);
-   boy.setPosition(boyPos.x,boyPos.y);
-   boy.setScale(0.5f,0.5f);
+    boy.setPosition(boyPos.x,boyPos.y);
+    boy.setScale(0.5f,0.5f);
     boyMoveAnimation = new MoveAnimation(boy, width + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
-        drawManager.addDrawable(boy);
+    drawManager.addDrawable(boy);
    
     girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.left); 
-   girl.setPosition(girlPos.x,girlPos.y);
-   girl.setScale(0.5f,0.5f);
+    girl.setPosition(girlPos.x,girlPos.y);
+    girl.setScale(0.5f,0.5f);
     girlMoveAnimation = new MoveAnimation(girl, width + 150 + imageBuffer, 400, moveDuration,EaseType.InOutCubic);
-        drawManager.addDrawable(girl);
+    drawManager.addDrawable(girl);
 
     startAnimation(boyMoveAnimation.reset());
     startAnimation(girlMoveAnimation.reset());
@@ -80,9 +68,6 @@ public class Scene_222 extends BaseScene {
   {
       boolean ableToMove = timeTracker.IfTimeIs(waitTime);; // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
 
-      // if(ableToMove)
-      //   startAnimation(tigerMoveAnimation.reset());
-
       if(maxWaitCount >= curWaitCount)    
       { 
         int targetTime = curWaitCount * scaleChangeTime;
@@ -93,15 +78,11 @@ public class Scene_222 extends BaseScene {
 
       if(needToScaleUp)
       {
-          // stopAnimation(tigerScaleDownAnimation);
-          // startAnimation(tigerScaleUpAnimation.reset());
           curWaitCount++;
       }
 
         if(needToScaleDown)
         {
-          // stopAnimation(tigerScaleUpAnimation);
-          // startAnimation(tigerScaleDownAnimation.reset());
           curWaitCount++;
         }
       }

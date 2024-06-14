@@ -20,6 +20,27 @@ import { Scene_204 } from "../scenes/Scene_204";
 import { Scene_205 } from "../scenes/Scene_205";
 import { Scene_206 } from "../scenes/Scene_206";
 import { Scene_207 } from "../scenes/Scene_207";
+import { Scene_208 } from "../scenes/Scene_208";
+import { Scene_209 } from "../scenes/Scene_209";
+import { Scene_210 } from "../scenes/Scene_210";
+import { Scene_211 } from "../scenes/Scene_211";
+import { Scene_212 } from "../scenes/Scene_212";
+import { Scene_213 } from "../scenes/Scene_213";
+import { Scene_214 } from "../scenes/Scene_214";
+import { Scene_215 } from "../scenes/Scene_215";
+import { Scene_216 } from "../scenes/Scene_216";
+import { Scene_217 } from "../scenes/Scene_217";
+import { Scene_218 } from "../scenes/Scene_218";
+import { Scene_219 } from "../scenes/Scene_219";
+import { Scene_220 } from "../scenes/Scene_220";
+import { Scene_221 } from "../scenes/Scene_221";
+import { Scene_222 } from "../scenes/Scene_222";
+import { Scene_301 } from "../scenes/Scene_301";
+import { Scene_302 } from "../scenes/Scene_302";
+import { Scene_303 } from "../scenes/Scene_303";
+import { Scene_304 } from "../scenes/Scene_304";
+import { Scene_305 } from "../scenes/Scene_305";
+import { Scene_306 } from "../scenes/Scene_306";
 
 export const allScenes: Record<number, () => BaseScene> = {
   101: () => new Scene_101(),
@@ -63,4 +84,46 @@ export const allScenes: Record<number, () => BaseScene> = {
   206: () => new Scene_206(),
 
   207: () => new Scene_207(),
+
+  208: () => new Scene_208(),
+
+  209: () => new Scene_209(),
+
+  210: () => new Scene_210(),
+
+  211: () => new Scene_211(),
+
+  212: () => new Scene_212(),
+
+  213: () => new Scene_213(),
+
+  214: () => new Scene_214(),
+
+  215: () => new Scene_215(),
+
+  216: () => new Scene_216(),
+
+  217: () => new Scene_217(),
+
+  218: () => new Scene_218(),
+
+  219: () => new Scene_219(),
+
+  220: () => new Scene_220(),
+
+  221: () => new Scene_221(),
+
+  222: () => new Scene_222(),
+
+  301: () => new Scene_301(),
+
+  302: () => new Scene_302(),
+
+  303: () => new Scene_303(),
+
+  304: () => new Scene_304(),
+
+  305: () => new Scene_305(),
+
+  306: () => new Scene_306(),
 };

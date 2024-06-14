@@ -9,7 +9,7 @@ const MSG_TEXT_SIZE: number = 16;
 
 export class DialogUi {
     public visible: boolean;
-    private current?: DialogContent;
+    public current?: DialogContent;
     private queue: DialogContent[] = [];
 
     private x: number;

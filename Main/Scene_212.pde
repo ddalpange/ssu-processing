@@ -21,11 +21,6 @@ public class Scene_212 extends BaseScene {
 
     loadBackground("27-2", drawManager);
 
-    // Drawable openDoor = new OpenDoor(width / 2 + 300, height / 2);
-    // drawManager.addDrawable(openDoor);
-
-    // Scene_211_Family_Setup(drawManager);
-
     var mom = objectFactory.createCombination(CharacterType.mom, CharacterPoseType.front);
     mom.setPosition(width/2 + 130, 500);
     mom.setScale(0.7f, 0.7f);
