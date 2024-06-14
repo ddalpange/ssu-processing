@@ -6,7 +6,7 @@ export class Button {
     buttonColor: string = '#ffffff'
     textColor: string = '#000000'
     fontSize: number = 24;
-    position: PVector;
+    public position: PVector;
     size: PVector;
     image!: p5.Image;
     mouseClickedThisFrame!: boolean;

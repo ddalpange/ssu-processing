@@ -30,18 +30,3 @@ Button[] createGridButtons(String[] buttonTexts, int fontSize, int columnCount, 
   }
   return buttons;
 }
-
-// void drawGridButtons(int count, int columnCount, int rowCount, int x, int y, int w, int h) {
-//     int buttonIndex = 0;
-//     for (int i = 0; i < rowCount; i++) {
-//         for (int j = 0; j < columnCount; j++) {
-//             if (buttonIndex < count) {
-//                 buttons[buttonIndex].draw(x, y, w, h);
-//                 buttonIndex++;
-//             }
-//             x += w;
-//         }
-//         x = 0;
-//         y += h;
-//     }
-// }

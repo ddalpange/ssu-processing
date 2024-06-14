@@ -16,21 +16,6 @@ public class Scene_325 extends BaseScene {
     goldRope.setScale(0.2, 0.2);
     drawManager.addDrawable(goldRope);
 
-    // var newRope = objectFactory.create("res/images/object/rope_strong.png");
-    // newRope.setPosition(400, 120);
-    // newRope.setScale(0.1, 0.1);
-    // drawManager.addDrawable(newRope);
-
-    // var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.climb_rope);
-    // boy.setPosition(330, 250);
-    // boy.setScale(0.4, 0.4);
-    // drawManager.addDrawable(boy);
-
-    // var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.climb_rope);
-    // girl.setPosition(460, 330);
-    // girl.setScale(-0.4, 0.4);
-    // drawManager.addDrawable(girl);
-
     var oldRope = objectFactory.create("res/images/object/rope_weak.png");
     oldRope.setPosition(850, -50);
     oldRope.setScale(0.1, 0.1);
@@ -47,7 +32,6 @@ public class Scene_325 extends BaseScene {
   public void draw() {
     pushStyle();
     
-    drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
     

@@ -50,7 +50,6 @@ public class Scene_320 extends BaseScene {
   public void draw() {
     pushStyle();
     
-    drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
     animationManager.update();

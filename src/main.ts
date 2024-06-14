@@ -1,6 +1,8 @@
 import p5 from "p5";
-import { allScenes } from "./constants/allScenes";
+import { allScenes, createIntroScene } from "./constants/allScenes";
 import { sceneManager } from "./interfaces/SceneManager";
+import { Scene_Intro_New } from "./scenes/Scene_Intro_New";
+//import { Scene_Intro_New } from "./scenes/Scene_Intro_New";
 // import { imagePaths } from "./constants/imagePaths";
 
 export const main = (p: p5) => {
@@ -11,7 +13,8 @@ export const main = (p: p5) => {
     p.setup = function setup() {
         window.locale = "en";
         p.createCanvas(1280, 720);
-        sceneManager.loadScene(allScenes[101]());
+        //sceneManager.loadScene(allScenes[101]());
+        sceneManager.loadScene(createIntroScene());
     };
     p.draw = function draw() {
         updateDeltaTime();
@@ -33,7 +36,7 @@ export const main = (p: p5) => {
     p.keyPressed = function keyPressed() {
         console.log("pressed key : " + p.key);
         if (p.key === "Backspace") {
-            //sceneManager.loadScene(new Scene_Intro_New());
+            sceneManager.loadScene(new Scene_Intro_New());
         }
         if (p.key === "-") {
             sceneManager.getCurrentScene()?.loadPreviousScene();

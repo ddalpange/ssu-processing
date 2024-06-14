@@ -32,7 +32,6 @@ public class Scene_312 extends BaseScene {
   public void draw() {
     pushStyle();
     
-    drawGradientBackground();
     drawManager.drawing();
     uiManager.drawing();
     animationManager.update();

@@ -14,23 +14,6 @@ public class Scene_329 extends BaseScene {
     goldRope.setPosition(width/2, 250);
     goldRope.setScale(0.25, 0.25);
     drawManager.addDrawable(goldRope);
-
-    // var newRope = objectFactory.create("res/images/object/rope_strong.png");
-    // newRope.setPosition(width/2, 300);
-    // newRope.setScale(0.13, 0.13);
-    // drawManager.addDrawable(newRope);
-
-    // var boy = objectFactory.createCombination(CharacterType.boy, CharacterPoseType.climb_rope);
-    // boy.setPosition(570, 200);
-    // boy.setScale(0.4, 0.4);
-    // drawManager.addDrawable(boy);
-
-    // var girl = objectFactory.createCombination(CharacterType.girl, CharacterPoseType.climb_rope);
-    // girl.setPosition(700, 440);
-    // girl.setScale(-0.4, 0.4);
-    // drawManager.addDrawable(girl);
-
-    // 구름 필요
   }
  
   public void draw() {

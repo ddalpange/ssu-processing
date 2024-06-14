@@ -10,7 +10,6 @@ export class Button2 extends ShapeObject {
     fontColor: string = '#000000';
 
     mouseOverImage!: PImage.Image | undefined;
-    mouseClickedThisFrame!: boolean; // Assuming this is a boolean
     fontManager!: FontManager; // Assuming FontManager is a class
 
     constructor(imageSrc: string, x: number, y: number, text?: string, fontSize?: number) {
@@ -25,11 +24,11 @@ export class Button2 extends ShapeObject {
     }
 
     isClicked(): boolean {
-        return this.isMouseOver() && this.mouseClickedThisFrame;
+        return this.isMouseOver() && mouseClickedThisFrame;
     }
 
     draw(): void {
-        if (this.mouseOverImage !== null && this.isMouseOver()) {
+        if (this.mouseOverImage !== null && this.mouseOverImage !== undefined && this.isMouseOver()) {
             let temp = this.image;
             this.image = this.mouseOverImage;
             super.draw();
@@ -42,10 +41,10 @@ export class Button2 extends ShapeObject {
 
         if (this.text !== null) {
             let textX = this.x;
-            if (this.textOffset !== null)
+            if (this.textOffset !== null && this.textOffset !== undefined)
                 textX += this.textOffset.x;
             let textY = this.y;
-            if (this.textOffset !== null)
+            if (this.textOffset !== null && this.textOffset !== undefined)
                 textY += this.textOffset.y;
             p.textAlign(p.CENTER, p.CENTER);
             fontManager.drawText3(this.text, Math.round(textX), Math.round(textY), this.fontSize, this.fontColor);

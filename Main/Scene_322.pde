@@ -22,8 +22,6 @@ public class Scene_322 extends BaseScene {
 
     drawManager.drawing();
     uiManager.drawing();
-    // God, if you want to save me, give me a new rope, or if you want to kill me, give me a rotten rope!
-    // 하늘님, 나를 살리시려거든 새 동아줄을 내려주시고 죽이시려거든 썩은 동아줄을 내려주십시오!
     if (locale == "ko") {
       fontManager.drawText(
       "하늘님,",
