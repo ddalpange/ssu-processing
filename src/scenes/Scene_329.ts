@@ -1,5 +1,4 @@
 import { BaseScene } from "../interfaces/BaseScene";
-import { DrawManager } from "../interfaces/DrawManager";
 import { loadBackground, objectFactory } from "../interfaces/Objects";
 
 export class Scene_329 extends BaseScene {

@@ -1,4 +1,3 @@
-import p5 from "p5";
 import { BaseScene } from "../interfaces/BaseScene";
 import { ShapeObject } from "../interfaces/ShapeObject";
 import { ScaleAnimation } from "../interfaces/ScaleAnimation";

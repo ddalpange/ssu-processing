@@ -5,7 +5,6 @@ import { PVector } from './PVector';
 export class SpriteAnimation extends Drawable {
     private imagePaths: string[];
     private images: p5.Image[];
-    private cycleSeconds!: number;
     private frameSeconds!: number;
     private timeElapsed!: number;
     private currentFrame!: number;
@@ -41,7 +40,6 @@ export class SpriteAnimation extends Drawable {
     }
 
     public playNTimes(cycleSeconds: number, n: number) {
-        this.cycleSeconds = cycleSeconds;
         this.frameSeconds = cycleSeconds / this.images.length;
         this.nTimes = n;
         this.timeElapsed = 0;
@@ -50,7 +48,6 @@ export class SpriteAnimation extends Drawable {
     }
 
     public playInfinite(cycleSeconds: number) {
-        this.cycleSeconds = cycleSeconds;
         this.frameSeconds = cycleSeconds / this.images.length;
         this.nTimes = -1;
         this.timeElapsed = 0;

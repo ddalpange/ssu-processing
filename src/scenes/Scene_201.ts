@@ -1,6 +1,5 @@
 import { BaseScene } from "../interfaces/BaseScene";
 import { CharacterPoseType, CharacterType, loadBackground, objectFactory } from "../interfaces/Objects";
-import { Ground } from "../objects/Ground";
 
 export class Scene_201 extends BaseScene {
     private elapsed: number = 0;

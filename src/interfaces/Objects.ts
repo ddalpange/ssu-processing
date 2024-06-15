@@ -1,4 +1,3 @@
-import p5 from "p5";
 import { DrawManager } from "./DrawManager";
 import { ShapeObject } from "./ShapeObject";
 import { SpriteAnimation } from "./SpriteAnimation";

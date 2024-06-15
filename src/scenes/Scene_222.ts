@@ -7,7 +7,6 @@ import { ShapeObject } from "../interfaces/ShapeObject";
 import { TimeTracker } from "../interfaces/TimeTracker";
 
 export class Scene_222 extends BaseScene {
-    private tigerPos: PVector = new PVector(200, 400);
     private boyPos: PVector = new PVector(400, 400);
     private girlPos: PVector = new PVector(550, 400);
 
@@ -19,10 +18,7 @@ export class Scene_222 extends BaseScene {
 
     private readonly imageBuffer: number = 300;
     private readonly moveDuration: number = 10.5;
-    private readonly tigerMoveDuration: number = 3;
-    private readonly tigerScaleDuration: number = 0.7;
 
-    private readonly waitTime: number = 6; // n초
     private readonly scaleChangeTime: number = 1;
     private readonly maxWaitCount: number = 6; // 호랑이 scale 변경은 여기까지만
 
@@ -67,8 +63,6 @@ export class Scene_222 extends BaseScene {
     }
 
     private DrawObject(): void {
-        let ableToMove: boolean = this.timeTracker.ifTimeIs(this.waitTime); // 모든 프레임을 무시하지 않기에 이런 식으로 로직 짜기 가능
-
         if (this.maxWaitCount >= this.curWaitCount) {
             let targetTime: number = this.curWaitCount * this.scaleChangeTime;
             let needScaleChange: boolean = this.timeTracker.ifTimeOver(targetTime);

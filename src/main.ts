@@ -1,5 +1,5 @@
 import p5 from "p5";
-import { allScenes, createIntroScene } from "./constants/allScenes";
+import { createIntroScene } from "./constants/allScenes";
 import { sceneManager } from "./interfaces/SceneManager";
 import { Scene_Intro_New } from "./scenes/Scene_Intro_New";
 //import { Scene_Intro_New } from "./scenes/Scene_Intro_New";

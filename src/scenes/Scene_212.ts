@@ -1,5 +1,4 @@
 import { BaseScene } from "../interfaces/BaseScene";
-import { DrawManager } from "../interfaces/DrawManager";
 import { EffectType } from "../interfaces/EffectType";
 import { CharacterPoseType, CharacterType, loadBackground, objectFactory } from "../interfaces/Objects";
 

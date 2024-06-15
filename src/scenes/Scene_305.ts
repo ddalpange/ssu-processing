@@ -1,5 +1,4 @@
 import { BaseScene } from "../interfaces/BaseScene";
-import { DrawManager } from "../interfaces/DrawManager";
 import { EaseType } from "../interfaces/EaseType";
 import { MoveAnimation } from "../interfaces/MoveAnimation";
 import { CharacterPoseType, CharacterType, loadBackground, objectFactory } from "../interfaces/Objects";

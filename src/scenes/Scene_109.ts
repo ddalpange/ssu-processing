@@ -1,5 +1,4 @@
 import { BaseScene } from "../interfaces/BaseScene";
-import { DrawManager } from "../interfaces/DrawManager";
 import { Drawable } from "../interfaces/Drawable";
 import { CharacterPoseType, CharacterType, loadBackground, objectFactory } from "../interfaces/Objects";
 import { PVector } from "../interfaces/PVector";

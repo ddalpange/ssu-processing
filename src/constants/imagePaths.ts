@@ -1,62 +1,4 @@
 export const imagePaths = {
-  ["res/images/object/Jar_1.png"]: "res/images/object/Jar_1.png",
-  ["res/images/object/Jar_2.png"]: "res/images/object/Jar_2.png",
-  ["res/images/object/Twinkle.png"]: "res/images/object/Twinkle.png",
-  ["res/images/object/basket_01_01.png"]: "res/images/object/basket_01_01.png",
-  ["res/images/object/basket_01_02.png"]: "res/images/object/basket_01_02.png",
-  ["res/images/object/basket_01_03.png"]: "res/images/object/basket_01_03.png",
-  ["res/images/object/cloth_blood.png"]: "res/images/object/cloth_blood.png",
-  ["res/images/object/cloud.png"]: "res/images/object/cloud.png",
-  ["res/images/object/cloud2.png"]: "res/images/object/cloud2.png",
-  ["res/images/object/door.png"]: "res/images/object/door.png",
-  ["res/images/object/door_2.png"]: "res/images/object/door_2.png",
-  ["res/images/object/egg.png"]: "res/images/object/egg.png",
-  ["res/images/object/ex.png"]: "res/images/object/ex.png",
-  ["res/images/object/ex_2.png"]: "res/images/object/ex_2.png",
-  ["res/images/object/fabric_01.png"]: "res/images/object/fabric_01.png",
-  ["res/images/object/fluff.png"]: "res/images/object/fluff.png",
-  ["res/images/object/hut_back.png"]: "res/images/object/hut_back.png",
-  ["res/images/object/hut_front.png"]: "res/images/object/hut_front.png",
-  ["res/images/object/knife.png"]: "res/images/object/knife.png",
-  ["res/images/object/moon.png"]: "res/images/object/moon.png",
-  ["res/images/object/mortar-04.png"]: "res/images/object/mortar-04.png",
-  ["res/images/object/mortar-05.png"]: "res/images/object/mortar-05.png",
-  ["res/images/object/oil.png"]: "res/images/object/oil.png",
-  ["res/images/object/ricecake_01_01.png"]:
-    "res/images/object/ricecake_01_01.png",
-  ["res/images/object/ricecake_01_02.png"]:
-    "res/images/object/ricecake_01_02.png",
-  ["res/images/object/ricecake_02_01.png"]:
-    "res/images/object/ricecake_02_01.png",
-  ["res/images/object/ricecake_02_02.png"]:
-    "res/images/object/ricecake_02_02.png",
-  ["res/images/object/rope_strong.png"]: "res/images/object/rope_strong.png",
-  ["res/images/object/rope_weak.png"]: "res/images/object/rope_weak.png",
-  ["res/images/object/shoes.png"]: "res/images/object/shoes.png",
-  ["res/images/object/stones.png"]: "res/images/object/stones.png",
-  ["res/images/object/stones_weeds.png"]: "res/images/object/stones_weeds.png",
-  ["res/images/object/sun.png"]: "res/images/object/sun.png",
-  ["res/images/object/thunder_1.png"]: "res/images/object/thunder_1.png",
-  ["res/images/object/thunder_1_.png"]: "res/images/object/thunder_1_.png",
-  ["res/images/object/thunder_2.png"]: "res/images/object/thunder_2.png",
-  ["res/images/object/thunder_2_.png"]: "res/images/object/thunder_2_.png",
-  ["res/images/object/tiger_in_the_dark_bg_1.png"]:
-    "res/images/object/tiger_in_the_dark_bg_1.png",
-  ["res/images/object/tiger_in_the_dark_bg_2.png"]:
-    "res/images/object/tiger_in_the_dark_bg_2.png",
-  ["res/images/object/tiger_in_the_dark_bg_3.png"]:
-    "res/images/object/tiger_in_the_dark_bg_3.png",
-  ["res/images/object/tiger_in_the_dark_bg_4.png"]:
-    "res/images/object/tiger_in_the_dark_bg_4.png",
-  ["res/images/object/tiger_in_the_dark_bg_5.png"]:
-    "res/images/object/tiger_in_the_dark_bg_5.png",
-  ["res/images/object/tiger_in_the_dark_bg_6.png"]:
-    "res/images/object/tiger_in_the_dark_bg_6.png",
-  ["res/images/object/tiger_in_the_dark_bg_7.png"]:
-    "res/images/object/tiger_in_the_dark_bg_7.png",
-  ["res/images/object/tree_to_climb.png"]:
-    "res/images/object/tree_to_climb.png",
-  ["res/images/object/well.png"]: "res/images/object/well.png",
   ["res/images/test/SpriteAnim_1.png"]: "res/images/test/SpriteAnim_1.png",
   ["res/images/test/SpriteAnim_2.png"]: "res/images/test/SpriteAnim_2.png",
   ["res/images/test/SpriteAnim_3.png"]: "res/images/test/SpriteAnim_3.png",
@@ -139,6 +81,64 @@ export const imagePaths = {
   ["res/images/bg/background_9-2.png"]: "res/images/bg/background_9-2.png",
   ["res/images/bg/background_9.png"]: "res/images/bg/background_9.png",
   ["res/images/bg/background_intro.png"]: "res/images/bg/background_intro.png",
+  ["res/images/object/Jar_1.png"]: "res/images/object/Jar_1.png",
+  ["res/images/object/Jar_2.png"]: "res/images/object/Jar_2.png",
+  ["res/images/object/Twinkle.png"]: "res/images/object/Twinkle.png",
+  ["res/images/object/basket_01_01.png"]: "res/images/object/basket_01_01.png",
+  ["res/images/object/basket_01_02.png"]: "res/images/object/basket_01_02.png",
+  ["res/images/object/basket_01_03.png"]: "res/images/object/basket_01_03.png",
+  ["res/images/object/cloth_blood.png"]: "res/images/object/cloth_blood.png",
+  ["res/images/object/cloud.png"]: "res/images/object/cloud.png",
+  ["res/images/object/cloud2.png"]: "res/images/object/cloud2.png",
+  ["res/images/object/door.png"]: "res/images/object/door.png",
+  ["res/images/object/door_2.png"]: "res/images/object/door_2.png",
+  ["res/images/object/egg.png"]: "res/images/object/egg.png",
+  ["res/images/object/ex.png"]: "res/images/object/ex.png",
+  ["res/images/object/ex_2.png"]: "res/images/object/ex_2.png",
+  ["res/images/object/fabric_01.png"]: "res/images/object/fabric_01.png",
+  ["res/images/object/fluff.png"]: "res/images/object/fluff.png",
+  ["res/images/object/hut_back.png"]: "res/images/object/hut_back.png",
+  ["res/images/object/hut_front.png"]: "res/images/object/hut_front.png",
+  ["res/images/object/knife.png"]: "res/images/object/knife.png",
+  ["res/images/object/moon.png"]: "res/images/object/moon.png",
+  ["res/images/object/mortar-04.png"]: "res/images/object/mortar-04.png",
+  ["res/images/object/mortar-05.png"]: "res/images/object/mortar-05.png",
+  ["res/images/object/oil.png"]: "res/images/object/oil.png",
+  ["res/images/object/ricecake_01_01.png"]:
+    "res/images/object/ricecake_01_01.png",
+  ["res/images/object/ricecake_01_02.png"]:
+    "res/images/object/ricecake_01_02.png",
+  ["res/images/object/ricecake_02_01.png"]:
+    "res/images/object/ricecake_02_01.png",
+  ["res/images/object/ricecake_02_02.png"]:
+    "res/images/object/ricecake_02_02.png",
+  ["res/images/object/rope_strong.png"]: "res/images/object/rope_strong.png",
+  ["res/images/object/rope_weak.png"]: "res/images/object/rope_weak.png",
+  ["res/images/object/shoes.png"]: "res/images/object/shoes.png",
+  ["res/images/object/stones.png"]: "res/images/object/stones.png",
+  ["res/images/object/stones_weeds.png"]: "res/images/object/stones_weeds.png",
+  ["res/images/object/sun.png"]: "res/images/object/sun.png",
+  ["res/images/object/thunder_1.png"]: "res/images/object/thunder_1.png",
+  ["res/images/object/thunder_1_.png"]: "res/images/object/thunder_1_.png",
+  ["res/images/object/thunder_2.png"]: "res/images/object/thunder_2.png",
+  ["res/images/object/thunder_2_.png"]: "res/images/object/thunder_2_.png",
+  ["res/images/object/tiger_in_the_dark_bg_1.png"]:
+    "res/images/object/tiger_in_the_dark_bg_1.png",
+  ["res/images/object/tiger_in_the_dark_bg_2.png"]:
+    "res/images/object/tiger_in_the_dark_bg_2.png",
+  ["res/images/object/tiger_in_the_dark_bg_3.png"]:
+    "res/images/object/tiger_in_the_dark_bg_3.png",
+  ["res/images/object/tiger_in_the_dark_bg_4.png"]:
+    "res/images/object/tiger_in_the_dark_bg_4.png",
+  ["res/images/object/tiger_in_the_dark_bg_5.png"]:
+    "res/images/object/tiger_in_the_dark_bg_5.png",
+  ["res/images/object/tiger_in_the_dark_bg_6.png"]:
+    "res/images/object/tiger_in_the_dark_bg_6.png",
+  ["res/images/object/tiger_in_the_dark_bg_7.png"]:
+    "res/images/object/tiger_in_the_dark_bg_7.png",
+  ["res/images/object/tree_to_climb.png"]:
+    "res/images/object/tree_to_climb.png",
+  ["res/images/object/well.png"]: "res/images/object/well.png",
   ["res/images/ui/3button.png"]: "res/images/ui/3button.png",
   ["res/images/ui/Arrow_L.png"]: "res/images/ui/Arrow_L.png",
   ["res/images/ui/Arrow_R.png"]: "res/images/ui/Arrow_R.png",

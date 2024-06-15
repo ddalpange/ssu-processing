@@ -1,10 +1,5 @@
-import PImage from 'p5';
 import { CharacterPoseType, CharacterType, loadBackground, objectFactory } from '../interfaces/Objects';
 import { BaseScene } from '../interfaces/BaseScene';
-import { HPBar } from '../objects/HPBar';
-import { ShapeObject } from '../interfaces/ShapeObject';
-import { Button2 } from '../objects/Button2';
-import { PVector } from '../interfaces/PVector';
 
 export class Scene_105 extends BaseScene {
     getPreviousScene(): number {

@@ -1,9 +1,8 @@
-import p5 from "p5";
 import { BaseScene } from "../interfaces/BaseScene";
 import { ShapeObject } from "../interfaces/ShapeObject";
 import { ScaleAnimation } from "../interfaces/ScaleAnimation";
 import { TimeTracker } from "../interfaces/TimeTracker";
-import { CharacterPoseType, CharacterType, loadBackground, objectFactory } from "../interfaces/Objects";
+import { CharacterType, loadBackground, objectFactory } from "../interfaces/Objects";
 import { SpriteAnimation } from "../interfaces/SpriteAnimation";
 import { Button } from "../objects/Button";
 import { PVector } from "../interfaces/PVector";

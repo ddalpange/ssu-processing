@@ -1,4 +1,3 @@
-import p5 from "p5";
 import { BaseScene } from "../interfaces/BaseScene";
 import { ShapeObject } from "../interfaces/ShapeObject";
 import { Button2 } from "../objects/Button2";
@@ -87,9 +86,6 @@ export class Scene_Intro_New extends BaseScene {
 
         this.backButton = new Button2('res/images/UI/button_back.png', 50, 50);
 
-        const sceneNumbers = allSceneNumbers;
-        const sceneNumberStrs = Util.ToStringArray(sceneNumbers);
-        const sceneButtonsWidth = this.sceneButtonWidth * sceneNumbers.length;
         const transparentColor: string = '#00000000'
 
         this.introductionSceneButtons = createGridButtons(Util.ToStringArray(introductionSceneNumbers), 20, 1, p.width / 3 - 300, 150, 200, p.height - 170, transparentColor);
