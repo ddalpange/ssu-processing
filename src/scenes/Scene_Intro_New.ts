@@ -3,7 +3,7 @@ import { ShapeObject } from "../interfaces/ShapeObject";
 import { Button2 } from "../objects/Button2";
 import { loadBackground, objectFactory } from "../interfaces/Objects";
 import { PVector } from "../interfaces/PVector";
-import { allSceneNumbers, allScenes } from "../constants/allScenes";
+import { allScenes } from "../constants/allScenes";
 import { Util } from "../interfaces/Util";
 import { createGridButtons } from "../interfaces/GridLayout";
 import { deploymentSceneNumbers, endingSceneNumbers, introductionSceneNumbers } from "../constants/knownScenes";

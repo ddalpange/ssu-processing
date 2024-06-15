@@ -18,7 +18,6 @@ export class Scene_109 extends BaseScene {
     private items!: Item[];
     private selected?: Item | null;
     private redbeanRicecakeCount!: ShapeObject[];
-    private elapsedTime: number = 0;
 
     private BASTKET_X!: number;
     private BASTKET_Y!: number;
@@ -165,8 +164,6 @@ export class Scene_109 extends BaseScene {
             this.loadNextScene();
             return;
         }
-
-        this.elapsedTime += deltaTime;
 
         p.push();
         p.background(255);
