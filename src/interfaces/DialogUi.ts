@@ -1,78 +1,76 @@
+import p5 from "p5";
 import { DialogContent } from "./DialogContent";
-import { fontManager } from "./FontManager";
 
-const DIALOG_HEIGHT: number = 200;
-const DIALOG_PADDING: number = 16;
-const DIALOG_MARGIN: number = 10;
-const TELLER_TEXT_SIZE: number = 24;
-const MSG_TEXT_SIZE: number = 16;
+const TELLER_TEXT_SIZE = 28;
+const MSG_TEXT_SIZE = 18;
 
 export class DialogUi {
     public visible: boolean;
-    public current?: DialogContent;
+    public current: DialogContent;
     private queue: DialogContent[] = [];
+    private x: number = 0;
+    private y: number = 0;
+    private imageWidth: number = 0;
+    private imageHeight: number = 0;
+    private uiImage: p5.Image | undefined;
 
-    private x: number;
-    private y: number;
+    private charIndex: number = 0;
+    private frameElapsed: number = 0;
+    private frameCounterTime: number = 0.25;
 
     constructor() {
         this.visible = false;
-        this.x = p.width / 4;
-        this.y = p.height - DIALOG_HEIGHT - DIALOG_MARGIN * 2; // 20 is MARGIN
-        fontManager.setup();
+        this.current = new DialogContent("0", "", "", undefined);
+
+        p.loadImage("res/images/UI/subtitle_bar_new.png", img => {
+            this.uiImage = img;
+            this.imageWidth = img.width;
+            this.imageHeight = img.height;
+            this.x = p.width / 2 - this.imageWidth / 2;
+            this.y = 500;
+        });
     }
 
     private drawDialogBox(): void {
-        if (!this.current) return undefined;
-
-        const msg: string = this.current.text;
-        if (msg == null || msg === "") {
+        const msg = this.current.text;
+        if (!msg) {
             return;
         }
 
         p.push();
-        p.strokeWeight(1);
-        p.fill(255, 255, 255, 200);
-        p.rect(this.x, this.y, p.width / 2, DIALOG_HEIGHT, 5);
+        p.tint(255, 190);
+
+        if (this.uiImage == null) {
+            return;
+        }
+
+        p.image(this.uiImage, this.x, this.y, this.imageWidth, this.imageHeight);
         p.pop();
     }
 
     private drawText(): void {
-        if (!this.current) return undefined;
-        //console.log("debug", { current: this.current });
-
-        let textAnchor: number = this.y + DIALOG_PADDING * 2;
-        if (this.current.teller != null) {
-            p.textSize(TELLER_TEXT_SIZE);
+        if (this.current.teller) {
             p.fill(0, 0, 255);
-            fontManager.drawText2(
-                this.current.teller,
-                this.x + DIALOG_PADDING,
-                this.y + DIALOG_PADDING * 2,
-                TELLER_TEXT_SIZE
-            );
-            p.text(
-                this.current.teller,
-                this.x + DIALOG_PADDING,
-                this.y + DIALOG_PADDING * 2
-            );
-            textAnchor = this.y + DIALOG_PADDING * 2 + TELLER_TEXT_SIZE + 10;
+            p.textAlign(p.CENTER, p.CENTER);
+            p.textSize(TELLER_TEXT_SIZE);
+            p.text(this.current.teller, this.x + this.imageWidth / 2, this.y + 50);
         }
+
+        p.fill(0, 0, 0);
+        const msg = this.current.text.replace("\\n", "\n");
+        if (this.frameElapsed >= this.frameCounterTime && this.charIndex < msg.length) {
+            this.charIndex++;
+        } else if (this.charIndex >= msg.length) {
+            this.charIndex = msg.length;
+        }
+
+        const showingText = msg.substring(0, this.charIndex);
         p.textSize(MSG_TEXT_SIZE);
-        // p.fill(0, 0, 0);
-        const msg: string = this.current.text.replace("\\n", "\n");
-        fontManager.drawText(
-            msg,
-            this.x + DIALOG_PADDING,
-            textAnchor,
-            p.width / 2 - DIALOG_PADDING * 2,
-            1000,
-            MSG_TEXT_SIZE
-        );
+        p.text(showingText, this.x + 130, this.y + 75, this.imageWidth - 250, this.imageHeight - 80);
+        this.frameElapsed += deltaTime / 1000; // p5.js provides deltaTime in milliseconds
     }
 
     public draw(): void {
-        // Default DIALOG BOX Render
         if (this.visible) {
             this.drawDialogBox();
             this.drawText();
@@ -85,6 +83,10 @@ export class DialogUi {
 
     public hide(): void {
         this.visible = false;
+    }
+
+    public isVisible(): boolean {
+        return this.visible;
     }
 
     public set(content: DialogContent): void {
@@ -100,39 +102,48 @@ export class DialogUi {
         this.queue.push(...contents);
     }
 
-    // true : 대화 표시 성공, false : 대화 표시 실패
     public next(): boolean {
-        // stopPlayingVoice();
-        const el = this.queue.shift();
-        if (el) {
-            this.current = el;
-            // if (this.current.voicePath != null) {
-            //   lastPlayedSoundFile = soundManager.playOnce(this.current.voicePath);
-            // }
+        const msg = this.current.text.replace("\\n", "\n");
+        if (this.charIndex < msg.length) {
+            this.charIndex = msg.length;
+            return true;
+        }
+
+        stopPlayingVoice();
+
+        if (this.queue.length > 0) {
+            this.resetTextAnimation();
+            this.current = this.queue.shift()!;
+            if (this.current.voicePath) {
+                //lastPlayedSoundFile = soundManager.playOnce(this.current.voicePath);
+            }
             return true;
         }
 
         return false;
     }
 
+    private resetTextAnimation(): void {
+        this.frameElapsed = 0;
+        this.charIndex = 0;
+    }
+
     public push(msg: string, teller: string): void {
+        this.resetTextAnimation();
         this.queue.push(new DialogContent("0", msg, teller, undefined));
     }
 
     public getCurrentId(): string {
-        return this.current?.id ?? "";
+        return this.current.id;
     }
 }
 
-// // DialogUi 자체가 씬별로 생성되어서 전역 변수로 처리해야 함.
-// let lastPlayedSoundFile: SoundFile | null = null;
+//let lastPlayedSoundFile: SoundFile | null = null;
 
-// function stopPlayingVoice(): void {
-//   if (lastPlayedSoundFile == null) {
-//     return;
-//   }
+export function stopPlayingVoice(): void {
+    //if (lastPlayedSoundFile === null) return;
 
-//   lastPlayedSoundFile.stop();
-//   lastPlayedSoundFile.removeFromCache();
-//   lastPlayedSoundFile = null;
-// }
+    //lastPlayedSoundFile.stop();
+    //lastPlayedSoundFile.removeFromCache();
+    //lastPlayedSoundFile = null;
+}

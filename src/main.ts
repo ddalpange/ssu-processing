@@ -2,6 +2,7 @@ import p5 from "p5";
 import { createIntroScene } from "./constants/allScenes";
 import { sceneManager } from "./interfaces/SceneManager";
 import { Scene_Intro_New } from "./scenes/Scene_Intro_New";
+import { fontManager } from "./interfaces/FontManager";
 //import { Scene_Intro_New } from "./scenes/Scene_Intro_New";
 // import { imagePaths } from "./constants/imagePaths";
 
@@ -13,6 +14,7 @@ export const main = (p: p5) => {
     p.setup = function setup() {
         window.locale = "en";
         p.createCanvas(1280, 720);
+        fontManager.setup();
         //sceneManager.loadScene(allScenes[101]());
         sceneManager.loadScene(createIntroScene());
     };
