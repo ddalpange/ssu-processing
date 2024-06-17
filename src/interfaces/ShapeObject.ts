@@ -18,9 +18,8 @@ export class ShapeObject extends Drawable {
 
             this.image = image;
             this.initialW = image.width;
-            this.w = image.width;
             this.initialH = image.height;
-            this.h = image.height;
+            this.setScale(this.getScaleX(), this.getScaleY());
         };
 
         const onFail = () => {

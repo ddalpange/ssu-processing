@@ -95,7 +95,7 @@ export class SpriteAnimation extends Drawable {
             image = this.images[this.currentFrame];
 
             this.timeElapsed += deltaTime;
-            console.log('deltatime: ' + deltaTime)
+            //console.log('deltatime: ' + deltaTime)
             if (this.timeElapsed > this.frameSeconds) {
                 this.timeElapsed = 0;
                 this.nextFrame();
