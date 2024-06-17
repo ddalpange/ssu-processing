@@ -1,7 +1,11 @@
-# SSU 숭실대
+## ssu-processing
+숭실대 미디어경영학과 24학번 미디어앤테크 팀 프로젝트 - 2팀
 
-- https://github.com/jungkeechu/ProcessingLevel1
-- https://processing.org/
+2가지 실행 방법을 제공합니다.
+* Processing - Java
+  * 완성
+* p5.js - TypeScript
+  * 아직 미완성
 
 ## Processing JAVA
 
@@ -55,12 +59,4 @@ npm i -g pnpm # install pnpm
 pnpm i # install node_modules
 pnpm dev # start dev server
 ```
-
-### How to Convert?
-
-### Migration Plan
-
-씬과 Drawable(상속 포함) 오브젝트들은 맨 나중에 스크립트를 짜서 정규식으로 치환해볼 예정
-그 외의 인터페이스, 매니저 같은 것들을 src/interfaces 안에 전부 구현해야함.
-
-[Java to Ts 컨버터](https://www.codeconvert.ai/java-to-typescript-converter) 이거 써보니 잘해주는데 하루에 10개까지만 사용 가능 ...
+(아직 준비중, Mac 환경 추천)
