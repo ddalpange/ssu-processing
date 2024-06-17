@@ -1,5 +1,6 @@
 import p5 from "p5";
 import { Drawable } from "./Drawable";
+import { PVector } from "./PVector";
 
 export class ShapeObject extends Drawable {
     public image: p5.Image | undefined;
@@ -8,7 +9,7 @@ export class ShapeObject extends Drawable {
     constructor(imageSrc: string) {
         super();
         this.imageSrc = imageSrc;
-        this.scale = new p5.Vector();
+        this.scale = new PVector(1, 1);
         let retryCount = 0;
         const maxRetries = 10;
 
@@ -20,6 +21,9 @@ export class ShapeObject extends Drawable {
             this.initialW = image.width;
             this.initialH = image.height;
             this.setScale(this.getScaleX(), this.getScaleY());
+            console.log("이미지 scale : " + this.getScaleX() + ',' + this.getScaleY());
+            console.log("이미지 w,h : " + this.w + ',' + this.h);
+            console.log("이미지 w,h2 : " + image.width + ',' + image.height);
         };
 
         const onFail = () => {

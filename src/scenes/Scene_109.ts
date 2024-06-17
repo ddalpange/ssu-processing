@@ -381,7 +381,7 @@ class Item {
     }
 
     mousePressed(): boolean {
-        return this.itemObject!.mousePressed();
+        return this.itemObject!.isMouseClicked();
     }
 
     mouseReleased() {

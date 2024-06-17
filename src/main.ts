@@ -23,11 +23,11 @@ export const main = (p: p5) => {
         window.mouseClickedThisFrame = false;
     };
     p.mousePressed = function mousePressed() {
+        window.mouseClickedThisFrame = true;
         const scene = sceneManager.getCurrentScene();
         scene?.mousePressed();
     };
     p.mouseReleased = function mouseReleased() {
-        window.mouseClickedThisFrame = true;
         const scene = sceneManager.getCurrentScene();
         if (sceneManager?.getNextScene()) {
             scene?.mouseReleased();

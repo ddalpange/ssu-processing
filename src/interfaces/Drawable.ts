@@ -71,33 +71,20 @@ export class Drawable {
         console.log("Draw");
     }
 
-    public onClick() {
-        console.log("Clicked");
+    public isMouseClicked() {
+        return mouseClickedThisFrame && this.isMouseOver();
     }
 
     public mousePressed() {
-        var modX = this.x - this.w / 2;
-        var modY = this.y - this.h / 2;
-        if (
-            p.mouseX > modX &&
-            p.mouseX < modX + this.w &&
-            p.mouseY > modY &&
-            p.mouseY < modY + this.h
-        ) {
-            this.onClick();
-            return true;
-        }
-        return false;
+
     }
 
     public isMouseOver() {
-        var modX = this.x - this.w / 2;
-        var modY = this.y - this.h / 2;
         if (
-            p.mouseX > modX
-            && p.mouseX < modX + this.w
-            && p.mouseY > modY
-            && p.mouseY < modY + this.h
+            p.mouseX > this.x - this.w / 2
+            && p.mouseX < this.x + this.w / 2
+            && p.mouseY > this.y - this.h / 2
+            && p.mouseY < this.y + this.h / 2
         ) {
             return true;
         }

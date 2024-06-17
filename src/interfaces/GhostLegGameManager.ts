@@ -25,8 +25,7 @@ export class GhostLegGameManager {
         for (let i = 0; i < this.drawables.length; i++) {
             let d = this.drawables[i];
             let s = this.sceneNums[i];
-            let isPressed = d.mousePressed();
-            if (isPressed && s > 0) {
+            if (d.isMouseClicked() && s > 0) {
                 sceneManager.loadScene(allScenes[s]());
             }
         }
