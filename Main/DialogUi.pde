@@ -25,7 +25,7 @@ public class DialogUi {
     public DialogUi() {
         this.visible = false;
         current = new DialogContent("0", "", "", null);
-        this.uiImage = loadImage("res/images/UI/subtitle_bar_new.png");
+        this.uiImage = loadImage("res/images/ui/subtitle_bar_new.png");
         //this.imageWidth = uiImage.width + 200;
         this.imageWidth = uiImage.width;
         this.imageHeight = uiImage.height;

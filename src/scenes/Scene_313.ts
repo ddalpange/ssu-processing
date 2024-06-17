@@ -42,7 +42,7 @@ export class Scene_313 extends BaseScene {
         this.startAnimation(new MoveAnimation(this.oldRope, p.width - 350, 200, 2));
         this.drawManager.addDrawable(this.oldRope);
 
-        let questionMark = objectFactory.create("res/images/UI/red question.png");
+        let questionMark = objectFactory.create("res/images/ui/red question.png");
         questionMark.setPosition(900, 300);
         questionMark.setScale(1, 1);
         this.drawManager.addDrawable(questionMark);

@@ -15,7 +15,7 @@ export class Scene_318 extends BaseScene {
 
         loadBackground("55", this.drawManager);
 
-        this.retryButton = new Button2("res/images/UI/button_1.png", 1050, 400);
+        this.retryButton = new Button2("res/images/ui/button_1.png", 1050, 400);
         this.retryButton.text = locale === "en" ? "Retry?" : "되돌아가기";
         this.retryButton.setScale(1, 1);
         this.drawManager.addDrawable(this.retryButton);

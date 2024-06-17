@@ -25,7 +25,7 @@ public class Scene_306 extends BaseScene {
 
     loadBackground("43", drawManager);
 
-    speechBubble = objectFactory.create("res/images/UI/speech-bubble.png");
+    speechBubble = objectFactory.create("res/images/ui/speech-bubble.png");
     speechBubble.setPosition(originXPos, originYPos);
     speechBubble.setScale(0.45, 0.45);
     drawManager.addDrawable(speechBubble);

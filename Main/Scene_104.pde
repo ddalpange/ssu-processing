@@ -43,15 +43,15 @@ public class Scene_104 extends BaseScene {
     drawManager.addDrawable(hpBar);
 
 
-    leftArrow = objectFactory.create("res/images/UI/Arrow_L.png");
+    leftArrow = objectFactory.create("res/images/ui/Arrow_L.png");
     leftArrow.setPosition(970, 550);
     leftArrow.setScale(0.8, 0.8);
 
-    rightArrow = objectFactory.create("res/images/UI/Arrow_R.png");
+    rightArrow = objectFactory.create("res/images/ui/Arrow_R.png");
     rightArrow.setPosition(1180, 550);
     rightArrow.setScale(0.8, 0.8);
 
-    arrowDescButton = new Button2(loadImage("res/images/UI/subtitle_bar_2.png"), 1065, 670);
+    arrowDescButton = new Button2(loadImage("res/images/ui/subtitle_bar_2.png"), 1065, 670);
     arrowDescButton.setScale(0.4, 0.4);
     arrowDescButton.textOffset = locale == "en" ? new PVector(-10, 0) : new PVector(-5, 0);
     arrowDescButton.text = locale == "en" ? "Press Left or Right Arrow Key" : "좌우 방향키를 누르세요!";

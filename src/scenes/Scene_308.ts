@@ -22,7 +22,7 @@ export class Scene_308 extends BaseScene {
         this.oil.setPosition(250, 220);
         this.drawManager.addDrawable(this.oil);
 
-        let questionMark = objectFactory.create("res/images/UI/green_question.png");
+        let questionMark = objectFactory.create("res/images/ui/green_question.png");
         questionMark.setPosition(800, 270);
         questionMark.setScale(1, 1);
         this.drawManager.addDrawable(questionMark);

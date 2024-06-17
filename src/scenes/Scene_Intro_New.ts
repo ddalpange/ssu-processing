@@ -47,27 +47,27 @@ export class Scene_Intro_New extends BaseScene {
         loadBackground('intro', this.drawManager);
 
         // 0
-        this.title = objectFactory.create('res/images/UI/Opening_TItle.png');
+        this.title = objectFactory.create('res/images/ui/Opening_TItle.png');
         this.title.setPosition(p.width / 2, 150);
         this.title.setScale(0.7, 0.7);
 
         const textOffset = new PVector(0, -5);
-        this.startButton = new Button2('res/images/UI/intro_button1.png', p.width / 2, 400, 'Start', 30);
-        //this.startButton.mouseOverImage = loadImage('res/images/UI/intro_button2.png');
+        this.startButton = new Button2('res/images/ui/intro_button1.png', p.width / 2, 400, 'Start', 30);
+        //this.startButton.mouseOverImage = loadImage('res/images/ui/intro_button2.png');
         this.startButton.textOffset = textOffset;
         this.startButton.fontColor = this.textColor;
 
-        this.sceneListButton = new Button2('res/images/UI/intro_button1.png', p.width / 2, 500, 'Shortcuts', 30);
-        //this.sceneListButton.mouseOverImage = loadImage('res/images/UI/intro_button2.png');
+        this.sceneListButton = new Button2('res/images/ui/intro_button1.png', p.width / 2, 500, 'Shortcuts', 30);
+        //this.sceneListButton.mouseOverImage = loadImage('res/images/ui/intro_button2.png');
         this.sceneListButton.textOffset = textOffset;
         this.sceneListButton.fontColor = this.textColor;
 
-        this.creditButton = new Button2('res/images/UI/intro_button1.png', p.width / 2, 600, 'Credits', 30);
-        //this.creditButton.mouseOverImage = loadImage('res/images/UI/intro_button2.png');
+        this.creditButton = new Button2('res/images/ui/intro_button1.png', p.width / 2, 600, 'Credits', 30);
+        //this.creditButton.mouseOverImage = loadImage('res/images/ui/intro_button2.png');
         this.creditButton.textOffset = textOffset;
         this.creditButton.fontColor = this.textColor;
 
-        this.localeButton = new Button2('res/images/UI/koreng.png', p.width - 150, 200, locale, 20);
+        this.localeButton = new Button2('res/images/ui/koreng.png', p.width - 150, 200, locale, 20);
         this.localeButton.setScale(0.6, 0.6);
         this.localeButton.textOffset = new PVector(0, -2);
         this.localeButton.fontColor = this.textColor;
@@ -75,16 +75,16 @@ export class Scene_Intro_New extends BaseScene {
         this.refreshButtonText();
 
         // 1
-        this.도입버튼 = objectFactory.create('res/images/UI/Opening_UI_03_01.png');
+        this.도입버튼 = objectFactory.create('res/images/ui/Opening_UI_03_01.png');
         this.도입버튼.setPosition(p.width / 3 - 200, 100);
 
-        this.전개버튼 = objectFactory.create('res/images/UI/Opening_UI_03_02.png');
+        this.전개버튼 = objectFactory.create('res/images/ui/Opening_UI_03_02.png');
         this.전개버튼.setPosition(p.width / 2, 100);
 
-        this.결말버튼 = objectFactory.create('res/images/UI/Opening_UI_03_03.png');
+        this.결말버튼 = objectFactory.create('res/images/ui/Opening_UI_03_03.png');
         this.결말버튼.setPosition(p.width / 3 * 2 + 200, 100);
 
-        this.backButton = new Button2('res/images/UI/button_back.png', 50, 50);
+        this.backButton = new Button2('res/images/ui/button_back.png', 50, 50);
 
         const transparentColor: string = '#00000000'
 

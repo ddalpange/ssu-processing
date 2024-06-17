@@ -44,15 +44,15 @@ export class Scene_104 extends BaseScene {
         this.drawManager.addDrawable(this.hpBar);
 
 
-        this.leftArrow = objectFactory.create("res/images/UI/Arrow_L.png");
+        this.leftArrow = objectFactory.create("res/images/ui/Arrow_L.png");
         this.leftArrow.setPosition(970, 550);
         this.leftArrow.setScale(0.8, 0.8);
 
-        this.rightArrow = objectFactory.create("res/images/UI/Arrow_R.png");
+        this.rightArrow = objectFactory.create("res/images/ui/Arrow_R.png");
         this.rightArrow.setPosition(1180, 550);
         this.rightArrow.setScale(0.8, 0.8);
 
-        this.arrowDescButton = new Button2("res/images/UI/subtitle_bar_2.png", 1065, 670);
+        this.arrowDescButton = new Button2("res/images/ui/subtitle_bar_2.png", 1065, 670);
         this.arrowDescButton.setScale(0.4, 0.4);
         this.arrowDescButton.textOffset = locale == "en" ? new PVector(-10, 0) : new PVector(-5, 0);
         this.arrowDescButton.text = locale == "en" ? "Press Left or Right Arrow Key" : "좌우 방향키를 누르세요!";

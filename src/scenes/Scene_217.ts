@@ -36,12 +36,12 @@ export class Scene_217 extends BaseScene {
         mom.setScale(1, 1);
         this.drawManager.addDrawable(mom);
 
-        this.retryButton = new Button2("res/images/UI/button_1.png", 1080, 100);
+        this.retryButton = new Button2("res/images/ui/button_1.png", 1080, 100);
         this.retryButton.text = locale == "en" ? "Want to go back?" : "다시 하시겠습니까?";
         this.retryButton.setScale(1, 1);
         this.drawManager.addDrawable(this.retryButton);
 
-        this.creditButton = new Button2("res/images/UI/button_1.png", 1080, 200);
+        this.creditButton = new Button2("res/images/ui/button_1.png", 1080, 200);
         this.creditButton.text = locale == "en" ? "Credits" : "제작진";
         this.creditButton.setScale(1, 1);
         this.drawManager.addDrawable(this.creditButton);

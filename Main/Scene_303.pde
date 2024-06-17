@@ -51,7 +51,7 @@ public class Scene_303 extends BaseScene {
     retryButton = createButton(locale == "en" ? "retry?" : "다시 시도?", width / 2 - 150, height / 2 - 150);
     skipButton = createButton(locale == "en" ? "skip?" : "건너뛰기?", width / 2 - 150, height / 2 + 50);
 
-    space = objectFactory.create("res/images/UI/space.png");
+    space = objectFactory.create("res/images/ui/space.png");
     space.setPosition(width - 200, height - 80);
     space.setScale(spaceScale, spaceScale);
     drawManager.addDrawable(space);

@@ -27,7 +27,7 @@ export class Scene_306 extends BaseScene {
 
         loadBackground("43", this.drawManager);
 
-        this.speechBubble = objectFactory.create("res/images/UI/speech-bubble.png");
+        this.speechBubble = objectFactory.create("res/images/ui/speech-bubble.png");
         this.speechBubble.setPosition(this.originXPos, this.originYPos);
         this.speechBubble.setScale(0.45, 0.45);
         this.drawManager.addDrawable(this.speechBubble);

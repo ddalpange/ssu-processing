@@ -68,7 +68,7 @@ export class Scene_303 extends BaseScene {
         this.retryButton = this.createButton(locale === "en" ? "retry?" : "다시 시도?", p.width / 2 - 150, p.height / 2 - 150);
         this.skipButton = this.createButton(locale === "en" ? "skip?" : "건너뛰기?", p.width / 2 - 150, p.height / 2 + 50);
 
-        this.space = objectFactory.create("res/images/UI/space.png");
+        this.space = objectFactory.create("res/images/ui/space.png");
 
         this.spaceUpAnimation = new ScaleAnimation(this.space, this.spaceScale + this.spaceScale * 0.05, this.spaceScale + this.spaceScale * 0.05, this.spaceScaleDuration);
         this.spaceDownAnimation = new ScaleAnimation(this.space, this.spaceScale - this.spaceScale * 0.05, this.spaceScale - this.spaceScale * 0.05, this.spaceScaleDuration);

@@ -32,12 +32,12 @@ public class Scene_217 extends BaseScene {
     mom.setScale(1f, 1f);
     drawManager.addDrawable(mom);
 
-    retryButton = new Button2(loadImage("res/images/UI/button_1.png"), 1080, 100);
+    retryButton = new Button2(loadImage("res/images/ui/button_1.png"), 1080, 100);
     retryButton.text = locale == "en" ? "Want to go back?" : "다시 하시겠습니까?";
     retryButton.setScale(1, 1);
     drawManager.addDrawable(retryButton);
 
-    creditButton = new Button2(loadImage("res/images/UI/button_1.png"), 1080, 200);
+    creditButton = new Button2(loadImage("res/images/ui/button_1.png"), 1080, 200);
     creditButton.text = locale == "en" ? "Credits" : "제작진";
     creditButton.setScale(1, 1);
     drawManager.addDrawable(creditButton);

@@ -25,7 +25,7 @@ public class Scene_308 extends BaseScene {
     //oil.d_rotate(30);
     drawManager.addDrawable(oil);
 
-    var questionMark = objectFactory.create("res/images/UI/green_question.png");
+    var questionMark = objectFactory.create("res/images/ui/green_question.png");
     questionMark.setPosition(800, 270);
     questionMark.setScale(1, 1);
     drawManager.addDrawable(questionMark);
