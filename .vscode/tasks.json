@@ -1,17 +1,29 @@
 {
   "version": "2.0.0",
   "tasks": [
-      {
-          "label": "Processing",
-          "type": "shell",
-          "command": "processing-java --sketch=${fileDirname} --run",
-          "group": {
-              "kind": "build",
-              "isDefault": true
-          },
-          "presentation": {
-              "reveal": "always"
-          }
+    {
+      "label": "Processing",
+      "type": "shell",
+      "command": "processing-java --sketch=${workspaceFolder}/Main --run",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
       }
+    },
+    {
+      "label": "P5",
+      "type": "shell",
+      "command": "pnpm dev",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      }
+    }
   ]
 }
