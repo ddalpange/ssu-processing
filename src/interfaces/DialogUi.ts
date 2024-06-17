@@ -29,6 +29,32 @@ export class DialogUi {
             this.x = p.width / 2 - this.imageWidth / 2;
             this.y = 500;
         });
+
+        var imageSrc = "res/images/ui/subtitle_bar_new.png";
+
+        const onSuccess = (image: p5.Image) => {
+            //console.log("debug 성공", { imageSrc });
+            console.log("이미지 로드 성공 : " + imageSrc);
+
+            this.uiImage = image;
+            this.imageWidth = image.width;
+            this.imageHeight = image.height;
+            this.x = p.width / 2 - this.imageWidth / 2;
+            this.y = 500;
+        };
+        let retryCount = 0;
+        const maxRetries = 10;
+
+        const onFail = () => {
+            if (retryCount < maxRetries) {
+                retryCount++;
+                p.loadImage(imageSrc, onSuccess, onFail);
+            } else {
+                console.error(`Failed to load image after ${maxRetries} attempts.`);
+            }
+        };
+
+        p.loadImage(imageSrc, onSuccess, onFail);
     }
 
     private drawDialogBox(): void {
@@ -50,10 +76,12 @@ export class DialogUi {
 
     private drawText(): void {
         if (this.current.teller) {
-            p.fill(0, 0, 255);
+            p.push();
+            p.fill(0, 0, 0);
             p.textAlign(p.CENTER, p.CENTER);
             p.textSize(TELLER_TEXT_SIZE);
             p.text(this.current.teller, this.x + this.imageWidth / 2, this.y + 50);
+            p.pop();
         }
 
         p.fill(0, 0, 0);
@@ -67,7 +95,7 @@ export class DialogUi {
         const showingText = msg.substring(0, this.charIndex);
         p.textSize(MSG_TEXT_SIZE);
         p.text(showingText, this.x + 130, this.y + 75, this.imageWidth - 250, this.imageHeight - 80);
-        this.frameElapsed += deltaTime / 1000; // p5.js provides deltaTime in milliseconds
+        this.frameElapsed += deltaTime
     }
 
     public draw(): void {
