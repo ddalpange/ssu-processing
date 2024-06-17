@@ -40,7 +40,7 @@ export class Scene_Intro_New extends BaseScene {
     }
 
     getNextScene(): number {
-        return -1;
+        return 101;
     }
 
     setup() {
