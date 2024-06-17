@@ -9,7 +9,6 @@ export class Button {
     public position: PVector;
     size: PVector;
     image!: p5.Image;
-    mouseClickedThisFrame!: boolean;
 
     constructor();
     constructor(text: string, position: PVector, size: PVector);
@@ -33,7 +32,7 @@ export class Button {
 
         p.pop();
 
-        return this.isMouseOver() && this.mouseClickedThisFrame;
+        return this.isMouseOver() && mouseClickedThisFrame;
     }
 
     isMouseOver(): boolean {
@@ -73,6 +72,7 @@ export class Button {
                 textY = this.position.y + sizeY / 2;
             }
             p.textAlign(p.CENTER, p.CENTER);
+            p.fill(this.textColor);
             p.text(this.text, textX, textY, fontSize);
         }
         p.pop();
