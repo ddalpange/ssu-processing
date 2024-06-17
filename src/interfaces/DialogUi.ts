@@ -22,7 +22,7 @@ export class DialogUi {
         this.visible = false;
         this.current = new DialogContent("0", "", "", undefined);
 
-        p.loadImage("res/images/UI/subtitle_bar_new.png", img => {
+        p.loadImage("res/images/ui/subtitle_bar_new.png", img => {
             this.uiImage = img;
             this.imageWidth = img.width;
             this.imageHeight = img.height;
